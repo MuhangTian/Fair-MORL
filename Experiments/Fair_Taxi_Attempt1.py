@@ -25,7 +25,7 @@ MAP = [
 
 arr = []   # For testing
 
-class FairTaxi(discrete.DiscreteEnv):
+class FairTaxi_Attempt1(discrete.DiscreteEnv):
     metadata = {"render.modes": ["human", "ansi"]}
     
     def __init__(self):
@@ -79,11 +79,16 @@ class FairTaxi(discrete.DiscreteEnv):
                                             elif action == 3 and self.desc[1 + row, 2 * col] == b":":
                                                 new_col = max(col - 1, 0)
                                             elif action == 4:   # Pick up
-                                                # Check if any of the passengers satisfy requirement
-                                                # not in taxi, taxi in same place as passnger location
-                                                # update passenger index for that passenger
-                                                # else, illegal action, reduce reward by [-5,-5,-5]???
-                                                vec_reward = np.array([-5,-5,-5])
+                                                if self.find_valid_pickup(taxi_loc, pass1_idx, pass2_idx, pass3_idx) == 1:
+                                                    new_pass1_idx = 5   # passenger 1 in taxi
+                                                elif self.find_valid_pickup(taxi_loc, pass1_idx, pass2_idx, pass3_idx) == 2:
+                                                    new_pass2_idx = 5
+                                                elif self.find_valid_pickup(taxi_loc, pass1_idx, pass2_idx, pass3_idx) == 3:
+                                                    new_pass3_idx = 5
+                                                else:   # Invalid pick up action
+                                                    vec_reward = np.array([-5,-5,-5])
+                                            elif action == 5:   # Drop off
+                                                if self.find_valid_dropoff(taxi_loc, pass1_idx, pass2_idx, pass3_idx, )
                                                 
                                             
                                                        
@@ -109,13 +114,23 @@ class FairTaxi(discrete.DiscreteEnv):
         except:
             distrib[state] = 1
     
-    def find_valid_pickup(self, pass1_idx, pass2_idx, pass3_idx, taxi_loc):
+    def find_valid_pickup(self, taxi_loc, pass1_idx, pass2_idx, pass3_idx):
         # check if any passenger can be picked up, return passenger number, else return false
         if pass1_idx <= 4 and taxi_loc == self.locs[pass1_idx]:
             return 1
         elif pass2_idx <= 4 and taxi_loc == self.locs[pass2_idx]:
             return 2
         elif pass3_idx <= 4 and taxi_loc == self.locs[pass3_idx]:
+            return 3
+        else:
+            return False
+    
+    def find_valid_dropoff(self, taxi_loc, pass1_idx, pass2_idx, pass3_idx, dest1_idx, dest2_idx, dest3_idx):
+        if (taxi_loc == self.locs[dest1_idx]) and pass1_idx == 5:
+            return 1
+        elif (taxi_loc == self.locs[dest2_idx]) and pass2_idx == 5:
+            return 2
+        elif (taxi_loc == self.locs[dest3_idx]) and pass3_idx == 5:
             return 3
         else:
             return False
