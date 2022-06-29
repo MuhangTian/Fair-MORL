@@ -39,6 +39,7 @@ class Fair_Taxi_Bandit(gym.Env):
         self.accum_reward = np.zeros(num_locs, dtype=float)
         self.metrics = []
         self.timesteps = 0
+        self.output_count = 0
 
     def _get_info(self):
         return  'Time step: {}\nAccumulated reward: {}'.format(self.timesteps, self.accum_reward)
@@ -47,11 +48,12 @@ class Fair_Taxi_Bandit(gym.Env):
         self.accum_reward = np.zeros(self.num_locs, dtype=float)
         self.metrics = []
         self.timesteps = 0
-        return
+        return 0    # since only one state, return 0
     
     def output_csv(self):
+        self.output_count += 1
         df = pd.DataFrame(data=self.metrics, columns=self.produce_labels())
-        df.to_csv(self.output_direct+'.csv')
+        df.to_csv(self.output_direct+'{}.csv'.format(self.output_count))
         return
 
     def update_metrics(self):
@@ -75,7 +77,7 @@ class Fair_Taxi_Bandit(gym.Env):
         except:
             raise Exception('Invalid Action')
         
-        observation = 1     # Since only have one state
+        observation = 0     # Since only have one state
         done = False        # Bandit problem, no terminal state
         info = self._get_info()
         self.timesteps += 1
