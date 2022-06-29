@@ -1,80 +1,112 @@
 '''
 Simplified fair taxi environment: https://docs.google.com/document/d/1NvALGY0kPwjz6ibj9H4S5taTDGVZWC3pKA1PXseI8r4/edit
+
+Fair bandit taxi problem:
+1. One state only, taxi driver choose which location to pick from in each timestep
+2. Environment gives a vector reward associated with the agent's action of choice
+
+Something special:
+1. Can set number of locations arbitrarily, num_locs = num_actions in this environment
+2. Can set reward generation and distributions arbitrarily, allow us to adjust environments when testing
+3. When call output_csv(), generates a table of timesteps, and accumulated reward so far at each location,
+this makes plotting the graphs easier.
+
 '''
 import gym
 import numpy as np
+import pandas as pd
 from gym import spaces
-from gym.envs.toy_text import discrete
-import scipy.stats as ss
-'''
-To do:
-1. Write Gaussian distributions for each possible location, with a sensible difference in means
-2. 
-'''
 class Fair_Taxi_Bandit(gym.Env):
+    '''
+    :param int num_locs: number of locations to choose from
+    :param int max_mean: maximum mean for all distributions
+    :param int min_mean: minimum mean for all distributions
+    :param int sd: the shared, constant standard deviation for all location's distributions
+    :param int center_mean: the mean value which most distributions' means are around (except max and min)
+    :param int max_diff: the maximum difference from center_mean allowed for variation in means (except max and min)
+    :param int output_direct: output directory of accumulated reward .csv file
+    '''
     metadata = {"render.modes": ["human", "ansi"]}
     
-    def __init__(self, num_locs, output_direct) -> None:
+    def __init__(self, num_locs=5, max_mean=40, min_mean=10, sd=3, center_mean=20, max_diff=2, output_direct='Bandit_Fair_Taxi_Run') -> None:
         self.num_locs = num_locs    # number of locations
         self.action_num = num_locs
         self.output_direct = output_direct
         
         self.action_space = spaces.Discrete(self.action_num)
         self.observation_space = spaces.Discrete(1)     # only one state due to simplification
-        self.rewards = self.generate_vec_reward(skewness=150, loc=10, scale=10, size=1000) # see https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.skewnorm.html
-        self.action_reward_map = self.action_to_reward()
-    
+        self.rewards = self.generate_vec_reward(max_mean, min_mean, sd, center_mean, max_diff)
+        self.accum_reward = np.zeros(num_locs, dtype=float)
+        self.metrics = []
+        self.timesteps = 0
+
     def _get_info(self):
-        
+        return  'Time step: {}\nAccumulated reward: {}'.format(self.timesteps, self.accum_reward)
+    
+    def reset(self):
+        self.accum_reward = np.zeros(self.num_locs, dtype=float)
+        self.metrics = []
+        self.timesteps = 0
+        return
+    
+    def output_csv(self):
+        df = pd.DataFrame(data=self.metrics, columns=self.produce_labels())
+        df.to_csv(self.output_direct+'.csv')
+        return
+
+    def update_metrics(self):
+        arr = np.append([self.timesteps], self.accum_reward)
+        self.metrics.append(arr)
+        return
+    
+    def produce_labels(self):
+        labels = ['Time steps']
+        for i in range(self.num_locs):
+            labels.append('Location {}'.format(i))
+        return labels
+    
     def step(self, action):
+        if action < 0:
+            raise Exception('Invalid Action')
+        
         try:
-            reward = self.action_reward_map[action]
+            reward = self.rewards[action]
+            self.accum_reward += reward
         except:
             raise Exception('Invalid Action')
+        
         observation = 1     # Since only have one state
         done = False        # Bandit problem, no terminal state
+        info = self._get_info()
+        self.timesteps += 1
+        self.update_metrics()
         
         return observation, reward, done, info
         
-    def generate_vec_reward(self, skewness, loc, scale, size):
+    def generate_vec_reward(self, max_mean, min_mean, sd, center_mean, max_diff):
         '''
-        Use skewed distribution to generate rewards, return a 2D array of rewards for choosing each location
+        Generate vector reward for each location, stored as 2D array
         '''
-        dist = ss.skewnorm.rvs(a=skewness, loc=loc, scale=scale, size=size)
-        max, min = np.max(dist), np.min(dist)      # use one max and one min from distribution for two locations
-        max_idx, min_idx = np.where(dist==max), np.where(dist==min)
-        
-        dist = np.delete(dist, max_idx)     # Delete max and min to avoid sampling with replacement
-        dist = np.delete(dist, min_idx)
-        
-        other_rewards = np.random.choice(dist, replace=False, size=self.num_locs-2) # Generate scalar rewards for remaining locations
-        other_rewards = np.sort(other_rewards)
-        
-        result = np.array([], dtype=float)      # creat output
+        rewards, result = np.array([], dtype=float), np.array([], dtype=float)
         for i in range(self.num_locs):
+            if i == 0:
+                rewards = np.append(rewards, np.random.normal(loc=max_mean, scale=sd))
+            elif i == self.num_locs-1:
+                rewards = np.append(rewards, np.random.normal(loc=min_mean, scale=sd))
+            else:
+                rand = np.random.uniform(low=-max_diff, high=max_diff)
+                rewards = np.append(rewards, np.random.normal(loc=center_mean+rand, scale=sd))       
+        rewards = np.sort(rewards)  # Sort to ensure rewards can be compared between experiments
+        
+        for i in range(self.num_locs):   # create 2D reward array
             zero = np.zeros(self.num_locs, dtype=float)
             if i == 0:
-                zero[i] = min
+                zero[i] = rewards[i]
                 result = np.append(result, zero)
-            elif i == self.num_locs-1:
-                zero[i] = max
-                result = np.vstack((result, zero))
             else:
-                zero[i] = other_rewards[i-1]
+                zero[i] = rewards[i]
                 result = np.vstack((result, zero))
-        
+                
         return result
     
-    def action_to_reward(self): # return dictionary of actions paired with reward of choosing that action
-        map = {}
-        for i in range(self.num_locs):
-            map[i] = self.rewards[i]
-        return map
-        
-
-if __name__ == '__main__':  # For testing
-    n = 6
-    env = Fair_Taxi_Bandit(n, 'output_path')
-    print(env.rewards) # reward for choosing each of N locations
-    print(env.action_reward_map)
     
