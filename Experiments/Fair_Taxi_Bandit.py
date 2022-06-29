@@ -45,10 +45,13 @@ class Fair_Taxi_Bandit(gym.Env):
         return  'Time step: {}\nAccumulated reward: {}'.format(self.timesteps, self.accum_reward)
     
     def reset(self):
+        return 0    # since only one state, return 0
+
+    def clean_all(self):
         self.accum_reward = np.zeros(self.num_locs, dtype=float)
         self.metrics = []
         self.timesteps = 0
-        return 0    # since only one state, return 0
+        return
     
     def output_csv(self):
         self.output_count += 1
