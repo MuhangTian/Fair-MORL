@@ -24,7 +24,7 @@ class Fair_Taxi_Bandit(gym.Env):
     :param int sd: the shared, constant standard deviation for all location's distributions
     :param int center_mean: the mean value which most distributions' means are around (except max and min)
     :param int max_diff: the maximum difference from center_mean allowed for variation in means (except max and min)
-    :param int output_direct: output directory of accumulated reward .csv file
+    :param str output_direct: output directory of accumulated reward .csv file
     '''
     metadata = {"render.modes": ["human", "ansi"]}
     
