@@ -1,8 +1,9 @@
-from cmath import e
-import numpy as np
-
-arr = np.zeros([1, 6, 6])
-arr2 = np.array([1,2,3,4,5,6])
-sum = arr + arr2
-print(sum[0, 1])
-print(np.log(e))
+from Experiments.Fair_Taxi_Bandit import Fair_Taxi_Bandit
+env = Fair_Taxi_Bandit()
+env.step(1)
+print(env.rewards)
+env.step(2)
+print(env.rewards)
+print(env.rewards)
+env.step(1)
+print(env.rewards)

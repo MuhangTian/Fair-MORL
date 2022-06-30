@@ -3,11 +3,9 @@ Running tests for bandit taxi problem, using our algorithm and Q-learning
 '''
 import numpy as np
 import copy
-import pandas as pd
-import matplotlib.pyplot as plt
 from Fair_Taxi_Bandit import Fair_Taxi_Bandit
 
-def run_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=1):
+def run_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99):
     Q_table = np.zeros([non_fair_env.observation_space.n, non_fair_env.action_space.n])
     
     for _ in range(episodes):
@@ -28,7 +26,7 @@ def run_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=1
     print('FINISH TRAINING Q LEARNING')
     return Q_table
 
-def run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=1):
+def run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99):
     Q_table = np.ones([fair_env.observation_space.n, fair_env.action_space.n, fair_env.num_locs]) # Cannot use zero due to log
     R_acc = np.zeros(fair_env.num_locs)
     
@@ -90,16 +88,16 @@ def evaluate_NSW_Q_learning(Q_table, runs=20, timesteps=10000, gamma=1):
 if __name__ == "__main__":
     
     non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
-                       min_mean=10, sd=0.1, 
-                       center_mean=20, max_diff=2,
-                       output_path='Bandit_Qlearning/Q_learning_run_')
+                                    min_mean=10, sd=1, 
+                                    center_mean=20, max_diff=2,
+                                    output_path='Bandit_Qlearning/Q_learning_run_')
 
-    fair_env = copy.deepcopy(non_fair_env) # copy the same environment, ensure same distribution & randomization
+    fair_env = copy.deepcopy(non_fair_env)
     fair_env.output_path='Bandit_NSW/NSW_Q_learning_run_' # change output path only
     
-    Q_table = run_Q_learning()
-    nsw_Q_table = run_NSW_Q_learning()
+    Q_table = run_Q_learning(timesteps=10000, episodes=100, alpha=0.1, epsilon=0.1, gamma=1)
+    nsw_Q_table = run_NSW_Q_learning(timesteps=10000, episodes=100, alpha=0.1, epsilon=0.1, gamma=1)
     print('Q learning Q-table:\n{}'.format(Q_table))
     print('NSW Q learning Q-table:\n{}'.format(nsw_Q_table))
-    evaluate_Q_learning(Q_table, runs=50, timesteps=100000)
-    evaluate_NSW_Q_learning(nsw_Q_table, runs=50, timesteps=100000)
+    evaluate_Q_learning(Q_table, runs=1, timesteps=10000)
+    evaluate_NSW_Q_learning(nsw_Q_table, runs=1, timesteps=10000)

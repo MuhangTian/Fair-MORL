@@ -30,13 +30,18 @@ class Fair_Taxi_Bandit(gym.Env):
     
     def __init__(self, num_locs=5, max_mean=40, min_mean=10, sd=3, center_mean=20, max_diff=2, output_path='Bandit_Fair_Taxi_Run') -> None:
         self.num_locs = num_locs    # number of locations
+        self.max_mean = max_mean
+        self.min_mean = min_mean
+        self.sd = sd
+        self.center_mean = center_mean
+        self.max_diff = max_diff
         self.action_num = num_locs
         self.output_path = output_path
         
         self.action_space = spaces.Discrete(self.action_num)
         self.observation_space = spaces.Discrete(1)     # only one state due to simplification
-        self.rewards = self.generate_vec_reward(max_mean, min_mean, sd, center_mean, max_diff)
         self.accum_reward = np.zeros(num_locs, dtype=float)
+        self.rewards = None
         self.metrics = []
         self.timesteps = 0
         self.output_count = 0
@@ -75,6 +80,9 @@ class Fair_Taxi_Bandit(gym.Env):
             raise Exception('Invalid Action')
         
         try:
+            self.rewards = self.generate_vec_reward(self.max_mean, self.min_mean, 
+                                                    self.sd, self.center_mean, 
+                                                    self.max_diff)  # random reward for each episode
             reward = self.rewards[action]
             self.accum_reward += reward
         except:
