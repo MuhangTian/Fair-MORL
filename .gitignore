@@ -1,3 +1,5 @@
 venv/
 Self_Practice/
 .DS_Store
+Bandit_NSW/
+Bandit_Qlearning/

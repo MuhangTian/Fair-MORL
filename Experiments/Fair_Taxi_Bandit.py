@@ -24,14 +24,14 @@ class Fair_Taxi_Bandit(gym.Env):
     :param int sd: the shared, constant standard deviation for all location's distributions
     :param int center_mean: the mean value which most distributions' means are around (except max and min)
     :param int max_diff: the maximum difference from center_mean allowed for variation in means (except max and min)
-    :param str output_direct: output directory of accumulated reward .csv file
+    :param str output_path: output directory of accumulated reward .csv file
     '''
     metadata = {"render.modes": ["human", "ansi"]}
     
-    def __init__(self, num_locs=5, max_mean=40, min_mean=10, sd=3, center_mean=20, max_diff=2, output_direct='Bandit_Fair_Taxi_Run') -> None:
+    def __init__(self, num_locs=5, max_mean=40, min_mean=10, sd=3, center_mean=20, max_diff=2, output_path='Bandit_Fair_Taxi_Run') -> None:
         self.num_locs = num_locs    # number of locations
         self.action_num = num_locs
-        self.output_direct = output_direct
+        self.output_path = output_path
         
         self.action_space = spaces.Discrete(self.action_num)
         self.observation_space = spaces.Discrete(1)     # only one state due to simplification
@@ -56,7 +56,7 @@ class Fair_Taxi_Bandit(gym.Env):
     def output_csv(self):
         self.output_count += 1
         df = pd.DataFrame(data=self.metrics, columns=self.produce_labels())
-        df.to_csv(self.output_direct+'{}.csv'.format(self.output_count))
+        df.to_csv(self.output_path+'{}.csv'.format(self.output_count))
         return
 
     def update_metrics(self):
