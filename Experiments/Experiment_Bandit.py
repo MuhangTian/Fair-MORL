@@ -22,6 +22,8 @@ def run_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=0
             
             Q_table[state, action] = new_value
             state = next_state
+            
+            print('Accumulated reward so far: {}'.format(non_fair_env.accum_reward))
     
     print('FINISH TRAINING Q LEARNING')
     return Q_table
@@ -45,6 +47,8 @@ def run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gam
             Q_table[state, action] = new_value
             state = next_state
             R_acc += reward
+            
+            print('Accumulated reward so far: {}'.format(R_acc))
     
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
@@ -64,40 +68,50 @@ def argmax_nsw(R, gamma_Q, state):
     return action
 
 def evaluate_Q_learning(Q_table, runs=20, timesteps=10000):
-    non_fair_env.clean_all() # clean values before generating results
-    state = non_fair_env.reset()
     for i in range(runs):
+        non_fair_env.clean_all() # clean values before generating results
+        state = non_fair_env.reset()
+        
         for _ in range(timesteps):
             action = np.argmax(Q_table[state])
             next, reward, done, info = non_fair_env.step(action)
+            
         non_fair_env.output_csv()
     return print("FINISH EVALUATE Q LEARNING")
 
 def evaluate_NSW_Q_learning(Q_table, runs=20, timesteps=10000, gamma=1):
     R_acc = np.zeros(fair_env.num_locs)
-    fair_env.clean_all()
-    state = fair_env.reset()
-    for i in range(runs):
+    for _ in range(runs):
+        fair_env.clean_all()
+        state = fair_env.reset()
+        
         for _ in range(timesteps):
             action = argmax_nsw(R_acc, gamma*Q_table[state], state)
             next, reward, done, info = fair_env.step(action)
             R_acc += reward
+            
         fair_env.output_csv()
     return print("FINSIH EVALUATE NSW Q LEARNING")
 
 if __name__ == "__main__":
     
-    non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
-                                    min_mean=10, sd=1, 
+    non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=100, 
+                                    min_mean=10, sd=0.1, 
                                     center_mean=20, max_diff=2,
                                     output_path='Bandit_Qlearning/Q_learning_run_')
 
-    fair_env = copy.deepcopy(non_fair_env)
-    fair_env.output_path='Bandit_NSW/NSW_Q_learning_run_' # change output path only
+    fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=100, 
+                                min_mean=10, sd=0.1, 
+                                center_mean=20, max_diff=2,
+                                output_path='Bandit_NSW/NSW_Q_learning_run_')
+    arr = []
+    for i in range(10):
+        Q_table = run_Q_learning(timesteps=10000, episodes=1, alpha=0.1, epsilon=0.1, gamma=1)
+        arr.append(Q_table)
+    for i in range(10):
+        print('Q learning Q-table:\n{}'.format(arr[i]))
+    # evaluate_Q_learning(Q_table, runs=1, timesteps=10000)
     
-    Q_table = run_Q_learning(timesteps=10000, episodes=100, alpha=0.1, epsilon=0.1, gamma=1)
-    nsw_Q_table = run_NSW_Q_learning(timesteps=10000, episodes=100, alpha=0.1, epsilon=0.1, gamma=1)
-    print('Q learning Q-table:\n{}'.format(Q_table))
-    print('NSW Q learning Q-table:\n{}'.format(nsw_Q_table))
-    evaluate_Q_learning(Q_table, runs=1, timesteps=10000)
-    evaluate_NSW_Q_learning(nsw_Q_table, runs=1, timesteps=10000)
+    # nsw_Q_table = run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=1)
+    # print('NSW Q learning Q-table:\n{}'.format(nsw_Q_table))
+    # evaluate_NSW_Q_learning(nsw_Q_table, runs=1, timesteps=10000)

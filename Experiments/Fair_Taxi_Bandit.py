@@ -9,7 +9,6 @@ Something special:
 1. Can set number of locations arbitrarily, num_locs = num_actions in this environment
 2. Can set reward generation and distributions arbitrarily, allow us to adjust environments when testing
 3. When call output_csv(), generates a table of timesteps, and accumulated reward so far at each location
-at every time step, this makes plotting the graphs easier.
 4. Rewards for each location is sorted, 1st location is smallest, Nth location is largest
 '''
 import gym
