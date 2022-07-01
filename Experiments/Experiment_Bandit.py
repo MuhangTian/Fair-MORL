@@ -190,12 +190,12 @@ if __name__ == "__main__":
     non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
                                     min_mean=10, sd=1, 
                                     center_mean=20, max_diff=2,
-                                    output_path='Bandit/Classical_10_locations/Bandit_run_')
+                                    output_path='Bandit/Classical_5_locations/Bandit_run_')
 
     fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
                                 min_mean=10, sd=1, 
                                 center_mean=20, max_diff=2,
-                                output_path='Bandit/NSW_10_locations/NSW_Bandit_run_')
+                                output_path='Bandit/NSW_5_locations/NSW_Bandit_run_')
     
     random = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
                                 min_mean=10, sd=1, 
