@@ -14,4 +14,7 @@ import numpy as np
 # env.step(1)
 # print(env.rewards)
 
-print(np.log(1))
+arr = [[1,2,3], [3,2,1], [4,5,6]]
+time = np.arange(1,4)
+print(np.sum(arr, axis=0))
+print(np.divide(arr, time))

@@ -1,5 +1,5 @@
 '''
-Running tests for bandit taxi problem, using our algorithm and Q-learning
+Running tests for bandit taxi problem, using NSW bandit algorithm and classical bandit algorithm
 '''
 import numpy as np
 import copy
@@ -175,17 +175,32 @@ def evaluate_NSW_Q_learning(Q_table, runs=20, timesteps=10000, gamma=1):
         fair_env.output_csv()
     return print("FINSIH EVALUATE NSW Q LEARNING")
 
+def run_random(runs=20, timesteps=10000):
+    for _ in range(runs):
+        random.clean_all()
+        for _ in range(timesteps):
+            action = random.action_space.sample()
+            next, reward, done, info = random.step(action)
+            
+        random.output_csv()
+    return  print("FINISH RANDOM RUNS")
+
 if __name__ == "__main__":
     
     non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
                                     min_mean=10, sd=1, 
                                     center_mean=20, max_diff=2,
-                                    output_path='Bandit_Qlearning/Bandit_run_')
+                                    output_path='Bandit/Classical_10_locations/Bandit_run_')
 
     fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
                                 min_mean=10, sd=1, 
                                 center_mean=20, max_diff=2,
-                                output_path='Bandit_NSW/NSW_Bandit_run_')
+                                output_path='Bandit/NSW_10_locations/NSW_Bandit_run_')
+    
+    random = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
+                                min_mean=10, sd=1, 
+                                center_mean=20, max_diff=2,
+                                output_path='Bandit/Random_5_locations/Random_Bandit_run_')
     
     # Q_table = run_Q_learning(timesteps=100000, episodes=1, alpha=0.01, epsilon=0.4, gamma=1)    # need to have a high exploration rate
     # print('Q learning Q-table:\n{}'.format(Q_table))
@@ -195,10 +210,12 @@ if __name__ == "__main__":
     # print('NSW Q learning Q-table:\n{}'.format(nsw_Q_table))
     # evaluate_NSW_Q_learning(nsw_Q_table, runs=1, timesteps=10000)
 
-    # Q_table = run_bandit_algorithm(timesteps=10000, epsilon=0.1)
-    # print('Bandit Algorithm Q table:\n{}'.format(Q_table))
-    # evaluate_bandit(Q_table, runs=1, timesteps=10000)
+    Q_table = run_bandit_algorithm(timesteps=100000, epsilon=0.1)
+    print('Bandit Algorithm Q table:\n{}'.format(Q_table))
+    evaluate_bandit(Q_table, runs=50, timesteps=10000)
     
-    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1)
+    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=100000, epsilon=0.1)
     print('NSW Bandit Algorithm Q table: {}'.format(nsw_Q_table))
-    evaluate_nsw_bandit(nsw_Q_table, runs=1, timesteps=10000)
+    evaluate_nsw_bandit(nsw_Q_table, runs=50, timesteps=10000)
+    
+    run_random(runs=50, timesteps=10000)
