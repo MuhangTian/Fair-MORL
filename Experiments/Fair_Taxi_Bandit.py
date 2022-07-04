@@ -44,6 +44,7 @@ class Fair_Taxi_Bandit(gym.Env):
         self.metrics = []
         self.timesteps = 0
         self.output_count = 0
+        self.freq = np.zeros(num_locs, dtype=float)
 
     def _get_info(self):
         return  'Time step: {}\nAccumulated reward: {}'.format(self.timesteps, self.accum_reward)
@@ -55,6 +56,7 @@ class Fair_Taxi_Bandit(gym.Env):
         self.accum_reward = np.zeros(self.num_locs, dtype=float)
         self.metrics = []
         self.timesteps = 0
+        self.freq = np.zeros(self.num_locs, dtype=float)
         return
     
     def output_csv(self):
@@ -65,6 +67,7 @@ class Fair_Taxi_Bandit(gym.Env):
 
     def update_metrics(self):
         arr = np.append([self.timesteps], self.accum_reward)
+        arr = np.append(arr, self.freq)
         self.metrics.append(arr)
         return
     
@@ -72,6 +75,8 @@ class Fair_Taxi_Bandit(gym.Env):
         labels = ['Time steps']
         for i in range(self.num_locs):
             labels.append('Location {}'.format(i))
+        for i in range(self.num_locs):
+            labels.append('Frequency at location {}'.format(i))
         return labels
     
     def step(self, action):
@@ -81,7 +86,7 @@ class Fair_Taxi_Bandit(gym.Env):
         try:
             self.rewards = self.generate_vec_reward(self.max_mean, self.min_mean, 
                                                     self.sd, self.center_mean, 
-                                                    self.max_diff)  # random reward for each episode
+                                                    self.max_diff)  # random reward for each step
             reward = self.rewards[action]
             self.accum_reward += reward
         except:
@@ -91,6 +96,7 @@ class Fair_Taxi_Bandit(gym.Env):
         done = False        # Bandit problem, no terminal state
         info = self._get_info()
         self.timesteps += 1
+        self.freq[action] += 1
         self.update_metrics()
         
         return observation, reward, done, info

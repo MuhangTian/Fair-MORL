@@ -1,6 +1,7 @@
 '''
 Running tests for bandit taxi problem, using NSW bandit algorithm and classical bandit algorithm
 '''
+from cmath import e
 import numpy as np
 import copy
 from Fair_Taxi_Bandit import Fair_Taxi_Bandit
@@ -53,11 +54,11 @@ def run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gam
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
 
-def run_bandit_algorithm(timesteps=10000, epsilon=0.1): # P32 Sutton & Barto
+def run_bandit_algorithm(timesteps=10000, epsilon=0.1): # Page 32 Sutton & Barto
     Q_table = np.zeros(non_fair_env.action_space.n)
     num_visited = np.zeros(non_fair_env.action_space.n)
     
-    for _ in range(timesteps):
+    for i in range(timesteps):
         
         if np.random.uniform(0,1) < epsilon:
             action = non_fair_env.action_space.sample()
@@ -68,17 +69,19 @@ def run_bandit_algorithm(timesteps=10000, epsilon=0.1): # P32 Sutton & Barto
         reward = np.sum(reward) # turn in to scalar reward
         num_visited[action] += 1
         Q_table[action] = Q_table[action] + (reward - Q_table[action])/num_visited[action]
-        print('Accumualted reward so far: {}'.format(non_fair_env.accum_reward))
+        
+        if i%100 == 0:
+            print('Accumualted reward at step {}: {}'.format(i, non_fair_env.accum_reward))
     print('FINISH TRAINING BANDIT')
     return Q_table
 
 def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1):
-    # Q_table = np.full([fair_env.action_space.n, fair_env.action_space.n], fill_value=1e-9)
-    Q_table = np.zeros([fair_env.action_space.n, fair_env.action_space.n])
+    Q_table = np.full([fair_env.action_space.n, fair_env.action_space.n], fill_value=e)
+    # Q_table = np.zeros([fair_env.action_space.n, fair_env.action_space.n])
     num_visited = np.zeros(fair_env.action_space.n)
     R_acc = np.zeros(fair_env.action_space.n)
     
-    for _ in range(timesteps):
+    for i in range(timesteps):
         
         if np.random.uniform(0,1) < epsilon:
             action = fair_env.action_space.sample()
@@ -90,7 +93,9 @@ def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1):
         new_value = Q_table[action] + (reward - Q_table[action])/num_visited[action]
         Q_table[action] = new_value
         R_acc += reward
-        print('Accumualted reward so far: {}'.format(fair_env.accum_reward))
+        
+        if i%100 == 0:
+            print('Accumualted reward at step {}: {}'.format(i, fair_env.accum_reward))
     print('FINISH TRAINING NSW BANDIT')
     return Q_table
 
@@ -137,6 +142,8 @@ def evaluate_bandit(Q_table, runs=20, timesteps=10000):
     return print("FINISH EVALUATE BANDIT")
 
 def evaluate_nsw_bandit(Q_table, runs=20, timesteps=10000):
+    # Intiailize Q table with nonzero entries
+    #Q_table = np.full([fair_env.action_space.n, fair_env.action_space.n], fill_value=1e-3) + Q_table
     for _ in range(runs):
         R_acc = np.zeros(fair_env.num_locs)
         fair_env.clean_all()
@@ -185,37 +192,40 @@ def run_random(runs=20, timesteps=10000):
         random.output_csv()
     return  print("FINISH RANDOM RUNS")
 
-if __name__ == "__main__":
+def run_experiments(runs, train_steps, eval_steps, epsilon):
+    Q_table = run_bandit_algorithm(timesteps=train_steps, epsilon=epsilon)
+    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=train_steps, epsilon=epsilon)
     
-    non_fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
-                                    min_mean=10, sd=1, 
-                                    center_mean=20, max_diff=2,
+    print('Bandit Algorithm Q table:\n{}'.format(Q_table))
+    print('NSW Bandit Algorithm Q table:\n{}'.format(nsw_Q_table))
+    
+    evaluate_bandit(Q_table, runs=runs, timesteps=eval_steps)
+    evaluate_nsw_bandit(nsw_Q_table, runs=runs, timesteps=eval_steps)
+    
+    run_random(runs=runs, timesteps=eval_steps)
+    return
+
+def create_envs(num_locs, max_mean, min_mean, sd, center_mean, max_diff):
+    non_fair_env = Fair_Taxi_Bandit(num_locs=num_locs, max_mean=max_mean, 
+                                    min_mean=min_mean, sd=sd, 
+                                    center_mean=center_mean, max_diff=max_diff,
                                     output_path='Bandit/Classical_5_locations/Bandit_run_')
 
-    fair_env = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
-                                min_mean=10, sd=1, 
-                                center_mean=20, max_diff=2,
+    fair_env = Fair_Taxi_Bandit(num_locs=num_locs, max_mean=max_mean, 
+                                min_mean=min_mean, sd=sd, 
+                                center_mean=center_mean, max_diff=max_diff,
                                 output_path='Bandit/NSW_5_locations/NSW_Bandit_run_')
     
-    random = Fair_Taxi_Bandit(num_locs=5, max_mean=40, 
-                                min_mean=10, sd=1, 
-                                center_mean=20, max_diff=2,
-                                output_path='Bandit/Random_5_locations/Random_Bandit_run_')
-    
-    # Q_table = run_Q_learning(timesteps=100000, episodes=1, alpha=0.01, epsilon=0.4, gamma=1)    # need to have a high exploration rate
-    # print('Q learning Q-table:\n{}'.format(Q_table))
-    # # evaluate_Q_learning(Q_table, runs=1, timesteps=10000)
-    
-    # nsw_Q_table = run_NSW_Q_learning(timesteps=10000, episodes=20, alpha=0.1, epsilon=0.1, gamma=1)
-    # print('NSW Q learning Q-table:\n{}'.format(nsw_Q_table))
-    # evaluate_NSW_Q_learning(nsw_Q_table, runs=1, timesteps=10000)
+    random = Fair_Taxi_Bandit(num_locs=num_locs, max_mean=max_mean, 
+                              min_mean=min_mean, sd=sd, 
+                              center_mean=center_mean, max_diff=max_diff,
+                              output_path='Bandit/Random_5_locations/Random_Bandit_run_')
+    return non_fair_env, fair_env, random
 
-    Q_table = run_bandit_algorithm(timesteps=100000, epsilon=0.1)
-    print('Bandit Algorithm Q table:\n{}'.format(Q_table))
-    evaluate_bandit(Q_table, runs=50, timesteps=10000)
+if __name__ == "__main__":
     
-    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=100000, epsilon=0.1)
-    print('NSW Bandit Algorithm Q table: {}'.format(nsw_Q_table))
-    evaluate_nsw_bandit(nsw_Q_table, runs=50, timesteps=10000)
+    non_fair_env, fair_env, random = create_envs(num_locs=5, max_mean=60, 
+                                                 min_mean=20, sd=3, 
+                                                 center_mean=40, max_diff=2)
     
-    run_random(runs=50, timesteps=10000)
+    run_experiments(runs=20, train_steps=10000, eval_steps=5, epsilon=0.1)
