@@ -70,14 +70,13 @@ def run_bandit_algorithm(timesteps=10000, epsilon=0.1): # Page 32 Sutton & Barto
         num_visited[action] += 1
         Q_table[action] = Q_table[action] + (reward - Q_table[action])/num_visited[action]
         
-        if i%100 == 0:
+        if i%1000 == 0:
             print('Accumualted reward at step {}: {}'.format(i, non_fair_env.accum_reward))
     print('FINISH TRAINING BANDIT')
     return Q_table
 
-def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1):
-    Q_table = np.full([fair_env.action_space.n, fair_env.action_space.n], fill_value=e)
-    # Q_table = np.zeros([fair_env.action_space.n, fair_env.action_space.n])
+def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1, nsw_lambda=1e-3):
+    Q_table = np.zeros([fair_env.action_space.n, fair_env.action_space.n])
     num_visited = np.zeros(fair_env.action_space.n)
     R_acc = np.zeros(fair_env.action_space.n)
     
@@ -86,7 +85,7 @@ def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1):
         if np.random.uniform(0,1) < epsilon:
             action = fair_env.action_space.sample()
         else:
-            action = bandit_argmax_nsw(R_acc, Q_table)
+            action = bandit_argmax_nsw(R_acc, Q_table, nsw_lambda)
             
         next_state, reward, done, info = fair_env.step(action)
         num_visited[action] += 1
@@ -94,22 +93,18 @@ def run_nsw_bandit_algorithm(timesteps=10000, epsilon=0.1):
         Q_table[action] = new_value
         R_acc += reward
         
-        if i%100 == 0:
+        if i%1000 == 0:
             print('Accumualted reward at step {}: {}'.format(i, fair_env.accum_reward))
     print('FINISH TRAINING NSW BANDIT')
     return Q_table
 
-def nsw(vec): return np.sum(np.log(vec))    # numpy uses natural log
+def nsw(vec, nsw_lambda): 
+    vec = vec + nsw_lambda
+    return np.sum(np.log(vec))    # numpy uses natural log
 
-def bandit_argmax_nsw(R, Q):
-    '''
-    Function that finds an action that max NSW(R_acc + gamma*Q_table[state, action])
-    :param R: (array) any vector reward to be added
-    :param gamma_Q: (2D array) gamma*Q_table[state]
-    :param state: (int) current state
-    '''
+def bandit_argmax_nsw(R, Q, nsw_lambda):
     sum = R + Q
-    nsw_vals = [nsw(sum[i]) for i in range(fair_env.action_num)]
+    nsw_vals = [nsw(sum[i], nsw_lambda) for i in range(fair_env.action_num)]
     if np.all(nsw_vals == nsw_vals[0]) == True: # if all values are same, random action
         # numpy argmax always return first element when all elements are same
         action = np.random.randint(fair_env.action_num)
@@ -141,15 +136,13 @@ def evaluate_bandit(Q_table, runs=20, timesteps=10000):
         non_fair_env.output_csv()
     return print("FINISH EVALUATE BANDIT")
 
-def evaluate_nsw_bandit(Q_table, runs=20, timesteps=10000):
-    # Intiailize Q table with nonzero entries
-    #Q_table = np.full([fair_env.action_space.n, fair_env.action_space.n], fill_value=1e-3) + Q_table
+def evaluate_nsw_bandit(Q_table, runs=20, timesteps=10000, nsw_lambda=1e-3):
     for _ in range(runs):
         R_acc = np.zeros(fair_env.num_locs)
         fair_env.clean_all()
         
         for _ in range(timesteps):
-            action = bandit_argmax_nsw(R_acc, Q_table)
+            action = bandit_argmax_nsw(R_acc, Q_table, nsw_lambda)
             next, reward, done, info = fair_env.step(action)
             R_acc += reward
             
@@ -192,15 +185,15 @@ def run_random(runs=20, timesteps=10000):
         random.output_csv()
     return  print("FINISH RANDOM RUNS")
 
-def run_experiments(runs, train_steps, eval_steps, epsilon):
+def run_experiments(runs, train_steps, eval_steps, epsilon, nsw_lambda):
     Q_table = run_bandit_algorithm(timesteps=train_steps, epsilon=epsilon)
-    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=train_steps, epsilon=epsilon)
+    nsw_Q_table = run_nsw_bandit_algorithm(timesteps=train_steps, epsilon=epsilon, nsw_lambda=nsw_lambda)
     
     print('Bandit Algorithm Q table:\n{}'.format(Q_table))
     print('NSW Bandit Algorithm Q table:\n{}'.format(nsw_Q_table))
     
     evaluate_bandit(Q_table, runs=runs, timesteps=eval_steps)
-    evaluate_nsw_bandit(nsw_Q_table, runs=runs, timesteps=eval_steps)
+    evaluate_nsw_bandit(nsw_Q_table, runs=runs, timesteps=eval_steps, nsw_lambda=nsw_lambda)
     
     run_random(runs=runs, timesteps=eval_steps)
     return
@@ -224,8 +217,8 @@ def create_envs(num_locs, max_mean, min_mean, sd, center_mean, max_diff):
 
 if __name__ == "__main__":
     
-    non_fair_env, fair_env, random = create_envs(num_locs=5, max_mean=60, 
-                                                 min_mean=20, sd=3, 
-                                                 center_mean=40, max_diff=2)
+    non_fair_env, fair_env, random = create_envs(num_locs=5, max_mean=70, 
+                                                 min_mean=30, sd=3, 
+                                                 center_mean=50, max_diff=0)
     
-    run_experiments(runs=20, train_steps=10000, eval_steps=5, epsilon=0.1)
+    run_experiments(runs=50, train_steps=100000, eval_steps=20, epsilon=0.1, nsw_lambda=1e-4)

@@ -13,8 +13,8 @@ def line_graph(path1, path2, path3, runs, loc_nums, steps): # plot graph based o
     plt.plot(time, avg3, 'blue', alpha=1, linewidth=1, label='Random')
     
     plt.xlabel('Time steps')
-    plt.ylabel('Cumulative average accumulated total reward')
-    plt.title('Bandit Algorithm vs NSW Bandit Algorithm (5 locations)', fontweight='bold')
+    plt.ylabel('Cumulative average of accumulated total reward')
+    plt.title('Bandit Algorithm vs NSW Bandit Algorithm ({} steps)'.format(steps), fontweight='bold')
     plt.legend()
     return plt.show()
 
@@ -41,8 +41,8 @@ def reward_bar_chart(path1, path2, path3, runs, loc_nums, steps):  # plot bar ch
     rects4 = ax.bar(x + width, locs[3], width, label='Location 4')
     rects5 = ax.bar(x + width*2, locs[4], width, label='Location 5')
     
-    ax.set_ylabel('Average Accumulated Total Reward')
-    ax.set_title('Classical vs NSW (Accumualted Reward)', fontweight='bold')
+    ax.set_ylabel('Average Accumulated Reward')
+    ax.set_title('Classical vs NSW ({} steps)'.format(steps), fontweight='bold')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()
@@ -66,8 +66,8 @@ def freq_bar_chart(path1, path2, path3, runs, loc_nums, steps):
     rects4 = ax.bar(x + width, locs[3], width, label='Location 4')
     rects5 = ax.bar(x + width*2, locs[4], width, label='Location 5')
     
-    ax.set_ylabel('Average Accumulated Total Reward')
-    ax.set_title('Classical vs NSW (Frequency)', fontweight='bold')
+    ax.set_ylabel('Number of times selected')
+    ax.set_title('Classical vs NSW ({} steps)'.format(steps), fontweight='bold')
     ax.set_xticks(x)
     ax.set_xticklabels(labels)
     ax.legend()
@@ -112,20 +112,73 @@ def freq_average_between_runs(path, runs, loc_nums):
             
     return result
 
-def visualize_results(total_runs, loc_nums, steps):
+def avg_nsw(path, runs, loc_nums, nsw_lambda):  # return average nsw score over runs for each algorithm
+    result = []
+    for i in range(1, runs+1):
+        arr = []
+        df = pd.read_csv(path+str(i)+'.csv')
+        for j in range(loc_nums):   # Find average nsw for single run, using vectorized operation
+            data = df['Location {}'.format(j)].to_numpy()
+            data = data + nsw_lambda    # NSW smoot, log(X+lambda)
+            data = np.log(data)
+            if arr == []:
+                arr = data
+            else:
+                arr += data
+        result.append(np.mean(arr))
+    
+    avg = np.mean(result)
+    return avg
+
+def nsw_bar_chart(path1, path2, path3, runs, loc_nums, nsw_lambda, steps):
+    avg1 = avg_nsw(path1, runs, loc_nums, nsw_lambda)
+    avg2 = avg_nsw(path2, runs, loc_nums, nsw_lambda)
+    avg3 = avg_nsw(path3, runs, loc_nums, nsw_lambda)
+    
+    width = 0.2
+    labels = ['Bandit Algorithm', 'NSW Bandit Algorithm', 'Random']
+    x = np.arange(len(labels))
+    fig, ax = plt.subplots()
+    arr = [avg1, avg2, avg3]
+    
+    rects1 = ax.bar(x, arr, width)
+    
+    ax.axhline(y=0, color='k')
+    ax.set_ylabel('Average NSW score')
+    ax.set_title('Classical vs NSW ({} steps)'.format(steps), fontweight='bold')
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels)
+    ax.legend()
+
+    fig.tight_layout()
+    return plt.show()
+
+def nsw(arr, nsw_lambda):
+    arr = arr + nsw_lambda
+    return np.sum(np.log(arr))
+
+def visualize_results(total_runs, loc_nums, steps, nsw_lambda):
     reward_bar_chart(path1='Bandit/Classical_5_locations/Bandit_run_', 
                     path2='Bandit/NSW_5_locations/NSW_Bandit_run_', 
-                    path3='Bandit/Random_5_locations/Random_Bandit_run_', runs=total_runs, loc_nums=loc_nums, steps=steps)
+                    path3='Bandit/Random_5_locations/Random_Bandit_run_', 
+                    runs=total_runs, loc_nums=loc_nums, steps=steps)
     
     freq_bar_chart(path1='Bandit/Classical_5_locations/Bandit_run_', 
                     path2='Bandit/NSW_5_locations/NSW_Bandit_run_', 
-                    path3='Bandit/Random_5_locations/Random_Bandit_run_', runs=total_runs, loc_nums=loc_nums, steps=steps)
+                    path3='Bandit/Random_5_locations/Random_Bandit_run_', 
+                    runs=total_runs, loc_nums=loc_nums, steps=steps)
     
+    nsw_bar_chart(path1='Bandit/Classical_5_locations/Bandit_run_', 
+                    path2='Bandit/NSW_5_locations/NSW_Bandit_run_', 
+                    path3='Bandit/Random_5_locations/Random_Bandit_run_', 
+                    runs=total_runs, loc_nums=loc_nums, nsw_lambda=nsw_lambda, steps=steps)
+
     line_graph(path1='Bandit/Classical_5_locations/Bandit_run_',
                path2='Bandit/NSW_5_locations/NSW_Bandit_run_', 
-               path3='Bandit/Random_5_locations/Random_Bandit_run_', runs=total_runs, loc_nums=loc_nums, steps=steps)
+               path3='Bandit/Random_5_locations/Random_Bandit_run_', 
+               runs=total_runs, loc_nums=loc_nums, steps=steps)
     return
 
 if __name__ == "__main__":
     
-    visualize_results(total_runs=20, loc_nums=5, steps=5)
+    visualize_results(total_runs=50, loc_nums=5, steps=20, nsw_lambda=1e-4)

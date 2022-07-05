@@ -108,13 +108,13 @@ class Fair_Taxi_Bandit(gym.Env):
         rewards, result = np.array([], dtype=float), np.array([], dtype=float)
         for i in range(self.num_locs):
             if i == 0:
-                rewards = np.append(rewards, np.random.normal(loc=max_mean, scale=sd))
-            elif i == self.num_locs-1:
                 rewards = np.append(rewards, np.random.normal(loc=min_mean, scale=sd))
+            elif i == self.num_locs-1:
+                rewards = np.append(rewards, np.random.normal(loc=max_mean, scale=sd))
             else:
                 rand = np.random.uniform(low=-max_diff, high=max_diff)
                 rewards = np.append(rewards, np.random.normal(loc=center_mean+rand, scale=sd))       
-        rewards = np.sort(rewards)  # Sort to ensure rewards can be compared between experiments
+        #rewards = np.sort(rewards)  # Sort to ensure rewards can be compared between experiments
         
         for i in range(self.num_locs):   # create 2D reward array
             zero = np.zeros(self.num_locs, dtype=float)
