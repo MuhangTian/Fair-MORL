@@ -1,8 +1,12 @@
 import numpy as np
+import pandas as pd
+import gym
+from gym import spaces
 
-arr = [[1,2,3],[4,5,6],[7,8,9]]
-print(arr)
-print(arr[0][2])
-arr = np.array(arr)
-print(arr)
-print(arr[0,2])
+box = spaces.Box(0, 4, shape=(2,), dtype=int)
+print(box)
+
+class env(gym.Env):
+    
+    def __init__(self) -> None:
+        super().__init__()
