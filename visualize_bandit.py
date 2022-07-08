@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def line_graph(path1, path2, path3, runs, loc_nums, steps): # plot graph based on timesteps and cumulative average of total reward
+
     avg1 = cumulative_average(path1, runs, loc_nums, steps)
     avg2 = cumulative_average(path2, runs, loc_nums, steps)
     avg3 = cumulative_average(path3, runs, loc_nums, steps)
@@ -119,12 +120,11 @@ def avg_nsw(path, runs, loc_nums, nsw_lambda):  # return average nsw score over 
         df = pd.read_csv(path+str(i)+'.csv')
         for j in range(loc_nums):   # Find average nsw for single run, using vectorized operation
             data = df['Location {}'.format(j)].to_numpy()
-            data = data + nsw_lambda    # NSW smoot, log(X+lambda)
-            data = np.log(data)
             if arr == []:
                 arr = data
             else:
-                arr += data
+                arr *= data     # take geometric mean
+        arr = np.power(arr, 1/loc_nums)
         result.append(np.mean(arr))
     
     avg = np.mean(result)
@@ -181,4 +181,4 @@ def visualize_results(total_runs, loc_nums, steps, nsw_lambda):
 
 if __name__ == "__main__":
     
-    visualize_results(total_runs=50, loc_nums=5, steps=20, nsw_lambda=1e-4)
+    visualize_results(total_runs=50, loc_nums=5, steps=50, nsw_lambda=1e-4)
