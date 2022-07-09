@@ -181,4 +181,4 @@ def visualize_results(total_runs, loc_nums, steps, nsw_lambda):
 
 if __name__ == "__main__":
     
-    visualize_results(total_runs=50, loc_nums=5, steps=50, nsw_lambda=1e-4)
+    visualize_results(total_runs=20, loc_nums=5, steps=20, nsw_lambda=1e-4)

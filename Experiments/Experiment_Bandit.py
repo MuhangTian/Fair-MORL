@@ -221,4 +221,4 @@ if __name__ == "__main__":
                                                  min_mean=30, sd=3, 
                                                  center_mean=50, max_diff=0)
     
-    run_experiments(runs=50, train_steps=100000, eval_steps=50, epsilon=0.1, nsw_lambda=1e-4)
+    run_experiments(runs=20, train_steps=100000, eval_steps=20, epsilon=0.1, nsw_lambda=1e-4)

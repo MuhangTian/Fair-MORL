@@ -16,15 +16,14 @@ class Fair_Taxi_MDP(gym.Env):
         self.output_path = output_path
         self.size = size    # size of grid world NxN
         self.window_size = 512
-        self.loc_coords = loc_coords    # array of tuples of coordinates for all locations
-        self.dest_coords = dest_coords  # array of tuples of coordinates for all destinations
+        self.loc_coords = np.array(loc_coords)
+        self.dest_coords = np.array(dest_coords)  
         self.share_dest = True if len(dest_coords) == 1 else False
         self.taxi_loc = None
         self.pass_loc = 0   # 1 is in taxi
         self.pass_dest = None   # destination of the passenger in taxi
         self.pass_idx = None    # to keep track of index of location of the passenger
-        self.old_fuel = fuel
-        self.current_fuel = fuel
+        self.fuel = fuel
         
         self.acc_reward = np.zeros(len(loc_coords))     # accumulated reward for each location
         self.pass_delivered_loc = np.zeros(len(loc_coords))      # record number of success deliveries for each location
@@ -33,39 +32,44 @@ class Fair_Taxi_MDP(gym.Env):
         self.metrics = []       # used to record values
         self.csv_num = 0
         
-        self.observation_space = spaces.Dict({
-            'taxi' : spaces.Box(0, size-1, shape=(2,), dtype=int),  # taxi location
-            'passenger' : spaces.Discrete(2),    # 0 for no passenger, 1 for with passenger
-        })
-        self.observation_space_size = size*size*2
+        self.observation_space = spaces.Discrete(size*size*2)
         self.action_space = spaces.Discrete(6)
         self._action_to_direct = {0: np.array([0, -1]),
                                   1: np.array([0, 1]),
                                   2: np.array([1, 0]),
-                                  3: np.array([-1, 0]),
-                                  4: 'pick', 
-                                  5: 'drop'}
+                                  3: np.array([-1, 0])}
         self.window = None
         self.clock = None
+
+    def _clean_metrics(self): 
+        '''
+        clean accumulated reward and past data
+        '''
+        self.metrics = []
+        self.acc_reward = np.zeros(len(self.loc_coords))
+        self.pass_delivered_loc = np.zeros(len(loc_coords))
+        self.pass_delivered = 0
+        
     
     def reset(self, seed=None):
+        '''
+        Initialize random state to begin with
+        '''
         super().reset(seed=seed)
         self.taxi_loc = self.np_random.integers(0, self.size, size=2)   # random taxi spawn location
         self.pass_loc = 0   # passenger out of taxi
         self.pass_dest = None
         self.pass_idx = None
-        self.acc_reward = np.zeros(len(self.loc_coords))
         self.pass_delivered = 0
         self.pass_delivered_loc = np.zeros(len(self.loc_coords))
         self.timesteps = 0
-        self.current_fuel = self.old_fuel
         state = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc)
         
         return state
     
     def _get_info(self):
         dict = {'Taxi Location' : self.taxi_loc, 'Accumulated Reward': self.acc_reward,
-                'Fuel Left' : self.current_fuel, 'Passengers Delivered' : self.pass_delivered,
+                'Fuel Left' : self.fuel-self.timesteps, 'Passengers Delivered' : self.pass_delivered,
                 'Passengers Deliverd by Location' : self.pass_delivered_loc}
         return dict
     
@@ -82,10 +86,10 @@ class Fair_Taxi_MDP(gym.Env):
         """
         labels = ['Timesteps']
         for i in range(len(self.loc_coords)):
-            labels.append('Accumulated Reward at Location {}'.format(i))
+            labels.append('Location {} Accumulated Reward'.format(i))
         for i in range(len(self.loc_coords)):
-            labels.append('Delivered Passengers at Location {}'.format(i))
-        labels.append('Total Number of Delivered Passengers')
+            labels.append('Location {} Delivered Passengers'.format(i))
+        labels.append('Total Delivered Passengers')
         return labels
     
     def _output_csv(self):
@@ -96,18 +100,17 @@ class Fair_Taxi_MDP(gym.Env):
         return 
         
     def step(self, action):
-        if action < 0: raise Exception('Invalid Action')
-        try: action_mapped = self._action_to_direct[action]
-        except: raise Exception('Invalid Action')
+        if action < 0 or action > 5: raise Exception('Invalid Action')
         
-        if action_mapped == 'pick':
-            if self.taxi_loc in self.loc_coords: # TODO: Bug in the condition, related with numpy array stuff
+        if action == 4: # pick
+            if self.taxi_loc.tolist() in self.loc_coords.tolist() and self.pass_loc == 0:
                 self.pass_loc = 1   # Passenger now in taxi
-                self.pass_idx = self.loc_coords.index(self.taxi_loc) # find destination
+                self.pass_idx = self.loc_coords.tolist().index(self.taxi_loc.tolist()) # find destination
                 self.pass_dest = self.dest_coords[self.pass_idx]
+            
             reward = np.zeros(len(self.loc_coords))     # NOTE: zero rewards for both valid and invalid pick?
-        elif action_mapped == 'drop':
-            if self.taxi_loc == self.pass_dest: # TODO: Bug in the condition, related with numpy array stuff
+        elif action == 5:   # drop
+            if np.array_equal(self.taxi_loc, self.pass_dest) and self.pass_loc == 1: 
                 self.pass_loc = 0
                 self.pass_dest = None
                 self.pass_delivered += 1
@@ -115,18 +118,20 @@ class Fair_Taxi_MDP(gym.Env):
                 self.pass_idx = None
                 reward = self.generate_reward()
             else:
+                self.pass_loc = 0
+                self.pass_dest = None
+                self.pass_idx = None
                 reward = np.zeros(len(self.loc_coords))
         else:
-            self.taxi_loc += action_mapped  # taxi move according to the map
+            self.taxi_loc += self._action_to_direct[action]  # taxi move according to the map
             self.taxi_loc = np.where(self.taxi_loc < 0, 0, self.taxi_loc)
             self.taxi_loc = np.where(self.taxi_loc > self.size-1, self.size-1, self.taxi_loc)
             reward = np.zeros(len(self.loc_coords))
         
         self.timesteps += 1
-        self.current_fuel -= 1
         self.acc_reward += reward
         
-        done = True if self.current_fuel == 0 else False  # terminal state, when fuel runs out
+        done = True if self.timesteps == self.fuel else False  # terminal state, when fuel runs out
         obs = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc)    # next state
         info = self._get_info()
         self._update_metrics()
@@ -146,24 +151,113 @@ class Fair_Taxi_MDP(gym.Env):
         code = np.ravel_multi_index([taxi_x, taxi_y, pass_loc], (self.size, self.size, 2))
         return code
     
-    # TODO: Test all methods above, debug if necessary
     def render(self, mode='human'):
-        # TODO: Finish this method after testing all above methods
+        '''
+        Create  graphics
+        '''
+        if self.window is None and mode == "human":
+            pygame.init()
+            pygame.display.init()
+            self.window = pygame.display.set_mode((self.window_size, self.window_size))
+        if self.clock is None and mode == "human":
+            self.clock = pygame.time.Clock()
+        
+        canvas = pygame.Surface((self.window_size, self.window_size))
+        canvas.fill((255, 255, 255))
+        pix_square_size = self.window_size / self.size  # The size of a single grid square in pixels
+        
+        font = pygame.font.SysFont('Times New Roman', 30, bold=False)
+        
+        # Draw Locations (blue)
+        loc_pos = []
+        for i in range(len(self.loc_coords)):
+            loc = pygame.Rect(pix_square_size * self.loc_coords[i], (pix_square_size, pix_square_size),)
+            pygame.draw.rect(
+                surface = canvas,
+                color = (28,134,238),
+                rect = loc,
+            )
+            label = font.render(str(i), True, (0,0,0))
+            label_rect = label.get_rect()
+            label_rect.center = loc.center
+            loc_pos.append([label, label_rect])
+        
+        # Draw Destinations (red)
+        dest_pos = []
+        for i in range(len(self.dest_coords)):
+            loc = pygame.Rect(pix_square_size * self.dest_coords[i], (pix_square_size, pix_square_size),)
+            pygame.draw.rect(
+                surface = canvas,
+                color = (238,64,0),
+                rect = loc,
+            )
+            label = font.render(str(i), True, (0,0,0))
+            label_rect = label.get_rect()
+            label_rect.center = loc.center
+            dest_pos.append([label, label_rect])
+
+        # Draw Agent (yellow when no passenger, green when there is passenger with passenger index)
+        if self.pass_idx == None:
+            agent = pygame.draw.circle(
+                    surface = canvas,
+                    color = (255,185,15),
+                    center = (self.taxi_loc + 0.5) * pix_square_size,
+                    radius = pix_square_size / 3,
+                    ) 
+        else:
+            agent = pygame.draw.circle(
+                    surface = canvas,
+                    color = (0,205,0),
+                    center = (self.taxi_loc + 0.5) * pix_square_size,
+                    radius = pix_square_size / 3,
+                    ) 
+            pass_label = font.render(str(self.pass_idx), True, (0,0,0))
+            pass_label_rect = pass_label.get_rect()
+            pass_label_rect.center = agent.center
+        
+        # Add gridlines
+        for x in range(self.size + 1):
+            pygame.draw.line(
+                canvas,
+                0,
+                (0, pix_square_size * x),
+                (self.window_size, pix_square_size * x),
+                width=1,
+            )
+            pygame.draw.line(
+                canvas,
+                0,
+                (pix_square_size * x, 0),
+                (pix_square_size * x, self.window_size),
+                width=1,
+            )
+        
+        # Output visualization
+        self.window.blit(canvas, canvas.get_rect())
+        if self.pass_idx != None: self.window.blit(pass_label, pass_label_rect)
+        for i in range(len(self.loc_coords)): self.window.blit(loc_pos[i][0], loc_pos[i][1])
+        for i in range(len(self.loc_coords)): self.window.blit(dest_pos[i][0], dest_pos[i][1])
+        pygame.event.pump()
+        pygame.display.update()
+
+        self.clock.tick(self.metadata["render_fps"]) # add a delay to keep the framerate stable
         return
         
 
 if __name__ == "__main__":
-    loc_coords = [[0,1],[0,2],[0,3]]
-    dest_coords = [[1,1],[1,2],[1,3]]
-    size = 5
+    loc_coords = [[8,1],[3,8],[5,5],[4,4]]
+    dest_coords = [[6,1],[0,9],[0,0],[1,1]]
+    size = 10
     env = Fair_Taxi_MDP(size=size, loc_coords=loc_coords, dest_coords=dest_coords,
-                        fuel=10, output_path='Taxi_MDP/run_')
+                        fuel=10000, output_path='Taxi_MDP/run_')
+    
     state = env.reset()
-    for _ in range(10):
+    done = False
+    while not done:
         action = env.action_space.sample()
-        env.step(action)
-    arr = [1,2,3]
-    print(arr.index(1))
+        next, reward, done, info = env.step(action)
+        env.step(4)
+        env.render()
         
     
         
