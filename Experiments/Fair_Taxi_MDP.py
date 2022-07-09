@@ -245,6 +245,7 @@ class Fair_Taxi_MDP(gym.Env):
         
 
 if __name__ == "__main__":
+    # For testing
     loc_coords = [[8,1],[3,8],[5,5],[4,4]]
     dest_coords = [[6,1],[0,9],[0,0],[1,1]]
     size = 10
