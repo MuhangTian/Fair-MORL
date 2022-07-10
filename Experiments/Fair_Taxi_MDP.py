@@ -1,5 +1,6 @@
 '''
-Taxi MDP environment: https://docs.google.com/document/d/16Ot75_Pw65V51QLKaXE1-ifJhQtf4AEkqZ0E87XbKrk/edit
+Taxi MDP environment designed for multi-objective reinforcement learning
+Description: https://docs.google.com/document/d/16Ot75_Pw65V51QLKaXE1-ifJhQtf4AEkqZ0E87XbKrk/edit
 '''
 import numpy as np
 import pandas as pd
@@ -20,9 +21,9 @@ class Fair_Taxi_MDP(gym.Env):
         self.window_size = 512
         self.loc_coords = np.array(loc_coords)
         self.dest_coords = np.array(dest_coords)  
-        self.share_dest = True if len(dest_coords) == 1 else False
+        self.share_dest = True if len(dest_coords) == 1 else False  # whether there is shared destination (not implemented)
         self.taxi_loc = None
-        self.pass_loc = 0   # 1 is in taxi
+        self.pass_loc = 0       # indicate whether passenger in taxi, 1 is in taxi
         self.pass_dest = None   # destination of the passenger in taxi
         self.pass_idx = None    # to keep track of index of location of the passenger
         self.fuel = fuel
@@ -49,7 +50,7 @@ class Fair_Taxi_MDP(gym.Env):
         '''
         self.metrics = []
         self.acc_reward = np.zeros(len(self.loc_coords))
-        self.pass_delivered_loc = np.zeros(len(loc_coords))
+        self.pass_delivered_loc = np.zeros(len(self.loc_coords))
         self.pass_delivered = 0
         
     
@@ -144,8 +145,11 @@ class Fair_Taxi_MDP(gym.Env):
         if action == 4: # pick
             if self.taxi_loc.tolist() in self.loc_coords.tolist() and self.pass_loc == 0:
                 self.pass_loc = 1   # Passenger now in taxi
-                self.pass_idx = self.loc_coords.tolist().index(self.taxi_loc.tolist()) # find destination
-                self.pass_dest = self.dest_coords[self.pass_idx]
+                self.pass_idx = self.loc_coords.tolist().index(self.taxi_loc.tolist()) # record origin
+                if self.share_dest == False:    # for multiple paired destinations
+                    self.pass_dest = self.dest_coords[self.pass_idx]
+                else:   # for single shared destination
+                    self.pass_dest = self.dest_coords[0]
             
             reward = np.zeros(len(self.loc_coords))     # NOTE: zero rewards for both valid and invalid pick?
         elif action == 5:   # drop
@@ -185,7 +189,21 @@ class Fair_Taxi_MDP(gym.Env):
         
     def encode(self, taxi_x, taxi_y, pass_loc):
         """
-        Encode state with taxi and passenger location into unique integer, used to index Q-table
+        Use current information in the state to encode into an unique integer, used to index Q-table
+
+        Parameters
+        ----------
+        taxi_x : int
+            x coordinate of taxi
+        taxi_y : int
+            y coordinate of taxi
+        pass_loc : int
+            whether passenger in taxi (0 for no, 1 for yes)
+
+        Returns
+        -------
+        code : int
+            unique integer encoded from current state information
         """
         code = np.ravel_multi_index([taxi_x, taxi_y, pass_loc], (self.size, self.size, 2))
         return code
@@ -222,18 +240,26 @@ class Fair_Taxi_MDP(gym.Env):
             loc_pos.append([label, label_rect])
         
         # Draw Destinations (red)
-        dest_pos = []
-        for i in range(len(self.dest_coords)):
-            loc = pygame.Rect(pix_square_size * self.dest_coords[i], (pix_square_size, pix_square_size),)
+        if self.share_dest == True: # for single destination, no labels
+            loc = pygame.Rect(pix_square_size * self.dest_coords[0], (pix_square_size, pix_square_size),)
             pygame.draw.rect(
                 surface = canvas,
                 color = (238,64,0),
                 rect = loc,
             )
-            label = font.render(str(i), True, (0,0,0))
-            label_rect = label.get_rect()
-            label_rect.center = loc.center
-            dest_pos.append([label, label_rect])
+        else: 
+            dest_pos = []
+            for i in range(len(self.dest_coords)):
+                loc = pygame.Rect(pix_square_size * self.dest_coords[i], (pix_square_size, pix_square_size),)
+                pygame.draw.rect(
+                    surface = canvas,
+                    color = (238,64,0),
+                    rect = loc,
+                )
+                label = font.render(str(i), True, (0,0,0))
+                label_rect = label.get_rect()
+                label_rect.center = loc.center
+                dest_pos.append([label, label_rect])
 
         # Draw Agent (yellow when no passenger, green when there is passenger with passenger index)
         if self.pass_idx == None:
@@ -275,29 +301,14 @@ class Fair_Taxi_MDP(gym.Env):
         self.window.blit(canvas, canvas.get_rect())
         if self.pass_idx != None: self.window.blit(pass_label, pass_label_rect)
         for i in range(len(self.loc_coords)): self.window.blit(loc_pos[i][0], loc_pos[i][1])
-        for i in range(len(self.loc_coords)): self.window.blit(dest_pos[i][0], dest_pos[i][1])
+        if self.share_dest == False:
+            for i in range(len(self.dest_coords)): self.window.blit(dest_pos[i][0], dest_pos[i][1])
+            
         pygame.event.pump()
         pygame.display.update()
-
         self.clock.tick(self.metadata["render_fps"]) # add a delay to keep the framerate stable
-        return
         
-
-if __name__ == "__main__":
-    # example
-    loc_coords = [[8,1],[3,8],[5,5],[4,4]]
-    dest_coords = [[6,1],[0,9],[0,0],[1,1]]
-    size = 10
-    env = Fair_Taxi_MDP(size=size, loc_coords=loc_coords, dest_coords=dest_coords,
-                        fuel=10000, fps=3, output_path='Taxi_MDP/run_')
-    
-    state = env.reset()
-    done = False
-    while not done:
-        action = env.action_space.sample()
-        next, reward, done, info = env.step(action)
-        env.step(4)
-        env.render()
+        return
         
     
         
