@@ -34,7 +34,7 @@ class Fair_Taxi_MDP(gym.Env):
         self.timesteps = 0
         self.metrics = []       # used to record values
         self.csv_num = 0
-        
+        # TODO: consider to add passenger destination into state space
         self.observation_space = spaces.Discrete(size*size*2)
         self.action_space = spaces.Discrete(6)
         self._action_to_direct = {0: np.array([0, 1]),
@@ -205,6 +205,7 @@ class Fair_Taxi_MDP(gym.Env):
         code : int
             unique integer encoded from current state information
         """
+        # TODO: consider to add passenger destination into state space
         code = np.ravel_multi_index([taxi_x, taxi_y, pass_loc], (self.size, self.size, 2))
         return code
     
