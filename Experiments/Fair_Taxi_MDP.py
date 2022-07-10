@@ -11,8 +11,10 @@ class Fair_Taxi_MDP(gym.Env):
     
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
     
-    def __init__(self, size, loc_coords, dest_coords, fuel, output_path) -> None:
+    def __init__(self, size, loc_coords, dest_coords, fuel, output_path, fps=4) -> None:
+    
         super().__init__()
+        self.metadata['render_fps'] = fps
         self.output_path = output_path
         self.size = size    # size of grid world NxN
         self.window_size = 512
@@ -34,8 +36,8 @@ class Fair_Taxi_MDP(gym.Env):
         
         self.observation_space = spaces.Discrete(size*size*2)
         self.action_space = spaces.Discrete(6)
-        self._action_to_direct = {0: np.array([0, -1]),
-                                  1: np.array([0, 1]),
+        self._action_to_direct = {0: np.array([0, 1]),
+                                  1: np.array([0, -1]),
                                   2: np.array([1, 0]),
                                   3: np.array([-1, 0])}
         self.window = None
@@ -51,15 +53,49 @@ class Fair_Taxi_MDP(gym.Env):
         self.pass_delivered = 0
         
     
-    def reset(self, seed=None):
-        '''
-        Initialize random state to begin with
-        '''
+    def reset(self, taxi_loc=None, pass_loc=None, pass_dest=None, seed=None):
+        """
+        Initialize random state (or a particular state when there are parameters)
+
+        Parameters
+        ----------
+        taxi_loc : array, optional
+            location coordinate of taxi, as an array, by default None
+        pass_loc : int, optional
+            whether taxi holds passenger, 0 means no, 1 means yes by default None
+        pass_dest : array, optional
+            destination coordinate of passenger in taxi, as an array, by default None
+        seed : int, optional
+            seed for randomization, by default None
+
+        Returns
+        -------
+        state : int
+            A given state encoded as an unique integer
+        """
         super().reset(seed=seed)
-        self.taxi_loc = self.np_random.integers(0, self.size, size=2)   # random taxi spawn location
-        self.pass_loc = 0   # passenger out of taxi
-        self.pass_dest = None
-        self.pass_idx = None
+        
+        if taxi_loc == None and pass_loc == None and pass_dest == None:   # when no parameters
+            self.taxi_loc = self.np_random.integers(0, self.size, size=2)   # random taxi spawn location
+            self.pass_loc = 0   # passenger out of taxi
+            self.pass_dest = None
+            self.pass_idx = None
+        else:   # with parameters
+            if taxi_loc != None and pass_loc == None and pass_dest == None:   # only taxi location
+                self.taxi_loc = np.array(taxi_loc)
+                self.pass_loc = 0
+                self.pass_dest = None
+                self.pass_idx = None
+            else:   # when taxi location and passenger is passed
+                if pass_loc == None or pass_loc == 0 or pass_dest == None: raise Exception('Invalid state')
+                elif type(pass_loc) != int or type(pass_dest) != list: raise TypeError()
+                elif len(pass_dest) != 2 or pass_loc not in [0,1]: raise ValueError()
+                
+                self.taxi_loc = np.array(taxi_loc)
+                self.pass_loc = pass_loc
+                self.pass_dest = np.array(pass_dest)
+                self.pass_idx = self.dest_coords.tolist().index(self.pass_dest.tolist())
+       
         self.pass_delivered = 0
         self.pass_delivered_loc = np.zeros(len(self.loc_coords))
         self.timesteps = 0
@@ -100,6 +136,9 @@ class Fair_Taxi_MDP(gym.Env):
         return 
         
     def step(self, action):
+        '''
+        Return reward, next state given current state and action (state transition)
+        '''
         if action < 0 or action > 5: raise Exception('Invalid Action')
         
         if action == 4: # pick
@@ -110,13 +149,13 @@ class Fair_Taxi_MDP(gym.Env):
             
             reward = np.zeros(len(self.loc_coords))     # NOTE: zero rewards for both valid and invalid pick?
         elif action == 5:   # drop
-            if np.array_equal(self.taxi_loc, self.pass_dest) and self.pass_loc == 1: 
+            if np.array_equal(self.taxi_loc, self.pass_dest) and self.pass_loc == 1:
+                reward = self.generate_reward()
                 self.pass_loc = 0
                 self.pass_dest = None
                 self.pass_delivered += 1
                 self.pass_delivered_loc[self.pass_idx] += 1
                 self.pass_idx = None
-                reward = self.generate_reward()
             else:
                 self.pass_loc = 0
                 self.pass_dest = None
@@ -245,12 +284,12 @@ class Fair_Taxi_MDP(gym.Env):
         
 
 if __name__ == "__main__":
-    # For testing
+    # example
     loc_coords = [[8,1],[3,8],[5,5],[4,4]]
     dest_coords = [[6,1],[0,9],[0,0],[1,1]]
     size = 10
     env = Fair_Taxi_MDP(size=size, loc_coords=loc_coords, dest_coords=dest_coords,
-                        fuel=10000, output_path='Taxi_MDP/run_')
+                        fuel=10000, fps=3, output_path='Taxi_MDP/run_')
     
     state = env.reset()
     done = False
