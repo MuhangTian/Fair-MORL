@@ -2,6 +2,7 @@
 Taxi MDP environment designed for multi-objective reinforcement learning
 Description: https://docs.google.com/document/d/16Ot75_Pw65V51QLKaXE1-ifJhQtf4AEkqZ0E87XbKrk/edit
 '''
+from multiprocessing.sharedctypes import Value
 import numpy as np
 import pandas as pd
 import gym
@@ -12,15 +13,20 @@ class Fair_Taxi_MDP(gym.Env):
     
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
     
-    def __init__(self, size, loc_coords, dest_coords, fuel, output_path, fps=4) -> None:
-    
+    def __init__(self, size, loc_coords, dest_coords, fuel, output_path, fps=4):
         super().__init__()
+        
+        self.loc_coords = np.array(loc_coords)
+        self.dest_coords = np.array(dest_coords)
+        
+        if np.shape(self.loc_coords)[1] != 2 or np.shape(self.dest_coords)[1] != 2: # check coordinates
+            raise ValueError('Wrong dimension for coordinates')
+        if len(self.loc_coords) != len(self.dest_coords): raise ValueError('Invalid location destination pair')
+        
         self.metadata['render_fps'] = fps
         self.output_path = output_path
         self.size = size    # size of grid world NxN
         self.window_size = 512
-        self.loc_coords = np.array(loc_coords)
-        self.dest_coords = np.array(dest_coords)  
         self.share_dest = True if len(dest_coords) == 1 else False  # whether there is shared destination (not implemented)
         self.taxi_loc = None
         self.pass_loc = 0       # indicate whether passenger in taxi, 1 is in taxi
@@ -34,8 +40,8 @@ class Fair_Taxi_MDP(gym.Env):
         self.timesteps = 0
         self.metrics = []       # used to record values
         self.csv_num = 0
-        # TODO: consider to add passenger destination into state space
-        self.observation_space = spaces.Discrete(size*size*2)
+        
+        self.observation_space = spaces.Discrete(size*size*2*(len(self.dest_coords)+1))
         self.action_space = spaces.Discrete(6)
         self._action_to_direct = {0: np.array([0, 1]),
                                   1: np.array([0, -1]),
@@ -100,7 +106,7 @@ class Fair_Taxi_MDP(gym.Env):
         self.pass_delivered = 0
         self.pass_delivered_loc = np.zeros(len(self.loc_coords))
         self.timesteps = 0
-        state = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc)
+        state = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc, self.pass_idx)
         
         return state
     
@@ -175,7 +181,7 @@ class Fair_Taxi_MDP(gym.Env):
         self.acc_reward += reward
         
         done = True if self.timesteps == self.fuel else False  # terminal state, when fuel runs out
-        obs = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc)    # next state
+        obs = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc, self.pass_idx)    # next state
         info = self._get_info()
         self._update_metrics()
         if done == True: self._output_csv()
@@ -187,7 +193,7 @@ class Fair_Taxi_MDP(gym.Env):
         reward[self.pass_idx] = 30     # dimension of the origin location receive reward
         return reward
         
-    def encode(self, taxi_x, taxi_y, pass_loc):
+    def encode(self, taxi_x, taxi_y, pass_loc, pass_idx):
         """
         Use current information in the state to encode into an unique integer, used to index Q-table
 
@@ -199,15 +205,21 @@ class Fair_Taxi_MDP(gym.Env):
             y coordinate of taxi
         pass_loc : int
             whether passenger in taxi (0 for no, 1 for yes)
-
+        pass_idx : int or Nonetype
+            indicates destination of current passenger in taxi, None for no passenger
         Returns
         -------
         code : int
             unique integer encoded from current state information
         """
-        # TODO: consider to add passenger destination into state space
-        code = np.ravel_multi_index([taxi_x, taxi_y, pass_loc], (self.size, self.size, 2))
+        # if no passenger, index is highest possible index + 1
+        if pass_idx == None: pass_idx = len(self.dest_coords)
+        code = np.ravel_multi_index([taxi_x, taxi_y, pass_loc, pass_idx], 
+                                    (self.size, self.size, 2, len(self.dest_coords)+1)
+                                    )
         return code
+
+    def decode(self, code): return np.unravel_index(code, (self.size, self.size, 2, len(self.dest_coords)+1)) 
     
     def render(self, mode='human'):
         '''
