@@ -18,9 +18,19 @@ class Fair_Taxi_MDP(gym.Env):
         self.loc_coords = np.array(loc_coords)
         self.dest_coords = np.array(dest_coords)
         
-        if np.shape(self.loc_coords)[1] != 2 or np.shape(self.dest_coords)[1] != 2: # check coordinates
-            raise ValueError('Wrong dimension for coordinates')
+        try:    # check coordinates
+            if np.shape(self.loc_coords)[1] != 2 or np.shape(self.dest_coords)[1] != 2:
+                raise ValueError('Wrong dimension for coordinates')
+        except: raise ValueError('Use 2D array for coordinates')
+        
         if len(self.loc_coords) != len(self.dest_coords): raise ValueError('Invalid location destination pair')
+        
+        check = set()
+        for i in range(len(self.loc_coords)):
+            check.add(np.square(self.loc_coords[i,0]) + np.square(self.loc_coords[i,1]))
+            check.add(np.square(self.dest_coords[i,0]) + np.square(self.dest_coords[i,1]))
+        if len(check) != len(self.loc_coords) + len(self.dest_coords):
+            raise ValueError('Coordinate array(s) contain repeats')
         
         self.metadata['render_fps'] = fps
         self.output_path = output_path
@@ -195,7 +205,7 @@ class Fair_Taxi_MDP(gym.Env):
     def encode(self, taxi_x, taxi_y, pass_loc, pass_idx):
         """
         Use current information in the state to encode into an unique integer, used to index Q-table
-
+        
         Parameters
         ----------
         taxi_x : int
@@ -206,6 +216,7 @@ class Fair_Taxi_MDP(gym.Env):
             whether passenger in taxi (0 for no, 1 for yes)
         pass_idx : int or Nonetype
             indicates destination of current passenger in taxi, None for no passenger
+            
         Returns
         -------
         code : int
