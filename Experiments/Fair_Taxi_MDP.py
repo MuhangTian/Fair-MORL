@@ -22,15 +22,10 @@ class Fair_Taxi_MDP(gym.Env):
             if np.shape(self.loc_coords)[1] != 2 or np.shape(self.dest_coords)[1] != 2:
                 raise ValueError('Wrong dimension for coordinates')
         except: raise ValueError('Use 2D array for coordinates')
-        
         if len(self.loc_coords) != len(self.dest_coords): raise ValueError('Invalid location destination pair')
-        
-        check = set()
-        for i in range(len(self.loc_coords)):
-            check.add(np.square(self.loc_coords[i,0]) + np.square(self.loc_coords[i,1]))
-            check.add(np.square(self.dest_coords[i,0]) + np.square(self.dest_coords[i,1]))
-        if len(check) != len(self.loc_coords) + len(self.dest_coords):
-            raise ValueError('Coordinate array(s) contain repeats')
+        for loc in self.loc_coords:
+            for dest in self.dest_coords:
+                if np.array_equal(loc, dest): raise ValueError('Contain repeated coordinate(s)')
         
         self.metadata['render_fps'] = fps
         self.output_path = output_path
@@ -193,7 +188,6 @@ class Fair_Taxi_MDP(gym.Env):
         obs = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc, self.pass_idx)    # next state
         info = self._get_info()
         self._update_metrics()
-        if done == True: self._output_csv()
                 
         return obs, reward, done, info
     
