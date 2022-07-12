@@ -132,7 +132,7 @@ if __name__ == '__main__':
     size = 5
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
-    fuel = 1000000
+    fuel = 10000000
     nonfair_env, fair_env, random_env = create_envs(size, loc_coords, dest_coords, fuel, fps=8)
     
     # run_Q_learning(episodes=1000, alpha=0.1, epsilon=0.3, gamma=0.99)
@@ -141,7 +141,7 @@ if __name__ == '__main__':
     
     # run_NSW_Q_learning(episodes=1, alpha=0.1, epsilon=0.3, gamma=0.99, nsw_lambda=0.01, init_val=30)
     nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2.npy')
-    evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,4], runs=5)
+    evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[4,0], runs=5)
     # evaluate_Q_learning(nsw_Q_table, taxi_loc=[2,4], runs=5)
     
 
