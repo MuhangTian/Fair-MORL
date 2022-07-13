@@ -9,10 +9,27 @@ import pygame
 from gym import spaces
 
 class Fair_Taxi_MDP(gym.Env):
+
     
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
     
     def __init__(self, size, loc_coords, dest_coords, fuel, output_path, fps=4):
+        """
+        Parameters
+        ----------
+        size : int
+            size of the grid world, if size = 5, world is a 5 by 5 grid
+        loc_coords : 2D array
+            arrays of coordinates of locations
+        dest_coords : 2D array
+            arrays of coordinates of destinations
+        fuel : int
+            a given number of timesteps for the agent to run
+        output_path : str
+            location where .csv file will be stored when calling _output_csv()
+        fps : int, optional
+            frame rate of render() method, by default 4
+        """
         super().__init__()
         
         self.loc_coords = np.array(loc_coords)
