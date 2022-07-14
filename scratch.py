@@ -1,4 +1,4 @@
-# import numpy as np
+import numpy as np
 # from Experiments.Fair_Taxi_MDP import Fair_Taxi_MDP
 
 # size = 5
@@ -12,4 +12,5 @@
 # for _ in range(10000):
 #     env.step(env.action_space.sample())
 #     env.render()
-print('Hello')
+arr = [1,2,3]
+np.save('Test', arr)
