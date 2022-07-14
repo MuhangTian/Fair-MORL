@@ -1,6 +1,8 @@
 #!/bin/sh
 #SBATCH --job-name=TAXI1
 #SBATCH --nodes=1
+#SBATCH --mail-type=begin        # send email when job begins
+#SBATCH --mail-type=end          # send email when job ends
 #SBATCH --mail-user=muhang.tian@duke.edu
 #SBATCH --ntasks=1                    
 #SBATCH --cpus-per-task=32            # Number of CPU cores per task
