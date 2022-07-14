@@ -168,6 +168,7 @@ def create_envs(size, loc_coords, dest_coords, fuel, fps=4):
     return nonfair_env, fair_env, random_env
 
 if __name__ == '__main__':
+    # TODO: add command line arguments so that multiple experiments can be run at the same time in cluster
     size = 5
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
