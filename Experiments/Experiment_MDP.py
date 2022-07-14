@@ -35,11 +35,12 @@ def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99):
 
 def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lambda=0.01, init_val=0):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)])
-    Q_table = Q_table + init_val
-    count = 0
-    R_acc = np.zeros(len(fair_env.loc_coords))
+    # Q_table = Q_table + init_val
+    Q_table[:, :4, :] = init_val
+    # count = 0
     
-    for _ in range(episodes):
+    for i in range(1, episodes+1):
+        R_acc = np.zeros(len(fair_env.loc_coords))
         state = fair_env.reset()
         done = False
         while not done:
@@ -49,17 +50,54 @@ def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lamb
                 action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
                 
             next_state, reward, done, info = fair_env.step(action)
-            max_action = argmax_nsw(reward, gamma*Q_table[next_state], nsw_lambda)
+            max_action = argmax_nsw(0, gamma*Q_table[next_state], nsw_lambda)
             new_value = Q_table[state, action] + alpha*(reward + gamma*Q_table[next_state, max_action] - Q_table[state, action])
             
             Q_table[state, action] = new_value
             state = next_state
             R_acc += reward
-            count += 1
-            if count%1000 == 0:
-                print('Accumulated reward at step {}: {}'.format(count, R_acc))
         
-    np.save(file='Taxi_MDP_Trained_Q-Table/NSW_size{}_locs{}'.format(fair_env.size,len(fair_env.loc_coords)),
+        if i%1000 == 0:
+            print('Accumulated reward at episode {}: {}'.format(i, R_acc))
+        
+    np.save(file='Taxi_MDP_Trained_Q-Table/NSW_size{}_locs{}_without_reward_{}'.format(fair_env.size,len(fair_env.loc_coords), 'different initial value'),
+            arr=Q_table)
+    print('FINISH TRAINING NSW Q LEARNING')
+    return Q_table
+
+def run_NSW_SARSA(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lambda=0.01, init_val=0):
+    Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)])
+    Q_table = Q_table + init_val
+    #count = 0
+    R_acc = np.zeros(len(fair_env.loc_coords))
+    
+    for _ in range(episodes):
+        state = fair_env.reset()
+        done = False
+        if np.random.uniform(0,1) < epsilon:
+            action = fair_env.action_space.sample()
+        else:
+            action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+            
+        while not done:
+            next_state, reward, done, info = fair_env.step(action)
+            
+            if np.random.uniform(0,1) < epsilon:
+                next_action = fair_env.action_space.sample()
+            else:
+                next_action = argmax_nsw(R_acc, gamma*Q_table[next_state], nsw_lambda)
+            
+            new_value = Q_table[state, action] + alpha*(reward + gamma*Q_table[next_state, next_action] - Q_table[state, action])
+            
+            Q_table[state, action] = new_value
+            state = next_state
+            action = next_action
+            R_acc += reward
+            # count += 1
+            # if count%1000 == 0:
+            #    #  print('Accumulated reward at step {}: {}'.format(count, R_acc))
+        
+    np.save(file='Taxi_MDP_Trained_Q-Table/NSW_size{}_locs{}_SARSA_{}'.format(fair_env.size,len(fair_env.loc_coords), int(fair_env.fuel/1000000)),
             arr=Q_table)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
@@ -98,12 +136,13 @@ def evaluate_Q_learning(Q_table, taxi_loc=None, runs=20):
         # nonfair_env._output_csv()
     return print("FINISH EVALUATE Q LEARNING")
 
-def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, runs=20, nsw_lambda=0.01, gamma=1):
+def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
     for _ in range(runs):
         fair_env._clean_metrics()
         done = False
         R_acc = np.zeros(vec_dim)
-        state = fair_env.reset(taxi_loc)
+        pass_loc = None if pass_dest == None else 1
+        state = fair_env.reset(taxi_loc, pass_loc, pass_dest)
         fair_env.render()
         
         while not done:
@@ -132,17 +171,21 @@ if __name__ == '__main__':
     size = 5
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
-    fuel = 100000000
-    nonfair_env, fair_env, random_env = create_envs(size, loc_coords, dest_coords, fuel, fps=15)
+    fuel = 10000
+    nonfair_env, fair_env, random_env = create_envs(size, loc_coords, dest_coords, fuel, fps=10)
     
     # run_Q_learning(episodes=1000, alpha=0.1, epsilon=0.3, gamma=0.99)
     # Q_table = np.load('Taxi_MDP_Trained_Q-table/Qlearning_size5_locs2.npy')
-    # evaluate_Q_learning(Q_table, taxi_loc=[0,0], runs=5)
+    # evaluate_Q_learning(Q_table, taxi_loc=[4,4], runs=5)
     
-    # run_NSW_Q_learning(episodes=1, alpha=0.1, epsilon=0.3, gamma=0.99, nsw_lambda=0.01, init_val=30)
-    nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_100.npy')
-    evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], runs=1)
-    # evaluate_Q_learning(nsw_Q_table, taxi_loc=[2,4], runs=5)
+    run_NSW_Q_learning(episodes=10000, alpha=0.1, epsilon=0.3, gamma=0.9, nsw_lambda=0.01, init_val=30)
+    # nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_without_reward_10.npy')
+    # evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], pass_dest=None, runs=1)
+    
+    # run_NSW_SARSA(episodes=1, alpha=0.1, epsilon=0.3, gamma=0.99, nsw_lambda=0.01, init_val=30)
+    # nsw_sarsa_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_SARSA_10.npy')
+    # evaluate_NSW_Q_learning(nsw_sarsa_Q_table, vec_dim=2, taxi_loc=None, pass_dest=None, runs=1)
+    
     
 
 
