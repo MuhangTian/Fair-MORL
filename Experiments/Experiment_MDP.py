@@ -57,7 +57,7 @@ def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lamb
             state = next_state
             R_acc += reward
         
-        if i%1000 == 0:
+        if i%100 == 0:
             print('Accumulated reward at episode {}: {}'.format(i, R_acc))
         
     np.save(file='Taxi_MDP_Trained_Q-Table/NSW_size{}_locs{}_without_reward_{}'.format(fair_env.size,len(fair_env.loc_coords), 'different initial value'),
