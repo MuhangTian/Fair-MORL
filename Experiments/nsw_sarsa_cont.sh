@@ -7,7 +7,7 @@
 #SBATCH --ntasks=1                    
 #SBATCH --cpus-per-task=4            
 #SBATCH --mem-per-cpu=6g
-#SBATCH --time=10:00:00               # Time limit hrs:min:sec
+#SBATCH --time=24:00:00               # Time limit hrs:min:sec
 #SBATCH --output=CONT_SARSA.out.%J
 #SBATCH --error=CONT_SARSA.err.%J
 module load python3
