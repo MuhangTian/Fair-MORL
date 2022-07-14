@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --job-name=TAXI1
+#SBATCH --job-name=NSW_SARSA
 #SBATCH --nodes=1
 #SBATCH --mail-type=begin        # send email when job begins
 #SBATCH --mail-type=end          # send email when job ends
@@ -11,4 +11,4 @@
 #SBATCH --output=hostname.out.%J
 #SBATCH --error=hostname.err.%J
 module load python3
-python3 Experiment_MDP.py 
+python3 nsw_sarsa_taxi.py
