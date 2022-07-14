@@ -178,7 +178,7 @@ if __name__ == '__main__':
     # Q_table = np.load('Taxi_MDP_Trained_Q-table/Qlearning_size5_locs2.npy')
     # evaluate_Q_learning(Q_table, taxi_loc=[4,4], runs=5)
     
-    sun_NSW_Q_learning(episodes=10000, alpha=0.1, epsilon=0.3, gamma=0.9, nsw_lambda=0.01, init_val=30)
+    run_NSW_Q_learning(episodes=10000, alpha=0.1, epsilon=0.3, gamma=0.9, nsw_lambda=0.01, init_val=30)
     # nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_without_reward_10.npy')
     # evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], pass_dest=None, runs=1)
     
