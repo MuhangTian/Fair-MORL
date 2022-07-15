@@ -4,8 +4,7 @@ from Fair_Taxi_MDP import Fair_Taxi_MDP
 
 def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lambda=0.01, init_val=0, file_name=''):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)])
-    # Q_table = Q_table + init_val
-    Q_table[:, :4, :] = init_val
+    Q_table = Q_table + init_val
     # count = 0
     
     for i in range(1, episodes+1):
@@ -19,7 +18,7 @@ def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lamb
                 action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
                 
             next_state, reward, done = fair_env.step(action)
-            max_action = argmax_nsw(0, gamma*Q_table[next_state], nsw_lambda)
+            max_action = argmax_nsw(reward, gamma*Q_table[next_state], nsw_lambda)
             new_value = Q_table[state, action] + alpha*(reward + gamma*Q_table[next_state, max_action] - Q_table[state, action])
             
             Q_table[state, action] = new_value
@@ -29,7 +28,7 @@ def run_NSW_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lamb
         if i%100 == 0:
             print('Accumulated reward at episode {}: {}'.format(i, R_acc))
         
-    np.save(file='taxi_q_tables/NSW_size{}_locs{}_without_reward_different_init_val{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
+    np.save(file='taxi_q_tables/NSW_size{}_locs{}_{}_{}'.format(fair_env.size,len(fair_env.loc_coords), 500, file_name),
             arr=Q_table)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
@@ -80,7 +79,7 @@ if __name__ == '__main__':
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.3, required=False, help="Exploration rate.\n")
     prs.add_argument("-g", dest="gamma", type=float, default=0.99, required=False, help="Discount rate\n")
-    prs.add_argument("-nl", dest="nsw_lambda", type=float, default=0.01, required=False, help="Smoothing factor\n")
+    prs.add_argument("-nl", dest="nsw_lambda", type=float, default=1e-4, required=False, help="Smoothing factor\n")
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
@@ -96,7 +95,7 @@ if __name__ == '__main__':
     run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 
                        gamma=args.gamma, nsw_lambda=args.nsw_lambda, init_val=args.init_val,
                        file_name=args.file_name)
-    # nsw_Q_table = np.load('Experiments/taxi_q_tables/NSW_size5_locs2_SARSA.npy')
+    # nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_without_reward_10.npy')
     # evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], pass_dest=None, runs=1)
     
     

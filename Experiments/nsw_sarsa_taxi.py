@@ -18,7 +18,7 @@ def run_NSW_SARSA(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, nsw_lambda=0.
             action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
             
         while not done:
-            next_state, reward, done, info = fair_env.step(action)
+            next_state, reward, done = fair_env.step(action)
             
             if np.random.uniform(0,1) < epsilon:
                 next_action = fair_env.action_space.sample()

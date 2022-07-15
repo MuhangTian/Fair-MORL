@@ -10,7 +10,6 @@ from gym import spaces
 
 class Fair_Taxi_MDP(gym.Env):
 
-    
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
     
     def __init__(self, size, loc_coords, dest_coords, fuel, output_path, fps=4):
@@ -203,10 +202,10 @@ class Fair_Taxi_MDP(gym.Env):
         
         done = True if self.timesteps == self.fuel else False  # terminal state, when fuel runs out
         obs = self.encode(self.taxi_loc[0], self.taxi_loc[1], self.pass_loc, self.pass_idx)    # next state
-        info = self._get_info()
-        self._update_metrics()
+        # info = self._get_info()
+        # self._update_metrics()    # comment out temporarily for faster run time
                 
-        return obs, reward, done, info
+        return obs, reward, done
     
     def generate_reward(self):  # generate reward based on traveled distance, with a floor of 0
         reward = np.zeros(len(self.loc_coords))
