@@ -60,5 +60,5 @@ if __name__ == '__main__':
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
     env = Fair_Taxi_MDP(size, loc_coords, dest_coords, fuel, '', 10)
-    q_table = np.load('Experiments/taxi_q_tables/NSW_size5_locs2_without_reward_different_init_val.npy')
-    evaluate_NSW_Q_learning(q_table, vec_dim=2, taxi_loc=[0,0], pass_dest=None, runs=1)
+    q_table = np.load('Experiments/taxi_q_tables/NSW_size5_locs2_500_2.npy')
+    evaluate_NSW_Q_learning(q_table, vec_dim=2, taxi_loc=[0,4], pass_dest=None, runs=1)
