@@ -29,20 +29,21 @@ def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, run
         env.render()
         
         while not done:
-            action = argmax_nsw(0, gamma*Q_table[state], nsw_lambda)
+            action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
             next, reward, done = env.step(action)
             # reward = np.sum(reward) # for scalar reward with NSW Q-table
             env.render()
             state = next
-            #R_acc += reward
+            R_acc += reward
         #env._output_csv()
     return print("FINSIH EVALUATE NSW Q LEARNING")
 
-def evaluate_Q_learning(Q_table, taxi_loc=None, runs=20):
+def evaluate_Q_learning(Q_table, taxi_loc=None, pass_dest=None, runs=20):
     for i in range(runs):
         env._clean_metrics() # clean values before generating results for each run
         done = False
-        state = env.reset(taxi_loc)
+        pass_loc = None if pass_dest == None else 1
+        state = env.reset(taxi_loc, pass_loc, pass_dest)
         env.render()
         
         while not done:
@@ -54,11 +55,16 @@ def evaluate_Q_learning(Q_table, taxi_loc=None, runs=20):
         # env._output_csv()
     return print("FINISH EVALUATE Q LEARNING")
 
+def check_all_locs():
+    
+
 if __name__ == '__main__':
     size = 5
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
     env = Fair_Taxi_MDP(size, loc_coords, dest_coords, fuel, '', 10)
-    q_table = np.load('Experiments/taxi_q_tables/NSW_size5_locs2_500_2.npy')
-    evaluate_NSW_Q_learning(q_table, vec_dim=2, taxi_loc=[0,4], pass_dest=None, runs=1)
+    q_table = np.load('Experiments/taxi_q_tables/QL_Penalty_size5_locs2.npy')
+    #evaluate_NSW_Q_learning(q_table, vec_dim=2, taxi_loc=[0,4], pass_dest=None, runs=1)
+    #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
+    evaluate_Q_learning(q_table, taxi_loc=[1,3], pass_dest=None, runs=1)

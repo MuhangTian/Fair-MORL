@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
 
-def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, loss_level, file_name):
+def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, file_name):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
     Num = np.full(fair_env.observation_space.n, epsilon, dtype=float)
     Q_table = Q_table + init_val
@@ -35,7 +35,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                 loss = np.sum(np.abs(Q_table - old_table))
                 loss_data.append(loss)
                 print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
-                if loss < loss_level: break
+                if loss < tolerance: break
                 old_table = np.copy(Q_table)
                 
     np.save(file='taxi_q_tables/NSW_Cont_Penalty_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
@@ -95,7 +95,7 @@ if __name__ == '__main__':
     prs.add_argument("-nl", dest="nsw_lambda", type=float, default=1e-4, required=False, help="Smoothing factor\n")
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     prs.add_argument("-d", dest="dim_factor", type=float, default=0.9, required=False, help="Diminish factor for epsilon\n")
-    prs.add_argument("-l", dest="loss_level", type=float, default=1e-20, required=False, help="Loss threshold for Q-values between each episode\n")
+    prs.add_argument("-t", dest="tolerance", type=float, default=1e-10, required=False, help="Loss threshold for Q-values between each episode\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
     
@@ -109,7 +109,7 @@ if __name__ == '__main__':
     
     run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 
                        gamma=args.gamma, nsw_lambda=args.nsw_lambda, init_val=args.init_val,
-                       dim_factor=args.dim_factor, loss_level=args.loss_level, file_name=args.file_name)
+                       dim_factor=args.dim_factor, tolerance=args.tolerance, file_name=args.file_name)
     # nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_without_reward_10.npy')
     # evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], pass_dest=None, runs=1)
     
