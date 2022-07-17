@@ -2,9 +2,10 @@ import numpy as np
 import argparse
 from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
 
-def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, init_val=0, loss_level=1e-20):
+def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, init_val=0, tolerance=1e-10):
     Q_table = np.zeros([nonfair_env.observation_space.n, nonfair_env.action_space.n])
     Q_table = Q_table + init_val
+    loss_data = []
     
     for i in range(1, episodes+1):
         state = nonfair_env.reset()
@@ -28,11 +29,17 @@ def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, init_val=0, 
             state = next_state
 
         loss = np.sum(np.abs(Q_table - old_table))
-        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, nonfair_env.acc_reward, loss))
-        if loss < loss_level: break
+        loss_data.append(loss)
+        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, nonfair_env.timesteps, loss))
+        if loss < tolerance:
+            loss_count += 1
+            if loss_count == 10: break  # need to be smaller for consecutive loops to satisfy early break
+        else: loss_count = 0
         
-    np.save(file='Experiments/taxi_q_tables/Qlearning_Penalty_size{}_locs{}'.format(nonfair_env.size, len(nonfair_env.loc_coords)),
+    np.save(file='taxi_q_tables/QL_Penalty_size{}_locs{}'.format(nonfair_env.size, len(nonfair_env.loc_coords)),
             arr=Q_table)
+    np.save(file='taxi_q_tables/QL_Penalty_size{}_locs{}_loss'.format(nonfair_env.size, len(nonfair_env.loc_coords)),
+            arr=loss_data)
     print('FINISH TRAINING Q LEARNING')
     return Q_table
 
@@ -42,8 +49,8 @@ if __name__ == '__main__':
     prs.add_argument("-f", dest="fuel", type=int, default=10000, required=False, help="Timesteps each episode\n")
     prs.add_argument("-ep", dest="episodes", type=int, default=10000, required=False, help="Episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
-    prs.add_argument("-e", dest="epsilon", type=float, default=0.3, required=False, help="Exploration rate.\n")
-    prs.add_argument("-g", dest="gamma", type=float, default=0.99, required=False, help="Discount rate\n")
+    prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
+    prs.add_argument("-g", dest="gamma", type=float, default=0.95, required=False, help="Discount rate\n")
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     args = prs.parse_args()
     

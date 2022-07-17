@@ -1,3 +1,4 @@
+'''Evaluation of trained Q tables by playing the game'''
 import numpy as np
 from Fair_Taxi_MDP import Fair_Taxi_MDP
 
@@ -19,11 +20,11 @@ def nsw(vec, nsw_lambda):
     vec = vec + nsw_lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
-def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
+def evaluate_NSW_Q_learning(Q_table, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
     for _ in range(runs):
         env._clean_metrics()
         done = False
-        R_acc = np.zeros(vec_dim)
+        R_acc = np.zeros(len(env.loc_coords))
         pass_loc = None if pass_dest == None else 1
         state = env.reset(taxi_loc, pass_loc, pass_dest)
         env.render()
@@ -47,7 +48,6 @@ def evaluate_Q_learning(Q_table, taxi_loc=None, pass_dest=None, runs=20):
         env.render()
         
         while not done:
-            num = Q_table[state]
             action = np.argmax(Q_table[state])
             next, reward, done = env.step(action)
             env.render()
@@ -55,10 +55,35 @@ def evaluate_Q_learning(Q_table, taxi_loc=None, pass_dest=None, runs=20):
         # env._output_csv()
     return print("FINISH EVALUATE Q LEARNING")
 
-def check_all_locs():
-    # TODO: write a function that can check all initial locations work on for given Q table
-    # if not, return the list of initial locations that don't work
-    return
+def check_all_locs(q_table, size, eval_steps, gamma, nsw, nsw_lambda=1e-4):
+    invalid, prev, valid = [], 0, []
+    for i in range(size):
+        for j in range(size):
+            count = 0
+            R_acc = np.zeros(len(env.loc_coords))
+            state = env.reset([i,j])
+            prev = state
+            for _ in range(eval_steps):
+                num = q_table[state]
+                if nsw == False:
+                    action = np.argmax(gamma*q_table[state])
+                else:
+                    action = argmax_nsw(R_acc, gamma*q_table[state], nsw_lambda)
+                next, reward, done = env.step(action)
+                state = next
+                if state == prev: count += 1
+                else: count = 0
+                if count == 5: 
+                    invalid.append([i,j])    # initial location that doesn't work
+                    break
+                prev = state
+                if nsw == True: R_acc += reward
+            if count < 5: valid.append([i,j]) # append valid initial states
+            
+    if len(invalid) == 0: return print('All initial locations WORK')
+    elif len(invalid) == size*size: return print('All initial locations FAILED')
+    elif len(invalid) >= int(size*size/2): print('These initial locations WORK: {}'.format(valid))
+    else: return print('These initial locations FAIL: {}'.format(invalid))
 
 if __name__ == '__main__':
     size = 5
@@ -66,7 +91,8 @@ if __name__ == '__main__':
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
     env = Fair_Taxi_MDP(size, loc_coords, dest_coords, fuel, '', 10)
-    q_table = np.load('Experiments/taxi_q_tables/QL_Penalty_size5_locs2.npy')
-    #evaluate_NSW_Q_learning(q_table, vec_dim=2, taxi_loc=[0,4], pass_dest=None, runs=1)
+    q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
+    #evaluate_NSW_Q_learning(q_table, taxi_loc=[1,0], pass_dest=None, nsw_lambda=1e-4, gamma=0.95, runs=1)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
-    evaluate_Q_learning(q_table, taxi_loc=[1,3], pass_dest=None, runs=1)
+    #evaluate_Q_learning(q_table, taxi_loc=[1,3], pass_dest=None, runs=1)
+    check_all_locs(q_table, size, eval_steps=10000, gamma=0.95, nsw=False)
