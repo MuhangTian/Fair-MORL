@@ -37,7 +37,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                 print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
                 if loss < tolerance:
                     loss_count += 1
-                    if loss_count == 5: break # need to be smaller for consecutive loops to satisfy early break
+                    if loss_count == 10: break # need to be smaller for consecutive loops to satisfy early break
                 else: loss_count = 0
                 old_table = np.copy(Q_table)
                 
