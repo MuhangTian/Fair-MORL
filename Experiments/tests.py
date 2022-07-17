@@ -1,4 +1,5 @@
 import numpy as np
+from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
 from Fair_Taxi_MDP import Fair_Taxi_MDP
 
 '''Test MDP environment with mannual actions'''
@@ -20,11 +21,11 @@ from Fair_Taxi_MDP import Fair_Taxi_MDP
 #     env.render()
 
 '''Test encode method and total possible states'''
-size = 100
-location_coordinates = np.arange(16)
-destination_coordinates = np.arange(16)
-env = Fair_Taxi_MDP(size=size, loc_coords=location_coordinates, dest_coords=destination_coordinates,
-                    fuel=26, fps=2, output_path='Taxi_MDP/run_')
+# size = 100
+# location_coordinates = np.arange(16)
+# destination_coordinates = np.arange(16)
+# env = Fair_Taxi_MDP(size=size, loc_coords=location_coordinates, dest_coords=destination_coordinates,
+#                     fuel=26, fps=2, output_path='Taxi_MDP/run_')
 
 # arr = []
 # for i in range(size):
@@ -53,4 +54,46 @@ env = Fair_Taxi_MDP(size=size, loc_coords=location_coordinates, dest_coords=dest
 #     obs, reward, done, info = env.step(action)
 #     arr.append(obs)
 # print(len(set(arr)))
+
+'''Test taxi environment with penalty'''
+size = 5
+loc_coords = [[0,0], [3,2]]
+dest_coords = [[0,4], [3,3]]
+fuel = 100
+
+env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
+                    output_path='Taxi_MDP/NSW_Q_learning/run_', fps=1)
+
+# env.reset([2,2])
+# env.render()
+# next, reward, done = env.step(4) # pick
+# env.render()
+# print(reward)
+# next, reward, done = env.step(5) # drop
+# env.render()
+# print(reward)
+# next, reward, done = env.step(2) # right
+# env.render()
+# next, reward, done = env.step(5) # drop
+# env.render()
+# print(reward)
+# next, reward, done = env.step(4) # pick
+# env.render()
+# next, reward, done = env.step(0) # down
+# env.render()
+# next, reward, done = env.step(4) # pick
+# env.render()
+# print(reward)
+# next, reward, done = env.step(5) # drop
+# env.render()
+# print(reward)
+
+state = env.reset([3,3], 1, [3,3])
+env.render()
+next, reward, done = env.step(5)
+env.render()
+print(reward)
+
+
+
 

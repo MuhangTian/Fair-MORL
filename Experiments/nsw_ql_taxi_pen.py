@@ -1,7 +1,7 @@
-'''NSW Q learning without R included in argmax, same initial values'''
+'''NSW Q learning without R included in argmax, same initial values, with penalty environment'''
 import numpy as np
 import argparse
-from Fair_Taxi_MDP import Fair_Taxi_MDP
+from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
 
 def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, loss_level, file_name):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
@@ -30,17 +30,15 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
             Q_table[state, action] = new_value
             state = next_state
             R_acc += reward
-            
-            if fair_env.timesteps % 10000 == 0 and fair_env.timesteps != 0:      
-                loss = np.sum(np.abs(Q_table - old_table)) # calculate loss for fixed interval of steps
-                loss_data.append(loss)
-                print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
-                if loss < loss_level: break
-                old_table = np.copy(Q_table)
         
-    np.save(file='taxi_q_tables/NSW_size{}_locs{}_{}_{}'.format(fair_env.size,len(fair_env.loc_coords), 500, file_name),
+        loss = np.sum(np.abs(Q_table - old_table))
+        loss_data.append(loss)
+        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, R_acc, loss))
+        if loss < loss_level: break
+        
+    np.save(file='taxi_q_tables/NSW_Penalty_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
             arr=Q_table)
-    np.save(file='taxi_q_tables/NSW_size{}_locs{}_{}_{}_loss'.format(fair_env.size,len(fair_env.loc_coords), 500, file_name),
+    np.save(file='taxi_q_tables/NSW_Penalty_size{}_locs{}_{}_loss'.format(fair_env.size,len(fair_env.loc_coords), file_name),
             arr=loss_data)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
@@ -61,6 +59,7 @@ def argmax_nsw_geom(R, gamma_Q):    # unfinished argmax, calculate NSW by geomet
 
 def nsw(vec, nsw_lambda): 
     vec = vec + nsw_lambda
+    vec = np.where(vec <= 0, nsw_lambda, vec)  # replace any negative values or zeroes with lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
 def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
@@ -103,7 +102,7 @@ if __name__ == '__main__':
     dest_coords = [[0,4], [3,3]]
     fuel = args.fuel
     
-    fair_env = Fair_Taxi_MDP(size, loc_coords, dest_coords, fuel, 
+    fair_env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
     
     run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 

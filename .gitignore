@@ -2,4 +2,5 @@ venv/
 Self_Practice/
 .DS_Store
 Taxi_MDP/
-Bandit/
+csv_bandit/
+csv_taxi/

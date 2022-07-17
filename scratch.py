@@ -12,5 +12,5 @@ import numpy as np
 # for _ in range(10000):
 #     env.step(env.action_space.sample())
 #     env.render()
-arr = [1,2,3]
-np.save('Test', arr)
+arr = np.array([-0.00001,1,2,3,4,-3])
+print(np.where(arr < 0, 0, arr))
