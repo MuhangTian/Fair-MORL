@@ -35,7 +35,10 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                 loss = np.sum(np.abs(Q_table - old_table)) # calculate loss for fixed interval of steps
                 loss_data.append(loss)
                 print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
-                if loss < tolerance: break
+                if loss < tolerance:
+                    loss_count += 1
+                    if loss_count == 5: break # need to be smaller for consecutive loops to satisfy early break
+                else: loss_count = 0
                 old_table = np.copy(Q_table)
         
     np.save(file='taxi_q_tables/NSW_size{}_locs{}_{}_{}'.format(fair_env.size,len(fair_env.loc_coords), 500, file_name),
@@ -63,31 +66,12 @@ def nsw(vec, nsw_lambda):
     vec = vec + nsw_lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
-def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
-    for _ in range(runs):
-        fair_env._clean_metrics()
-        done = False
-        R_acc = np.zeros(vec_dim)
-        pass_loc = None if pass_dest == None else 1
-        state = fair_env.reset(taxi_loc, pass_loc, pass_dest)
-        fair_env.render()
-        
-        while not done:
-            action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
-            next, reward, done, info = fair_env.step(action)
-            # reward = np.sum(reward) # for scalar reward with NSW Q-table
-            fair_env.render()
-            state = next
-            R_acc += reward
-        #fair_env._output_csv()
-    return print("FINSIH EVALUATE NSW Q LEARNING")
-
 if __name__ == '__main__':
     
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
-    prs.add_argument("-f", dest="fuel", type=int, default=10000, required=False, help="Timesteps each episode\n")
-    prs.add_argument("-ep", dest="episodes", type=int, default=10000, required=False, help="Episodes.\n")
+    prs.add_argument("-f", dest="fuel", type=int, default=500000000, required=False, help="Timesteps each episode\n")
+    prs.add_argument("-ep", dest="episodes", type=int, default=1, required=False, help="Episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
     prs.add_argument("-g", dest="gamma", type=float, default=0.95, required=False, help="Discount rate\n")

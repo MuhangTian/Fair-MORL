@@ -7,7 +7,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
     Num = np.full(fair_env.observation_space.n, epsilon, dtype=float)
     Q_table[:, :4, :] = init_val
-    loss_data = []
+    loss_data, loss_count = [], 0
     
     for i in range(1, episodes+1):
         R_acc = np.zeros(len(fair_env.loc_coords))
@@ -35,7 +35,10 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                 loss = np.sum(np.abs(Q_table - old_table)) # calculate loss for fixed interval of steps
                 loss_data.append(loss)
                 print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
-                if loss < tolerance: break
+                if loss < tolerance:
+                    loss_count += 1
+                    if loss_count == 5: break # need to be smaller for consecutive loops to satisfy early break
+                else: loss_count = 0
                 old_table = np.copy(Q_table)
         
     np.save(file='taxi_q_tables/NSW_size{}_locs{}_{}_{}'.format(fair_env.size,len(fair_env.loc_coords), 500, file_name),

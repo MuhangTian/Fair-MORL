@@ -34,7 +34,10 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
         loss = np.sum(np.abs(Q_table - old_table))
         loss_data.append(loss)
         print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, R_acc, loss))
-        if loss < tolerance: break
+        if loss < tolerance:
+            loss_count += 1
+            if loss_count == 5: break  # need to be smaller for consecutive loops to satisfy early break
+        else: loss_count = 0
         
     np.save(file='taxi_q_tables/NSW_Penalty_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
             arr=Q_table)

@@ -56,7 +56,9 @@ def evaluate_Q_learning(Q_table, taxi_loc=None, pass_dest=None, runs=20):
     return print("FINISH EVALUATE Q LEARNING")
 
 def check_all_locs():
-    
+    # TODO: write a function that can check all initial locations work on for given Q table
+    # if not, return the list of initial locations that don't work
+    return
 
 if __name__ == '__main__':
     size = 5
