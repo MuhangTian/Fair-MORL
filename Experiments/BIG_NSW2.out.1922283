@@ -1,0 +1,439 @@
+Accumulated reward at timestep 10000: [0. 0.]
+Loss: 2436.4685121552693
+
+Accumulated reward at timestep 20000: [0. 0.]
+Loss: 1437.0221362401012
+
+Accumulated reward at timestep 30000: [0. 0.]
+Loss: 870.7178548473377
+
+Accumulated reward at timestep 40000: [0. 0.]
+Loss: 528.1636438529572
+
+Accumulated reward at timestep 50000: [0. 0.]
+Loss: 1012.6534638363557
+
+Accumulated reward at timestep 60000: [0. 0.]
+Loss: 2073.6358267452824
+
+Accumulated reward at timestep 70000: [0. 0.]
+Loss: 1258.4629144021242
+
+Accumulated reward at timestep 80000: [0. 0.]
+Loss: 761.9702357452024
+
+Accumulated reward at timestep 90000: [0. 0.]
+Loss: 462.4893972810446
+
+Accumulated reward at timestep 100000: [0. 0.]
+Loss: 295.92594193784623
+
+Accumulated reward at timestep 110000: [0. 0.]
+Loss: 226.16222564106204
+
+Accumulated reward at timestep 120000: [0. 0.]
+Loss: 179.49163046142775
+
+Accumulated reward at timestep 130000: [0. 0.]
+Loss: 142.40619826603427
+
+Accumulated reward at timestep 140000: [0. 0.]
+Loss: 113.08433189057992
+
+Accumulated reward at timestep 150000: [0. 0.]
+Loss: 89.71126718906382
+
+Accumulated reward at timestep 160000: [0. 0.]
+Loss: 71.24268486472259
+
+Accumulated reward at timestep 170000: [0. 0.]
+Loss: 56.53888845647383
+
+Accumulated reward at timestep 180000: [0. 0.]
+Loss: 44.85440380525984
+
+Accumulated reward at timestep 190000: [0. 0.]
+Loss: 35.6081838540417
+
+Accumulated reward at timestep 200000: [0. 0.]
+Loss: 28.235704169131974
+
+Accumulated reward at timestep 210000: [0. 0.]
+Loss: 22.471327647961328
+
+Accumulated reward at timestep 220000: [0. 0.]
+Loss: 17.93643709065217
+
+Accumulated reward at timestep 230000: [0. 0.]
+Loss: 14.298391155513608
+
+Accumulated reward at timestep 240000: [0. 0.]
+Loss: 11.40489804926823
+
+Accumulated reward at timestep 250000: [0. 0.]
+Loss: 9.08334607359391
+
+Accumulated reward at timestep 260000: [0. 0.]
+Loss: 7.244024166658543
+
+Accumulated reward at timestep 270000: [0. 0.]
+Loss: 5.7755936590094015
+
+Accumulated reward at timestep 280000: [0. 0.]
+Loss: 4.601530285320738
+
+Accumulated reward at timestep 290000: [0. 0.]
+Loss: 3.6684615393290803
+
+Accumulated reward at timestep 300000: [0. 0.]
+Loss: 2.925344321582763
+
+Accumulated reward at timestep 310000: [0. 0.]
+Loss: 2.332322637971971
+
+Accumulated reward at timestep 320000: [0. 0.]
+Loss: 1.8589482940113242
+
+Accumulated reward at timestep 330000: [0. 0.]
+Loss: 1.4817078790569669
+
+Accumulated reward at timestep 340000: [0. 0.]
+Loss: 1.181589170547787
+
+Accumulated reward at timestep 350000: [0. 0.]
+Loss: 0.9416034325590399
+
+Accumulated reward at timestep 360000: [0. 0.]
+Loss: 0.7505018006092371
+
+Accumulated reward at timestep 370000: [0. 0.]
+Loss: 0.598455669305884
+
+Accumulated reward at timestep 380000: [0. 0.]
+Loss: 0.47706117906411777
+
+Accumulated reward at timestep 390000: [0. 0.]
+Loss: 0.3804554630026278
+
+Accumulated reward at timestep 400000: [0. 0.]
+Loss: 0.3033111832943279
+
+Accumulated reward at timestep 410000: [0. 0.]
+Loss: 0.241597151881971
+
+Accumulated reward at timestep 420000: [0. 0.]
+Loss: 0.1927094026934258
+
+Accumulated reward at timestep 430000: [0. 0.]
+Loss: 0.15363331672017566
+
+Accumulated reward at timestep 440000: [0. 0.]
+Loss: 0.1224267456854423
+
+Accumulated reward at timestep 450000: [0. 0.]
+Loss: 0.09759648592084263
+
+Accumulated reward at timestep 460000: [0. 0.]
+Loss: 0.07783729060414639
+
+Accumulated reward at timestep 470000: [0. 0.]
+Loss: 0.06201720526888063
+
+Accumulated reward at timestep 480000: [0. 0.]
+Loss: 0.04947964527476013
+
+Accumulated reward at timestep 490000: [0. 0.]
+Loss: 0.03941762192732333
+
+Accumulated reward at timestep 500000: [0. 0.]
+Loss: 0.031435114349731764
+
+Accumulated reward at timestep 510000: [0. 0.]
+Loss: 0.02504844830810573
+
+Accumulated reward at timestep 520000: [0. 0.]
+Loss: 0.019968795854462058
+
+Accumulated reward at timestep 530000: [0. 0.]
+Loss: 0.01591722756411661
+
+Accumulated reward at timestep 540000: [0. 0.]
+Loss: 0.012693683050204583
+
+Accumulated reward at timestep 550000: [0. 0.]
+Loss: 0.010120876526993162
+
+Accumulated reward at timestep 560000: [0. 0.]
+Loss: 0.008061960772344267
+
+Accumulated reward at timestep 570000: [0. 0.]
+Loss: 0.0064331036505613825
+
+Accumulated reward at timestep 580000: [0. 0.]
+Loss: 0.005126691985827179
+
+Accumulated reward at timestep 590000: [0. 0.]
+Loss: 0.004084430938551773
+
+Accumulated reward at timestep 600000: [0. 0.]
+Loss: 0.003257993759260668
+
+Accumulated reward at timestep 610000: [0. 0.]
+Loss: 0.002597166780881406
+
+Accumulated reward at timestep 620000: [0. 0.]
+Loss: 0.002070466685724301
+
+Accumulated reward at timestep 630000: [0. 0.]
+Loss: 0.0016508532375212816
+
+Accumulated reward at timestep 640000: [0. 0.]
+Loss: 0.0013155707211330997
+
+Accumulated reward at timestep 650000: [0. 0.]
+Loss: 0.0010491606688386183
+
+Accumulated reward at timestep 660000: [0. 0.]
+Loss: 0.0008363537835931543
+
+Accumulated reward at timestep 670000: [0. 0.]
+Loss: 0.000666429728595205
+
+Accumulated reward at timestep 680000: [0. 0.]
+Loss: 0.000531439666736975
+
+Accumulated reward at timestep 690000: [0. 0.]
+Loss: 0.00042365253235471554
+
+Accumulated reward at timestep 700000: [0. 0.]
+Loss: 0.0003376144642893261
+
+Accumulated reward at timestep 710000: [0. 0.]
+Loss: 0.00026927541305732654
+
+Accumulated reward at timestep 720000: [0. 0.]
+Loss: 0.0002146029418571043
+
+Accumulated reward at timestep 730000: [0. 0.]
+Loss: 0.00017104563463203032
+
+Accumulated reward at timestep 740000: [0. 0.]
+Loss: 0.00013641247381467012
+
+Accumulated reward at timestep 750000: [0. 0.]
+Loss: 0.0001086877202590633
+
+Accumulated reward at timestep 760000: [0. 0.]
+Loss: 8.666768257896952e-05
+
+Accumulated reward at timestep 770000: [0. 0.]
+Loss: 6.907266925861271e-05
+
+Accumulated reward at timestep 780000: [0. 0.]
+Loss: 5.5109670550281334e-05
+
+Accumulated reward at timestep 790000: [0. 0.]
+Loss: 4.391187942127732e-05
+
+Accumulated reward at timestep 800000: [0. 0.]
+Loss: 3.500819981175052e-05
+
+Accumulated reward at timestep 810000: [0. 0.]
+Loss: 2.7908947404882855e-05
+
+Accumulated reward at timestep 820000: [0. 0.]
+Loss: 2.2242737235255626e-05
+
+Accumulated reward at timestep 830000: [0. 0.]
+Loss: 1.7738919626520126e-05
+
+Accumulated reward at timestep 840000: [0. 0.]
+Loss: 1.4138035713409544e-05
+
+Accumulated reward at timestep 850000: [0. 0.]
+Loss: 1.1268762137599519e-05
+
+Accumulated reward at timestep 860000: [0. 0.]
+Loss: 8.98534172582225e-06
+
+Accumulated reward at timestep 870000: [0. 0.]
+Loss: 7.164215750173433e-06
+
+Accumulated reward at timestep 880000: [0. 0.]
+Loss: 5.710122482890322e-06
+
+Accumulated reward at timestep 890000: [0. 0.]
+Loss: 4.552274434868114e-06
+
+Accumulated reward at timestep 900000: [0. 0.]
+Loss: 3.6303892394547513e-06
+
+Accumulated reward at timestep 910000: [0. 0.]
+Loss: 2.892837687368285e-06
+
+Accumulated reward at timestep 920000: [0. 0.]
+Loss: 2.305819534822884e-06
+
+Accumulated reward at timestep 930000: [0. 0.]
+Loss: 1.8374545670099237e-06
+
+Accumulated reward at timestep 940000: [0. 0.]
+Loss: 1.4659130522891746e-06
+
+Accumulated reward at timestep 950000: [0. 0.]
+Loss: 1.1687496669892679e-06
+
+Accumulated reward at timestep 960000: [0. 0.]
+Loss: 9.313130783044467e-07
+
+Accumulated reward at timestep 970000: [0. 0.]
+Loss: 7.423465320508219e-07
+
+Accumulated reward at timestep 980000: [0. 0.]
+Loss: 5.917768224570998e-07
+
+Accumulated reward at timestep 990000: [0. 0.]
+Loss: 4.719013996281554e-07
+
+Accumulated reward at timestep 1000000: [0. 0.]
+Loss: 3.76114642219043e-07
+
+Accumulated reward at timestep 1010000: [0. 0.]
+Loss: 2.999697179577528e-07
+
+Accumulated reward at timestep 1020000: [0. 0.]
+Loss: 2.3908130789031974e-07
+
+Accumulated reward at timestep 1030000: [0. 0.]
+Loss: 1.9059691344889996e-07
+
+Accumulated reward at timestep 1040000: [0. 0.]
+Loss: 1.5186972079302622e-07
+
+Accumulated reward at timestep 1050000: [0. 0.]
+Loss: 1.2108821488883544e-07
+
+Accumulated reward at timestep 1060000: [0. 0.]
+Loss: 9.656253071880102e-08
+
+Accumulated reward at timestep 1070000: [0. 0.]
+Loss: 7.695651017096554e-08
+
+Accumulated reward at timestep 1080000: [0. 0.]
+Loss: 6.136124251454994e-08
+
+Accumulated reward at timestep 1090000: [0. 0.]
+Loss: 4.890516046050092e-08
+
+Accumulated reward at timestep 1100000: [0. 0.]
+Loss: 3.8972829427891256e-08
+
+Accumulated reward at timestep 1110000: [0. 0.]
+Loss: 3.1079748007194635e-08
+
+Accumulated reward at timestep 1120000: [0. 0.]
+Loss: 2.477424342312101e-08
+
+Accumulated reward at timestep 1130000: [0. 0.]
+Loss: 1.9750487732013048e-08
+
+Accumulated reward at timestep 1140000: [0. 0.]
+Loss: 1.574472702857428e-08
+
+Accumulated reward at timestep 1150000: [0. 0.]
+Loss: 1.255627342170651e-08
+
+Accumulated reward at timestep 1160000: [0. 0.]
+Loss: 1.000076224152719e-08
+
+Accumulated reward at timestep 1170000: [0. 0.]
+Loss: 7.976903285420955e-09
+
+Accumulated reward at timestep 1180000: [0. 0.]
+Loss: 6.363546043148642e-09
+
+Accumulated reward at timestep 1190000: [0. 0.]
+Loss: 5.067235283486766e-09
+
+Accumulated reward at timestep 1200000: [0. 0.]
+Loss: 4.041338539312338e-09
+
+Accumulated reward at timestep 1210000: [0. 0.]
+Loss: 3.2225374994799788e-09
+
+Accumulated reward at timestep 1220000: [0. 0.]
+Loss: 2.5690260085574123e-09
+
+Accumulated reward at timestep 1230000: [0. 0.]
+Loss: 2.047172101222135e-09
+
+Accumulated reward at timestep 1240000: [0. 0.]
+Loss: 1.6317446222256534e-09
+
+Accumulated reward at timestep 1250000: [0. 0.]
+Loss: 1.3014105967116737e-09
+
+Accumulated reward at timestep 1260000: [0. 0.]
+Loss: 1.0370547761314136e-09
+
+Accumulated reward at timestep 1270000: [0. 0.]
+Loss: 8.26992684777289e-10
+
+Accumulated reward at timestep 1280000: [0. 0.]
+Loss: 6.591789140188368e-10
+
+Accumulated reward at timestep 1290000: [0. 0.]
+Loss: 5.257241613280679e-10
+
+Accumulated reward at timestep 1300000: [0. 0.]
+Loss: 4.1878021664036766e-10
+
+Accumulated reward at timestep 1310000: [0. 0.]
+Loss: 3.339262092836598e-10
+
+Accumulated reward at timestep 1320000: [0. 0.]
+Loss: 2.6623397123811244e-10
+
+Accumulated reward at timestep 1330000: [0. 0.]
+Loss: 2.1221904888690829e-10
+
+Accumulated reward at timestep 1340000: [0. 0.]
+Loss: 1.6914795403710877e-10
+
+Accumulated reward at timestep 1350000: [0. 0.]
+Loss: 1.3489849636040146e-10
+
+Accumulated reward at timestep 1360000: [0. 0.]
+Loss: 1.0750523405107644e-10
+
+Accumulated reward at timestep 1370000: [0. 0.]
+Loss: 8.570512843477793e-11
+
+Accumulated reward at timestep 1380000: [0. 0.]
+Loss: 6.832358350492628e-11
+
+Accumulated reward at timestep 1390000: [0. 0.]
+Loss: 5.446711983209987e-11
+
+Accumulated reward at timestep 1400000: [0. 0.]
+Loss: 4.341087621557537e-11
+
+Accumulated reward at timestep 1410000: [0. 0.]
+Loss: 3.462634573337757e-11
+
+Accumulated reward at timestep 1420000: [0. 0.]
+Loss: 2.7588026704693946e-11
+
+Accumulated reward at timestep 1430000: [0. 0.]
+Loss: 2.199527703411425e-11
+
+Accumulated reward at timestep 1440000: [0. 0.]
+Loss: 1.7536230414227558e-11
+
+Accumulated reward at timestep 1450000: [0. 0.]
+Loss: 1.3976973535475701e-11
+
+Accumulated reward at timestep 1460000: [0. 0.]
+Loss: 1.1141256661281603e-11
+
+FINISH TRAINING NSW Q LEARNING

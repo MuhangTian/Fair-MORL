@@ -1,0 +1,970 @@
+Accumulated reward at episode 1: [-38972. -38882.]
+Loss: 7548.843870095558
+
+Accumulated reward at episode 2: [-38689. -38599.]
+Loss: 2005.1692772160936
+
+Accumulated reward at episode 3: [-39146. -38996.]
+Loss: 1081.2211331468616
+
+Accumulated reward at episode 4: [-38204. -38144.]
+Loss: 1004.5171330927651
+
+Accumulated reward at episode 5: [-39072. -38862.]
+Loss: 875.9825761002511
+
+Accumulated reward at episode 6: [-39461. -39311.]
+Loss: 760.0346907305005
+
+Accumulated reward at episode 7: [-39454. -39364.]
+Loss: 501.75868513055
+
+Accumulated reward at episode 8: [-39083. -38933.]
+Loss: 500.0755094840361
+
+Accumulated reward at episode 9: [-38778. -38658.]
+Loss: 496.14802269996915
+
+Accumulated reward at episode 10: [-39472. -39382.]
+Loss: 376.12532988597184
+
+Accumulated reward at episode 11: [-38452. -38272.]
+Loss: 400.90004610615114
+
+Accumulated reward at episode 12: [-38921. -38771.]
+Loss: 368.33537439268093
+
+Accumulated reward at episode 13: [-39307. -39127.]
+Loss: 350.97993476283693
+
+Accumulated reward at episode 14: [-39666. -39606.]
+Loss: 387.3787406473492
+
+Accumulated reward at episode 15: [-39185. -38855.]
+Loss: 249.58749812659283
+
+Accumulated reward at episode 16: [-39270. -39210.]
+Loss: 302.16787169116776
+
+Accumulated reward at episode 17: [-38875. -38695.]
+Loss: 238.55327902644748
+
+Accumulated reward at episode 18: [-38506. -38476.]
+Loss: 317.8928958547774
+
+Accumulated reward at episode 19: [-39162. -38952.]
+Loss: 218.6038280407093
+
+Accumulated reward at episode 20: [-39161. -38921.]
+Loss: 262.2322955357252
+
+Accumulated reward at episode 21: [-39382. -39292.]
+Loss: 202.78384558940695
+
+Accumulated reward at episode 22: [-39386. -39296.]
+Loss: 220.15055573014632
+
+Accumulated reward at episode 23: [-39128. -38978.]
+Loss: 240.36097947096764
+
+Accumulated reward at episode 24: [-38953. -38683.]
+Loss: 248.88705171131446
+
+Accumulated reward at episode 25: [-38914. -38824.]
+Loss: 247.34486840179582
+
+Accumulated reward at episode 26: [-39105. -39075.]
+Loss: 219.90428305152355
+
+Accumulated reward at episode 27: [-39278. -39038.]
+Loss: 336.71312501237855
+
+Accumulated reward at episode 28: [-38565. -38535.]
+Loss: 196.97743219970477
+
+Accumulated reward at episode 29: [-39146. -39146.]
+Loss: 189.60310173806212
+
+Accumulated reward at episode 30: [-38923. -38713.]
+Loss: 211.65892408169066
+
+Accumulated reward at episode 31: [-39193. -39103.]
+Loss: 233.51711341937943
+
+Accumulated reward at episode 32: [-39371. -39221.]
+Loss: 255.5223848848754
+
+Accumulated reward at episode 33: [-39787. -39577.]
+Loss: 171.92673653971246
+
+Accumulated reward at episode 34: [-39410. -39080.]
+Loss: 135.98171394731537
+
+Accumulated reward at episode 35: [-39646. -39376.]
+Loss: 149.57597479113736
+
+Accumulated reward at episode 36: [-39214. -39094.]
+Loss: 204.84972014989566
+
+Accumulated reward at episode 37: [-38256. -38286.]
+Loss: 190.44359857846513
+
+Accumulated reward at episode 38: [-39227. -39077.]
+Loss: 392.56591412347393
+
+Accumulated reward at episode 39: [-39071. -38981.]
+Loss: 307.7403097717651
+
+Accumulated reward at episode 40: [-38458. -38338.]
+Loss: 270.50578240211206
+
+Accumulated reward at episode 41: [-39849. -39729.]
+Loss: 199.19371931462928
+
+Accumulated reward at episode 42: [-39345. -39225.]
+Loss: 208.10044977799345
+
+Accumulated reward at episode 43: [-38736. -38586.]
+Loss: 311.33525303261104
+
+Accumulated reward at episode 44: [-39130. -39040.]
+Loss: 259.9049192455684
+
+Accumulated reward at episode 45: [-40363. -40273.]
+Loss: 229.4953775916471
+
+Accumulated reward at episode 46: [-38884. -38704.]
+Loss: 201.15624789512015
+
+Accumulated reward at episode 47: [-39307. -39127.]
+Loss: 186.20558661938372
+
+Accumulated reward at episode 48: [-38692. -38572.]
+Loss: 189.9007505410913
+
+Accumulated reward at episode 49: [-39311. -39251.]
+Loss: 200.5300761766476
+
+Accumulated reward at episode 50: [-39335. -39185.]
+Loss: 229.11095475008966
+
+Accumulated reward at episode 51: [-39507. -39387.]
+Loss: 244.88143020359485
+
+Accumulated reward at episode 52: [-38613. -38403.]
+Loss: 194.0996071860714
+
+Accumulated reward at episode 53: [-39111. -38991.]
+Loss: 244.23269221050865
+
+Accumulated reward at episode 54: [-39110. -38960.]
+Loss: 377.9614340090426
+
+Accumulated reward at episode 55: [-38885. -38885.]
+Loss: 326.8117340718892
+
+Accumulated reward at episode 56: [-39032. -38972.]
+Loss: 289.7612892097664
+
+Accumulated reward at episode 57: [-39360. -39150.]
+Loss: 388.7212616998594
+
+Accumulated reward at episode 58: [-38878. -38788.]
+Loss: 192.1099361759288
+
+Accumulated reward at episode 59: [-39118. -38938.]
+Loss: 826.679951332051
+
+Accumulated reward at episode 60: [-39158. -39098.]
+Loss: 386.2273563679056
+
+Accumulated reward at episode 61: [-38761. -38671.]
+Loss: 322.0553482863862
+
+Accumulated reward at episode 62: [-38681. -38621.]
+Loss: 319.7117253406883
+
+Accumulated reward at episode 63: [-39280. -39250.]
+Loss: 382.77723962109746
+
+Accumulated reward at episode 64: [-38936. -38996.]
+Loss: 341.1801802359903
+
+Accumulated reward at episode 65: [-38885. -38735.]
+Loss: 297.3448182296273
+
+Accumulated reward at episode 66: [-38190. -38130.]
+Loss: 354.8520712121761
+
+Accumulated reward at episode 67: [-38798. -38738.]
+Loss: 343.2603451282946
+
+Accumulated reward at episode 68: [-39041. -38981.]
+Loss: 345.1438955605022
+
+Accumulated reward at episode 69: [-39252. -39192.]
+Loss: 347.97116550101293
+
+Accumulated reward at episode 70: [-39155. -39005.]
+Loss: 322.77241134763653
+
+Accumulated reward at episode 71: [-38491. -38401.]
+Loss: 291.09012914270863
+
+Accumulated reward at episode 72: [-39704. -39554.]
+Loss: 331.66288687768207
+
+Accumulated reward at episode 73: [-39198. -39138.]
+Loss: 305.93051618368906
+
+Accumulated reward at episode 74: [-39661. -39571.]
+Loss: 366.9461079261429
+
+Accumulated reward at episode 75: [-38481. -38361.]
+Loss: 368.1471315805063
+
+Accumulated reward at episode 76: [-39163. -38983.]
+Loss: 325.00117115823394
+
+Accumulated reward at episode 77: [-39633. -39513.]
+Loss: 271.17620556928784
+
+Accumulated reward at episode 78: [-39009. -38949.]
+Loss: 250.98332319642287
+
+Accumulated reward at episode 79: [-39327. -39207.]
+Loss: 304.7072032830403
+
+Accumulated reward at episode 80: [-38775. -38715.]
+Loss: 299.2490469056671
+
+Accumulated reward at episode 81: [-39074. -38924.]
+Loss: 341.0963778983198
+
+Accumulated reward at episode 82: [-38630. -38390.]
+Loss: 304.6183828979289
+
+Accumulated reward at episode 83: [-39202. -39112.]
+Loss: 304.1807378096596
+
+Accumulated reward at episode 84: [-38700. -38670.]
+Loss: 340.78567572458553
+
+Accumulated reward at episode 85: [-38922. -38802.]
+Loss: 316.8811445865218
+
+Accumulated reward at episode 86: [-38670. -38550.]
+Loss: 283.6792671260823
+
+Accumulated reward at episode 87: [-39373. -39283.]
+Loss: 613.4986905398667
+
+Accumulated reward at episode 88: [-39129. -39009.]
+Loss: 619.5594802177546
+
+Accumulated reward at episode 89: [-39118. -38938.]
+Loss: 369.78585524175094
+
+Accumulated reward at episode 90: [-38685. -38625.]
+Loss: 412.7679994040176
+
+Accumulated reward at episode 91: [-39200. -39200.]
+Loss: 617.0108333667202
+
+Accumulated reward at episode 92: [-38720. -38630.]
+Loss: 551.4638654546513
+
+Accumulated reward at episode 93: [-39951. -39921.]
+Loss: 402.92933095618355
+
+Accumulated reward at episode 94: [-38933. -38753.]
+Loss: 397.17893465402193
+
+Accumulated reward at episode 95: [-39649. -39619.]
+Loss: 373.05714202951765
+
+Accumulated reward at episode 96: [-39174. -39054.]
+Loss: 402.18679535418005
+
+Accumulated reward at episode 97: [-38429. -38369.]
+Loss: 418.66664253662873
+
+Accumulated reward at episode 98: [-39542. -39392.]
+Loss: 383.4823178222915
+
+Accumulated reward at episode 99: [-39021. -38901.]
+Loss: 360.8693409630454
+
+Accumulated reward at episode 100: [-38874. -38814.]
+Loss: 390.4834711336085
+
+Accumulated reward at episode 101: [-39588. -39348.]
+Loss: 377.4776657169913
+
+Accumulated reward at episode 102: [-38699. -38639.]
+Loss: 391.466839401263
+
+Accumulated reward at episode 103: [-38203. -38113.]
+Loss: 405.2675878635173
+
+Accumulated reward at episode 104: [-38820. -38760.]
+Loss: 377.4409695047943
+
+Accumulated reward at episode 105: [-38878. -38788.]
+Loss: 373.65820448022083
+
+Accumulated reward at episode 106: [-39328. -39238.]
+Loss: 405.98311912741633
+
+Accumulated reward at episode 107: [-38942. -38882.]
+Loss: 389.6134849882002
+
+Accumulated reward at episode 108: [-39056. -38906.]
+Loss: 368.2292555725611
+
+Accumulated reward at episode 109: [-39220. -39130.]
+Loss: 309.81436172362805
+
+Accumulated reward at episode 110: [-38711. -38471.]
+Loss: 348.05017589074527
+
+Accumulated reward at episode 111: [-38263. -38083.]
+Loss: 370.243427845931
+
+Accumulated reward at episode 112: [-38555. -38495.]
+Loss: 368.4339711501709
+
+Accumulated reward at episode 113: [-38875. -38695.]
+Loss: 371.41217721517455
+
+Accumulated reward at episode 114: [-38395. -38275.]
+Loss: 435.16852973181284
+
+Accumulated reward at episode 115: [-38722. -38692.]
+Loss: 385.2960795337074
+
+Accumulated reward at episode 116: [-38922. -38802.]
+Loss: 366.5914524540416
+
+Accumulated reward at episode 117: [-38786. -38636.]
+Loss: 412.4931460102737
+
+Accumulated reward at episode 118: [-39392. -39332.]
+Loss: 378.33985436968374
+
+Accumulated reward at episode 119: [-39039. -38919.]
+Loss: 349.89972452271525
+
+Accumulated reward at episode 120: [-38967. -38847.]
+Loss: 368.5511256170611
+
+Accumulated reward at episode 121: [-38635. -38545.]
+Loss: 400.80916189937676
+
+Accumulated reward at episode 122: [-39244. -39214.]
+Loss: 526.1389903587853
+
+Accumulated reward at episode 123: [-39408. -39288.]
+Loss: 631.3182888515742
+
+Accumulated reward at episode 124: [-38590. -38500.]
+Loss: 431.3854826648411
+
+Accumulated reward at episode 125: [-38708. -38678.]
+Loss: 401.41955242325037
+
+Accumulated reward at episode 126: [-38807. -38747.]
+Loss: 393.1615164602804
+
+Accumulated reward at episode 127: [-38778. -38688.]
+Loss: 407.71423592167355
+
+Accumulated reward at episode 128: [-38711. -38621.]
+Loss: 398.103710556485
+
+Accumulated reward at episode 129: [-38634. -38664.]
+Loss: 418.1767473232923
+
+Accumulated reward at episode 130: [-39021. -38901.]
+Loss: 403.71583914427436
+
+Accumulated reward at episode 131: [-38896. -38806.]
+Loss: 428.6529994991188
+
+Accumulated reward at episode 132: [-39577. -39397.]
+Loss: 426.7086232799033
+
+Accumulated reward at episode 133: [-39128. -38858.]
+Loss: 433.87446128543024
+
+Accumulated reward at episode 134: [-39293. -39233.]
+Loss: 381.99751671133527
+
+Accumulated reward at episode 135: [-39192. -39072.]
+Loss: 385.7786906338399
+
+Accumulated reward at episode 136: [-39022. -38932.]
+Loss: 392.51885265846
+
+Accumulated reward at episode 137: [-38923. -38713.]
+Loss: 416.36534703534704
+
+Accumulated reward at episode 138: [-38655. -38505.]
+Loss: 367.1069939759517
+
+Accumulated reward at episode 139: [-38389. -38209.]
+Loss: 337.2016380329286
+
+Accumulated reward at episode 140: [-39191. -39041.]
+Loss: 367.0820940493064
+
+Accumulated reward at episode 141: [-38248. -38158.]
+Loss: 394.5149438899996
+
+Accumulated reward at episode 142: [-39338. -39278.]
+Loss: 360.66075925961934
+
+Accumulated reward at episode 143: [-39229. -39139.]
+Loss: 397.40087773745637
+
+Accumulated reward at episode 144: [-39085. -38995.]
+Loss: 409.6768864181975
+
+Accumulated reward at episode 145: [-39117. -38907.]
+Loss: 402.2710755572393
+
+Accumulated reward at episode 146: [-38417. -38267.]
+Loss: 395.2248170514718
+
+Accumulated reward at episode 147: [-39324. -39114.]
+Loss: 504.59548224213165
+
+Accumulated reward at episode 148: [-38750. -38600.]
+Loss: 411.4904281879686
+
+Accumulated reward at episode 149: [-39843. -39813.]
+Loss: 449.8844199444526
+
+Accumulated reward at episode 150: [-38917. -38647.]
+Loss: 389.44259270011696
+
+Accumulated reward at episode 151: [-39246. -39126.]
+Loss: 405.1663067360625
+
+Accumulated reward at episode 152: [-39732. -39642.]
+Loss: 420.3000200280692
+
+Accumulated reward at episode 153: [-39327. -39207.]
+Loss: 375.9279896336807
+
+Accumulated reward at episode 154: [-38950. -38860.]
+Loss: 401.32563761995925
+
+Accumulated reward at episode 155: [-38551. -38371.]
+Loss: 390.23597376646137
+
+Accumulated reward at episode 156: [-38705. -38555.]
+Loss: 366.22070764225714
+
+Accumulated reward at episode 157: [-38650. -38470.]
+Loss: 370.37889237993994
+
+Accumulated reward at episode 158: [-38510. -38450.]
+Loss: 377.2395652700627
+
+Accumulated reward at episode 159: [-38145. -38085.]
+Loss: 384.71232531410146
+
+Accumulated reward at episode 160: [-39119. -38969.]
+Loss: 424.3975492254267
+
+Accumulated reward at episode 161: [-39310. -39220.]
+Loss: 427.6838379716563
+
+Accumulated reward at episode 162: [-38851. -38641.]
+Loss: 415.6637446002935
+
+Accumulated reward at episode 163: [-38535. -38415.]
+Loss: 408.1262495731045
+
+Accumulated reward at episode 164: [-38616. -38496.]
+Loss: 399.4585617368399
+
+Accumulated reward at episode 165: [-39318. -39198.]
+Loss: 419.80741800744806
+
+Accumulated reward at episode 166: [-39006. -39006.]
+Loss: 425.2909126126409
+
+Accumulated reward at episode 167: [-39147. -39027.]
+Loss: 374.6424489032613
+
+Accumulated reward at episode 168: [-39139. -39049.]
+Loss: 359.1229600410194
+
+Accumulated reward at episode 169: [-38811. -38601.]
+Loss: 414.2802294283443
+
+Accumulated reward at episode 170: [-39075. -38955.]
+Loss: 377.2188346883271
+
+Accumulated reward at episode 171: [-38881. -38611.]
+Loss: 364.8604422706717
+
+Accumulated reward at episode 172: [-39227. -39077.]
+Loss: 442.2051451459361
+
+Accumulated reward at episode 173: [-39058. -38968.]
+Loss: 1216.2023323869091
+
+Accumulated reward at episode 174: [-38990. -38900.]
+Loss: 2622.8951306293684
+
+Accumulated reward at episode 175: [-38976. -39006.]
+Loss: 917.0910029433078
+
+Accumulated reward at episode 176: [-7500. 67500.]
+Loss: 95.69931485169562
+
+Accumulated reward at episode 177: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 178: [-7500. 67500.]
+Loss: 1.7243968385467712
+
+Accumulated reward at episode 179: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 180: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 181: [-7500. 67500.]
+Loss: 1.7213962311594972
+
+Accumulated reward at episode 182: [-7501. 67469.]
+Loss: 1.7411843274106533
+
+Accumulated reward at episode 183: [-7501. 67469.]
+Loss: 1.3999635577049574
+
+Accumulated reward at episode 184: [-7501. 67469.]
+Loss: 1.4041278466267597
+
+Accumulated reward at episode 185: [-7500. 67500.]
+Loss: 1.394330947239192
+
+Accumulated reward at episode 186: [-7500. 67500.]
+Loss: 1.5519571546920945
+
+Accumulated reward at episode 187: [-7500. 67500.]
+Loss: 1.7258332883079461
+
+Accumulated reward at episode 188: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 189: [-7501. 67469.]
+Loss: 1.3981121276323805
+
+Accumulated reward at episode 190: [-7501. 67469.]
+Loss: 1.7104534770866304
+
+Accumulated reward at episode 191: [-7501. 67469.]
+Loss: 1.6973049571734844
+
+Accumulated reward at episode 192: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 193: [-7501. 67469.]
+Loss: 1.3450314793581861
+
+Accumulated reward at episode 194: [-38733. -38613.]
+Loss: 1710.3433677188352
+
+Accumulated reward at episode 195: [-7500. 67500.]
+Loss: 0.0001798784634097217
+
+Accumulated reward at episode 196: [-7501. 67469.]
+Loss: 0.0018486051651960267
+
+Accumulated reward at episode 197: [-7501. 67469.]
+Loss: 0.030772878757437283
+
+Accumulated reward at episode 198: [-7501. 67469.]
+Loss: 0.0022847397113157086
+
+Accumulated reward at episode 199: [-7501. 67469.]
+Loss: 0.004710704161728252
+
+Accumulated reward at episode 200: [-38995. -38905.]
+Loss: 337.60054005932284
+
+Accumulated reward at episode 201: [-7501. 67469.]
+Loss: 7.2944331748203695e-06
+
+Accumulated reward at episode 202: [-7501. 67469.]
+Loss: 6.953040346147077e-06
+
+Accumulated reward at episode 203: [-7501. 67469.]
+Loss: 6.08575813743073e-07
+
+Accumulated reward at episode 204: [-7501. 67469.]
+Loss: 6.257736309578377e-06
+
+Accumulated reward at episode 205: [-7500. 67500.]
+Loss: 1.1474601597782907e-06
+
+Accumulated reward at episode 206: [-7501. 67469.]
+Loss: 0.0008260091409750814
+
+Accumulated reward at episode 207: [-7501. 67469.]
+Loss: 3.862031112689124e-06
+
+Accumulated reward at episode 208: [-7501. 67469.]
+Loss: 4.836169983502003e-05
+
+Accumulated reward at episode 209: [-7501. 67469.]
+Loss: 0.00010807364122289442
+
+Accumulated reward at episode 210: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 211: [-7501. 67469.]
+Loss: 5.631962679331082e-06
+
+Accumulated reward at episode 212: [-7501. 67469.]
+Loss: 3.577383443698068e-06
+
+Accumulated reward at episode 213: [-7501. 67469.]
+Loss: 4.479836580806307e-05
+
+Accumulated reward at episode 214: [-7501. 67469.]
+Loss: 5.068766412819059e-06
+
+Accumulated reward at episode 215: [-7501. 67469.]
+Loss: 3.75792399180952e-05
+
+Accumulated reward at episode 216: [-7501. 67469.]
+Loss: 2.291235594142904e-06
+
+Accumulated reward at episode 217: [-7501. 67469.]
+Loss: 3.4099429115030944e-05
+
+Accumulated reward at episode 218: [-7501. 67469.]
+Loss: 0.0003911170887693771
+
+Accumulated reward at episode 219: [-7501. 67469.]
+Loss: 0.000355519017354311
+
+Accumulated reward at episode 220: [-7501. 67469.]
+Loss: 4.4570460300263903e-07
+
+Accumulated reward at episode 221: [-7501. 67469.]
+Loss: 8.306209231534467e-08
+
+Accumulated reward at episode 222: [-7501. 67469.]
+Loss: 3.0832617658127504e-05
+
+Accumulated reward at episode 223: [-7501. 67469.]
+Loss: 4.561889771714789e-06
+
+Accumulated reward at episode 224: [-7501. 67469.]
+Loss: 2.0678340932889228e-06
+
+Accumulated reward at episode 225: [-7501. 67469.]
+Loss: 0.0003231015887887878
+
+Accumulated reward at episode 226: [-7501. 67469.]
+Loss: 6.0622505362317725e-06
+
+Accumulated reward at episode 227: [-7501. 67469.]
+Loss: 4.105700793566314e-06
+
+Accumulated reward at episode 228: [-7501. 67469.]
+Loss: 0.00010151825524751246
+
+Accumulated reward at episode 229: [-7501. 67469.]
+Loss: 2.89784394169601e-06
+
+Accumulated reward at episode 230: [-7501. 67469.]
+Loss: 2.6614715160633295e-06
+
+Accumulated reward at episode 231: [-7501. 67469.]
+Loss: 0.00029366595455559974
+
+Accumulated reward at episode 232: [-7501. 67469.]
+Loss: 1.6657377672757434e-06
+
+Accumulated reward at episode 233: [-7501. 67469.]
+Loss: 2.6082252846393317e-06
+
+Accumulated reward at episode 234: [-7501. 67469.]
+Loss: 3.613016792414214e-07
+
+Accumulated reward at episode 235: [-7501. 67469.]
+Loss: 5.530380901674903e-06
+
+Accumulated reward at episode 236: [-7500. 67500.]
+Loss: 5.011651463604494e-06
+
+Accumulated reward at episode 237: [-7501. 67469.]
+Loss: 3.6951307125221433e-06
+
+Accumulated reward at episode 238: [-7501. 67469.]
+Loss: 5.0442626875479846e-06
+
+Accumulated reward at episode 239: [-7501. 67469.]
+Loss: 1.0531458833007434e-05
+
+Accumulated reward at episode 240: [-7501. 67469.]
+Loss: 2.937006135628195e-05
+
+Accumulated reward at episode 241: [-7501. 67469.]
+Loss: 1.3235319134885515e-05
+
+Accumulated reward at episode 242: [-7501. 67469.]
+Loss: 2.7790063484189886e-05
+
+Accumulated reward at episode 243: [-7501. 67469.]
+Loss: 3.325617645266732e-06
+
+Accumulated reward at episode 244: [-7501. 67469.]
+Loss: 2.652596202779023e-05
+
+Accumulated reward at episode 245: [-7501. 67469.]
+Loss: 4.110063200890579e-05
+
+Accumulated reward at episode 246: [-7501. 67469.]
+Loss: 9.587563852164749e-06
+
+Accumulated reward at episode 247: [-7501. 67469.]
+Loss: 1.6636147419646363e-06
+
+Accumulated reward at episode 248: [-7500. 67500.]
+Loss: 1.2144578676043238e-09
+
+Accumulated reward at episode 249: [-7501. 67469.]
+Loss: 2.3970429396058535e-05
+
+Accumulated reward at episode 250: [-7501. 67469.]
+Loss: 2.5072743365939232e-05
+
+Accumulated reward at episode 251: [-7501. 67469.]
+Loss: 8.857204516488082e-07
+
+Accumulated reward at episode 252: [-7513. 67367.]
+Loss: 9.260558264640068
+
+Accumulated reward at episode 253: [-7501. 67469.]
+Loss: 6.728029688929382e-08
+
+Accumulated reward at episode 254: [-38673. -38523.]
+Loss: 218.9251800507198
+
+Accumulated reward at episode 255: [-7501. 67469.]
+Loss: 1.0101741487744675e-07
+
+Accumulated reward at episode 256: [-7501. 67469.]
+Loss: 5.619312570814827e-07
+
+Accumulated reward at episode 257: [-7500. 67500.]
+Loss: 1.2353893907857127e-08
+
+Accumulated reward at episode 258: [-7501. 67469.]
+Loss: 1.683220141046604e-08
+
+Accumulated reward at episode 259: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 260: [-7501. 67469.]
+Loss: 4.4313268610096657e-08
+
+Accumulated reward at episode 261: [-7501. 67469.]
+Loss: 5.090866768142632e-07
+
+Accumulated reward at episode 262: [-7501. 67469.]
+Loss: 1.5868729441592677e-08
+
+Accumulated reward at episode 263: [-7501. 67469.]
+Loss: 8.61395399454068e-10
+
+Accumulated reward at episode 264: [-7501. 67469.]
+Loss: 4.840695844166021e-09
+
+Accumulated reward at episode 265: [-7500. 67500.]
+Loss: 1.5031957900646375e-09
+
+Accumulated reward at episode 266: [-7501. 67469.]
+Loss: 4.0945818291504565e-08
+
+Accumulated reward at episode 267: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 268: [-7500. 67500.]
+Loss: 1.111850700397099e-08
+
+Accumulated reward at episode 269: [-7501. 67469.]
+Loss: 9.13792996826146e-08
+
+Accumulated reward at episode 270: [-7501. 67469.]
+Loss: 3.424507699634205e-08
+
+Accumulated reward at episode 271: [-7500. 67500.]
+Loss: 1.3528778097793293e-09
+
+Accumulated reward at episode 272: [-7501. 67469.]
+Loss: 4.6051442037509105e-07
+
+Accumulated reward at episode 273: [-7501. 67469.]
+Loss: 4.342153303582563e-10
+
+Accumulated reward at episode 274: [-7501. 67469.]
+Loss: 1.7242699712483045e-08
+
+Accumulated reward at episode 275: [-7501. 67469.]
+Loss: 7.594369577645921e-10
+
+Accumulated reward at episode 276: [-7501. 67469.]
+Loss: 2.7850150630115422e-08
+
+Accumulated reward at episode 277: [-7501. 67469.]
+Loss: 3.795650904692138e-08
+
+Accumulated reward at episode 278: [-7501. 67469.]
+Loss: 2.4916770868799176e-09
+
+Accumulated reward at episode 279: [-7501. 67469.]
+Loss: 3.9314684840974223e-10
+
+Accumulated reward at episode 280: [-7501. 67469.]
+Loss: 8.265896589421118e-08
+
+Accumulated reward at episode 281: [-7501. 67469.]
+Loss: 2.76587641678816e-11
+
+Accumulated reward at episode 282: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 283: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 284: [-7501. 67469.]
+Loss: 4.230789940606883e-09
+
+Accumulated reward at episode 285: [-7501. 67469.]
+Loss: 3.5573588519355326e-10
+
+Accumulated reward at episode 286: [-7501. 67469.]
+Loss: 1.4533707570763e-10
+
+Accumulated reward at episode 287: [-7501. 67469.]
+Loss: 3.221556355015309e-10
+
+Accumulated reward at episode 288: [-7501. 67469.]
+Loss: 3.517434432609434e-08
+
+Accumulated reward at episode 289: [-7501. 67469.]
+Loss: 4.356628835466836e-09
+
+Accumulated reward at episode 290: [-7501. 67469.]
+Loss: 6.603809801219995e-07
+
+Accumulated reward at episode 291: [-7501. 67469.]
+Loss: 2.9173197191312283e-10
+
+Accumulated reward at episode 292: [-7500. 67500.]
+Loss: 8.446576771348191e-13
+
+Accumulated reward at episode 293: [-7501. 67469.]
+Loss: 1.753889478095516e-08
+
+Accumulated reward at episode 294: [-7500. 67500.]
+Loss: 7.611689056830073e-13
+
+Accumulated reward at episode 295: [-7501. 67469.]
+Loss: 1.1126900290037156e-08
+
+Accumulated reward at episode 296: [-7501. 67469.]
+Loss: 1.814637329289326e-11
+
+Accumulated reward at episode 297: [-7501. 67469.]
+Loss: 1.6333601138285303e-11
+
+Accumulated reward at episode 298: [-7501. 67469.]
+Loss: 5.62692799022102e-08
+
+Accumulated reward at episode 299: [-39227. -39077.]
+Loss: 239.40220141943178
+
+Accumulated reward at episode 300: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 301: [-7501. 67469.]
+Loss: 5.329070518200751e-15
+
+Accumulated reward at episode 302: [-7501. 67469.]
+Loss: 2.2170532076870586e-10
+
+Accumulated reward at episode 303: [-7501. 67469.]
+Loss: 3.582911745070305e-12
+
+Accumulated reward at episode 304: [-7501. 67469.]
+Loss: 6.057376822354854e-13
+
+Accumulated reward at episode 305: [-7501. 67469.]
+Loss: 2.0080648255316191e-10
+
+Accumulated reward at episode 306: [-7501. 67469.]
+Loss: 1.8186963046673554e-10
+
+Accumulated reward at episode 307: [-7501. 67469.]
+Loss: 5.329070518200751e-15
+
+Accumulated reward at episode 308: [-7501. 67469.]
+Loss: 1.7152332887349075e-09
+
+Accumulated reward at episode 309: [-7500. 67500.]
+Loss: 6.966871524127782e-12
+
+Accumulated reward at episode 310: [-7501. 67469.]
+Loss: 1.6471357611180792e-10
+
+Accumulated reward at episode 311: [-7501. 67469.]
+Loss: 7.139142610412819e-10
+
+Accumulated reward at episode 312: [-7501. 67469.]
+Loss: 7.289457926162868e-11
+
+Accumulated reward at episode 313: [-7501. 67469.]
+Loss: 5.560440996532634e-10
+
+Accumulated reward at episode 314: [-7501. 67469.]
+Loss: 2.9132252166164108e-12
+
+Accumulated reward at episode 315: [-7500. 67500.]
+Loss: 6.271427821502584e-12
+
+Accumulated reward at episode 316: [-7500. 67500.]
+Loss: 0.0
+
+Accumulated reward at episode 317: [-7501. 67469.]
+Loss: 6.564171428635746e-11
+
+Accumulated reward at episode 318: [-7501. 67469.]
+Loss: 1.0432543717797671e-11
+
+Accumulated reward at episode 319: [-7501. 67469.]
+Loss: 3.9612757518625585e-13
+
+Accumulated reward at episode 320: [-7501. 67469.]
+Loss: 5.329070518200751e-15
+
+Accumulated reward at episode 321: [-7501. 67469.]
+Loss: 3.588240815588506e-13
+
+Accumulated reward at episode 322: [-7501. 67469.]
+Loss: 3.863576125695545e-13
+
+Accumulated reward at episode 323: [-7501. 67469.]
+Loss: 3.2152058793144533e-13
+
+FINISH TRAINING NSW Q LEARNING
