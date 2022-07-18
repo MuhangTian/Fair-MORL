@@ -1,5 +1,5 @@
 #!/bin/sh
-#SBATCH --job-name=BIG_PEN
+#SBATCH --job-name=NSW7
 #SBATCH --nodes=1
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=muhang.tian@duke.edu
@@ -7,6 +7,6 @@
 #SBATCH --cpus-per-task=48            
 #SBATCH --mem=50g
 #SBATCH --time=4-00:00:00               # Time limit hrs:min:sec
-#SBATCH --output=BIG_PEN.out.%J
-#SBATCH --error=BIG_PEN.err.%J
-python3 nsw_ql_taxi_pen2.py -n 1
+#SBATCH --output=NSW7.out.%J
+#SBATCH --error=NSW7.err.%J
+python3 nsw_ql_taxi_pen_v2_2.py -n 3 -g 0.85

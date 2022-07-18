@@ -1,6 +1,6 @@
-'''Evaluation of trained Q tables by playing the game, in no penalty environment'''
+'''Evaluation of trained Q tables by playing the game, in environment with penalty'''
 import numpy as np
-from Fair_Taxi_MDP import Fair_Taxi_MDP
+from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
 
 def argmax_nsw(R, gamma_Q, nsw_lambda):
     sum = R + gamma_Q
@@ -18,6 +18,7 @@ def argmax_nsw_geom(R, gamma_Q):    # unfinished argmax, calculate NSW by geomet
 
 def nsw(vec, nsw_lambda): 
     vec = vec + nsw_lambda
+    vec = np.where(vec <= 0, nsw_lambda, vec)  # replace any negative values or zeroes with lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
 def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20, nsw_lambda=0.01, gamma=1, render=True):
@@ -66,7 +67,6 @@ def check_all_locs(q_table, size, eval_steps, gamma, nsw, nsw_lambda=1e-4):
             state = env.reset([i,j])
             prev = state
             for _ in range(eval_steps):
-                num = q_table[state]
                 if nsw == False:
                     action = np.argmax(gamma*q_table[state])
                 else:
@@ -75,7 +75,7 @@ def check_all_locs(q_table, size, eval_steps, gamma, nsw, nsw_lambda=1e-4):
                 state = next
                 if state == prev: count += 1
                 else: count = 0
-                if count == 5: 
+                if count == 10: 
                     invalid.append([i,j])    # initial location that doesn't work
                     break
                 prev = state
@@ -92,8 +92,9 @@ if __name__ == '__main__':
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
-    env = Fair_Taxi_MDP(size, loc_coords, dest_coords, fuel, '', 15)
-    q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
-    #eval_nsw(q_table, taxi_loc=[3,4], pass_dest=None, nsw_lambda=1e-4, gamma=0.95, episodes=30, render=True)
-    eval_ql(q_table, taxi_loc=[0,4], pass_dest=None, episodes=1)
-    #check_all_locs(q_table, size, eval_steps=10000, gamma=0.99, nsw=False)
+    env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, '', 15)
+    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_size5_locs2_1.npy')
+    eval_nsw(q_table, taxi_loc=None, pass_dest=None, nsw_lambda=1e-4, gamma=0.95, episodes=30, render=True)
+    #check_all_locs(q_table, size, eval_steps=10000, gamma=0.95, nsw_lambda=1e-4, nsw=True)
+    #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
+    #eval_ql(q_table, taxi_loc=[2,2], pass_dest=None, episodes=1)

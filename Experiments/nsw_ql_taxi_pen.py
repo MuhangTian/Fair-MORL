@@ -65,25 +65,6 @@ def nsw(vec, nsw_lambda):
     vec = np.where(vec <= 0, nsw_lambda, vec)  # replace any negative values or zeroes with lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
-def evaluate_NSW_Q_learning(Q_table, vec_dim, taxi_loc=None, pass_dest=None, runs=20, nsw_lambda=0.01, gamma=1):
-    for _ in range(runs):
-        fair_env._clean_metrics()
-        done = False
-        R_acc = np.zeros(vec_dim)
-        pass_loc = None if pass_dest == None else 1
-        state = fair_env.reset(taxi_loc, pass_loc, pass_dest)
-        fair_env.render()
-        
-        while not done:
-            action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
-            next, reward, done, info = fair_env.step(action)
-            # reward = np.sum(reward) # for scalar reward with NSW Q-table
-            fair_env.render()
-            state = next
-            R_acc += reward
-        #fair_env._output_csv()
-    return print("FINSIH EVALUATE NSW Q LEARNING")
-
 if __name__ == '__main__':
     
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
