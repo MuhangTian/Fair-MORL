@@ -12,5 +12,5 @@ def plot_loss(loss_data, ID):
     plt.show()
 
 if __name__ == '__main__':
-    loss_data = np.load('Experiments/taxi_q_tables/NSW_Penalty_size5_locs2_1_loss.npy')
-    plot_loss(loss_data, 1922343)
+    loss_data = np.load('Experiments/taxi_q_tables/NSW_Cont_Penalty_V2_size5_locs2_4_loss.npy')
+    plot_loss(loss_data, 1922616)

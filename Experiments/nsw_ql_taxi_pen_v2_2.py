@@ -80,6 +80,7 @@ if __name__ == '__main__':
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     prs.add_argument("-d", dest="dim_factor", type=float, default=0.9, required=False, help="Diminish factor for epsilon\n")
     prs.add_argument("-t", dest="tolerance", type=float, default=1e-10, required=False, help="Loss threshold for Q-values between each episode\n")
+    prs.add_argument("-s", dest="seed", type=int, default=1122, required=False, help="See for randomization of reset() function\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
     
@@ -90,6 +91,7 @@ if __name__ == '__main__':
     
     fair_env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
+    fair_env.seed(args.seed)
     
     run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 
                        gamma=args.gamma, nsw_lambda=args.nsw_lambda, init_val=args.init_val,

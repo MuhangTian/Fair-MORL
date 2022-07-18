@@ -1,6 +1,6 @@
 '''Evaluation of trained Q tables by playing the game, in environment with penalty'''
 import numpy as np
-from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
+from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty
 
 def argmax_nsw(R, gamma_Q, nsw_lambda):
     sum = R + gamma_Q
@@ -21,24 +21,45 @@ def nsw(vec, nsw_lambda):
     vec = np.where(vec <= 0, nsw_lambda, vec)  # replace any negative values or zeroes with lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
-def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20, nsw_lambda=0.01, gamma=1, render=True):
-    for i in range(1, episodes+1):
-        env._clean_metrics()
-        done = False
-        R_acc = np.zeros(len(env.loc_coords))
-        pass_loc = None if pass_dest == None else 1
-        state = env.reset(taxi_loc, pass_loc, pass_dest)
-        if render == True: env.render()
-        
-        while not done:
-            action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
-            next, reward, done = env.step(action)
-            # reward = np.sum(reward) # for scalar reward with NSW Q-table
+def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20, 
+             nsw_lambda=0.01, gamma=1, check_dest=False, size=5, render=True):
+    if check_dest == True:
+        for i in range(size):
+            for j in range(size):
+                done = False
+                R_acc = np.zeros(len(env.loc_coords))
+                pass_loc = None if pass_dest == None else 1
+                state = env.reset([i,j], pass_loc, pass_dest)
+                if render == True: env.render()
+                
+                while not done:
+                    action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+                    next, reward, done = env.step(action)
+                    # reward = np.sum(reward) # for scalar reward with NSW Q-table
+                    if render == True: env.render()
+                    state = next
+                    R_acc += reward
+            
+                print('Accumulated Reward, initial location {}: {}\n'.format([i,j], R_acc))
+    else:
+        for i in range(1, episodes+1):
+            env._clean_metrics()
+            done = False
+            R_acc = np.zeros(len(env.loc_coords))
+            pass_loc = None if pass_dest == None else 1
+            state = env.reset(taxi_loc, pass_loc, pass_dest)
+            print(state)
             if render == True: env.render()
-            state = next
-            R_acc += reward
-        
-        print('Accumulated Reward, episode {}: {}\n'.format(i, R_acc))
+            
+            while not done:
+                action = argmax_nsw(0, gamma*Q_table[state], nsw_lambda)
+                next, reward, done = env.step(action)
+                # reward = np.sum(reward) # for scalar reward with NSW Q-table
+                if render == True: env.render()
+                state = next
+                R_acc += reward
+            
+            print('Accumulated Reward, episode {}: {}\n'.format(i, R_acc))
         #env._output_csv()
     return print("FINSIH EVALUATE NSW Q LEARNING")
 
@@ -92,9 +113,13 @@ if __name__ == '__main__':
     loc_coords = [[0,0], [3,2]]
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
+    
     env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, '', 15)
-    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_size5_locs2_1.npy')
-    eval_nsw(q_table, taxi_loc=None, pass_dest=None, nsw_lambda=1e-4, gamma=0.95, episodes=30, render=True)
-    #check_all_locs(q_table, size, eval_steps=10000, gamma=0.95, nsw_lambda=1e-4, nsw=True)
+    env.seed(1122)  # make sure to use same seed as we used in learning
+    
+    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size5_locs2_1.npy')
+    eval_nsw(q_table, taxi_loc=None, pass_dest=None, nsw_lambda=1e-10,
+               gamma=1, episodes=30, render=False,  check_dest=False)
+    #check_all_locs(q_table, size, eval_steps=10000, gamma=0.8, nsw_lambda=1e-4, nsw=True)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
     #eval_ql(q_table, taxi_loc=[2,2], pass_dest=None, episodes=1)

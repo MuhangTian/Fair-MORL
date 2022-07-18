@@ -1,6 +1,6 @@
 '''
 Taxi MDP environment designed for multi-objective reinforcement learning
-(with negative reward of -10 for invalid actions, -1 for each time step)
+(with negative reward of -10 for invalid actions, 0 for each time step)
 Description: https://docs.google.com/document/d/16Ot75_Pw65V51QLKaXE1-ifJhQtf4AEkqZ0E87XbKrk/edit
 '''
 import numpy as np

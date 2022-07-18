@@ -63,36 +63,12 @@ fuel = 100
 
 env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
                     output_path='Taxi_MDP/NSW_Q_learning/run_', fps=1)
-
-# env.reset([2,2])
-# env.render()
-# next, reward, done = env.step(4) # pick
-# env.render()
-# print(reward)
-# next, reward, done = env.step(5) # drop
-# env.render()
-# print(reward)
-# next, reward, done = env.step(2) # right
-# env.render()
-# next, reward, done = env.step(5) # drop
-# env.render()
-# print(reward)
-# next, reward, done = env.step(4) # pick
-# env.render()
-# next, reward, done = env.step(0) # down
-# env.render()
-# next, reward, done = env.step(4) # pick
-# env.render()
-# print(reward)
-# next, reward, done = env.step(5) # drop
-# env.render()
-# print(reward)
-
-state = env.reset([3,3], 1, [3,3])
-env.render()
-next, reward, done = env.step(5)
-env.render()
-print(reward)
+env.seed(1122)
+arr= []    
+for _ in range(30):
+    state = env.reset()
+    arr.append(state)
+print(arr)
 
 
 
