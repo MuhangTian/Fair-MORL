@@ -1,4 +1,4 @@
-'''NSW Q learning without R included in argmax, same initial values, with penalty environment'''
+'''NSW Q learning without R included in argmax, same initial values, with penalty environment v2'''
 import numpy as np
 import argparse
 from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty
