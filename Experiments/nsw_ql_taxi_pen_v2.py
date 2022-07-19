@@ -77,7 +77,7 @@ if __name__ == '__main__':
     prs.add_argument("-nl", dest="nsw_lambda", type=float, default=1e-4, required=False, help="Smoothing factor\n")
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     prs.add_argument("-d", dest="dim_factor", type=float, default=0.9, required=False, help="Diminish factor for epsilon\n")
-    prs.add_argument("-t", dest="tolerance", type=float, default=1e-10, required=False, help="Loss threshold for Q-values between each episode\n")
+    prs.add_argument("-t", dest="tolerance", type=float, default=1e-5, required=False, help="Loss threshold for Q-values between each episode\n")
     prs.add_argument("-s", dest="seed", type=int, default=1122, required=False, help="See for randomization of reset() function\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
