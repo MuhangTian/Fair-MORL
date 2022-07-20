@@ -61,14 +61,17 @@ loc_coords = [[0,0], [0,5], [3,2]]
 dest_coords = [[0,4], [5,0], [3,3]]
 fuel = 100
 
+# size = 5
+# loc_coords = [[0,0], [3,2]]
+# dest_coords = [[0,4], [3,3]]
+
 env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                     output_path='Taxi_MDP/NSW_Q_learning/run_', fps=1)
 env.seed(1122)
 arr= []    
 for _ in range(10):
     state = env.reset()
-    arr.append(state)
-print(arr)
+    env.render()
 
 
 
