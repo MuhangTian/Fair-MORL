@@ -1,7 +1,7 @@
 '''NSW Q learning without R included in argmax, same initial values, with penalty environment v2'''
 import numpy as np
 import argparse
-from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty
+from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 
 def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, file_name):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
@@ -12,6 +12,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
     for i in range(1, episodes+1):
         R_acc = np.zeros(len(fair_env.loc_coords))
         state = fair_env.reset()
+        print(state)
         done = False
         old_table = np.copy(Q_table)
         
@@ -82,12 +83,15 @@ if __name__ == '__main__':
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
     
-    size = 5
-    loc_coords = [[0,0], [3,2]]
-    dest_coords = [[0,4], [3,3]]
-    fuel = args.fuel
+    # size = 5
+    # loc_coords = [[0,0], [3,2]]
+    # dest_coords = [[0,4], [3,3]]
     
-    fair_env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
+    size = 6
+    loc_coords = [[0,0], [0,5], [3,2]]
+    dest_coords = [[0,4], [5,0], [3,3]]
+    fuel = args.fuel
+    fair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
     fair_env.seed(args.seed)
     

@@ -1,5 +1,5 @@
 import numpy as np
-from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
+from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 from Fair_Taxi_MDP import Fair_Taxi_MDP
 
 '''Test MDP environment with mannual actions'''
@@ -56,20 +56,19 @@ from Fair_Taxi_MDP import Fair_Taxi_MDP
 # print(len(set(arr)))
 
 '''Test taxi environment with penalty'''
-size = 5
-loc_coords = [[0,0], [3,2]]
-dest_coords = [[0,4], [3,3]]
+size = 6
+loc_coords = [[0,0], [0,5], [3,2]]
+dest_coords = [[0,4], [5,0], [3,3]]
 fuel = 100
 
-env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
+env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                     output_path='Taxi_MDP/NSW_Q_learning/run_', fps=1)
 env.seed(1122)
 arr= []    
-for _ in range(30):
+for _ in range(10):
     state = env.reset()
     arr.append(state)
 print(arr)
-
 
 
 

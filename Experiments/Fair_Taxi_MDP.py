@@ -42,6 +42,8 @@ class Fair_Taxi_MDP(gym.Env):
         for loc in self.loc_coords:
             for dest in self.dest_coords:
                 if np.array_equal(loc, dest): raise ValueError('Contain repeated coordinate(s)')
+        if np.max(loc_coords)>size-1 or np.max(dest_coords)>size-1 or np.min(loc_coords)<0 or np.min(dest_coords)<0: 
+            raise ValueError('Coordinates out of range')
         
         self.metadata['render_fps'] = fps
         self.output_path = output_path

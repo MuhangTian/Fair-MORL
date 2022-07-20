@@ -1,6 +1,6 @@
 '''Evaluation of trained Q tables by playing the game, in environment with penalty'''
 import numpy as np
-from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty
+from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 
 def argmax_nsw(R, gamma_Q, nsw_lambda):
     sum = R + gamma_Q
@@ -28,8 +28,8 @@ def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20,
             for j in range(size):
                 done = False
                 R_acc = np.zeros(len(env.loc_coords))
-                pass_loc = None if pass_dest == None else 1
-                state = env.reset([i,j], pass_loc, pass_dest)
+                state = env.reset([i,j])
+                print(state)
                 if render == True: env.render()
                 
                 while not done:
@@ -52,7 +52,7 @@ def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20,
             if render == True: env.render()
             
             while not done:
-                action = argmax_nsw(0, gamma*Q_table[state], nsw_lambda)
+                action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
                 next, reward, done = env.step(action)
                 # reward = np.sum(reward) # for scalar reward with NSW Q-table
                 if render == True: env.render()
@@ -114,12 +114,13 @@ if __name__ == '__main__':
     dest_coords = [[0,4], [3,3]]
     fuel = 10000
     
-    env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, '', 15)
+    env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 15)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
     q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size5_locs2_1.npy')
-    eval_nsw(q_table, taxi_loc=None, pass_dest=None, nsw_lambda=1e-10,
-               gamma=1, episodes=30, render=False,  check_dest=False)
-    #check_all_locs(q_table, size, eval_steps=10000, gamma=0.8, nsw_lambda=1e-4, nsw=True)
+    eval_nsw(q_table, taxi_loc=[0,0], pass_dest=None, nsw_lambda=1e-4,
+               gamma=0.95, episodes=1, render=True,  check_dest=False)
+    # print(env.decode(128))
+    # check_all_locs(q_table, size, eval_steps=10000, gamma=0.8, nsw_lambda=1e-4, nsw=True)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
     #eval_ql(q_table, taxi_loc=[2,2], pass_dest=None, episodes=1)

@@ -9,7 +9,7 @@ import gym
 import pygame
 from gym import spaces
 
-class Fair_Taxi_MDP_Penalty(gym.Env):
+class Fair_Taxi_MDP_Penalty_V2(gym.Env):
 
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
     
@@ -43,6 +43,8 @@ class Fair_Taxi_MDP_Penalty(gym.Env):
         for loc in self.loc_coords:
             for dest in self.dest_coords:
                 if np.array_equal(loc, dest): raise ValueError('Contain repeated coordinate(s)')
+        if np.max(loc_coords)>size-1 or np.max(dest_coords)>size-1 or np.min(loc_coords)<0 or np.min(dest_coords)<0: 
+            raise ValueError('Coordinates out of range')
         
         self.metadata['render_fps'] = fps
         self.output_path = output_path
@@ -227,7 +229,7 @@ class Fair_Taxi_MDP_Penalty(gym.Env):
         pass_loc : int
             whether passenger in taxi (0 for no, 1 for yes)
         pass_idx : int or Nonetype
-            indicates destination of current passenger in taxi, None for no passenger
+            indicates destination of current passenger in taxi
             
         Returns
         -------
