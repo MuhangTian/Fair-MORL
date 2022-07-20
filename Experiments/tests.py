@@ -56,9 +56,9 @@ from Fair_Taxi_MDP import Fair_Taxi_MDP
 # print(len(set(arr)))
 
 '''Test taxi environment with penalty'''
-size = 6
-loc_coords = [[0,0], [0,5], [3,2]]
-dest_coords = [[0,4], [5,0], [3,3]]
+size = 8
+loc_coords = [[0,0], [0,5], [3,2], [5,4], [3,7], [5,6]]
+dest_coords = [[0,4], [5,0], [3,3], [2,0], [7,0], [6,6]]
 fuel = 100
 
 # size = 5
@@ -69,7 +69,7 @@ env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel,
                     output_path='Taxi_MDP/NSW_Q_learning/run_', fps=1)
 env.seed(1122)
 arr= []    
-for _ in range(10):
+for _ in range(1000):
     state = env.reset()
     env.render()
 

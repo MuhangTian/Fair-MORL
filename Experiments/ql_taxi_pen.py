@@ -1,6 +1,6 @@
 import numpy as np
 import argparse
-from Fair_Taxi_MDP_Penalty import Fair_Taxi_MDP_Penalty
+from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 
 def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, init_val=0, tolerance=1e-10):
     Q_table = np.zeros([nonfair_env.observation_space.n, nonfair_env.action_space.n])
@@ -30,7 +30,7 @@ def run_Q_learning(episodes=20, alpha=0.1, epsilon=0.1, gamma=0.99, init_val=0, 
 
         loss = np.sum(np.abs(Q_table - old_table))
         loss_data.append(loss)
-        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, nonfair_env.timesteps, loss))
+        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, nonfair_env.acc_reward, loss))
         if loss < tolerance:
             loss_count += 1
             if loss_count == 10: break  # need to be smaller for consecutive loops to satisfy early break
@@ -54,12 +54,16 @@ if __name__ == '__main__':
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     args = prs.parse_args()
     
-    size = 5
-    loc_coords = [[0,0], [3,2]]
-    dest_coords = [[0,4], [3,3]]
+    # size = 5
+    # loc_coords = [[0,0], [3,2]]
+    # dest_coords = [[0,4], [3,3]]
+    
+    size = 6
+    loc_coords = [[0,0], [0,5], [3,2]]
+    dest_coords = [[0,4], [5,0], [3,3]]
     fuel = args.fuel
     
-    nonfair_env = Fair_Taxi_MDP_Penalty(size, loc_coords, dest_coords, fuel, 
+    nonfair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                                         output_path='Taxi_MDP/Q_learning/run_', fps=4)
     
     run_Q_learning(episodes=args.episodes, alpha=args.alpha, 

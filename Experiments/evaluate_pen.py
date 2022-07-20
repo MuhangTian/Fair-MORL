@@ -22,18 +22,17 @@ def nsw(vec, nsw_lambda):
     return np.sum(np.log(vec))    # numpy uses natural log
 
 def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20, 
-             nsw_lambda=0.01, gamma=1, check_dest=False, size=5, render=True):
+             nsw_lambda=0.01, gamma=1, check_dest=False, render=True):
     if check_dest == True:
-        for i in range(size):
-            for j in range(size):
+        for i in range(env.size):
+            for j in range(env.size):
                 done = False
                 R_acc = np.zeros(len(env.loc_coords))
                 state = env.reset([i,j])
-                print(state)
                 if render == True: env.render()
                 
                 while not done:
-                    action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+                    action = argmax_nsw(0, gamma*Q_table[state], nsw_lambda)
                     next, reward, done = env.step(action)
                     # reward = np.sum(reward) # for scalar reward with NSW Q-table
                     if render == True: env.render()
@@ -52,7 +51,7 @@ def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20,
             if render == True: env.render()
             
             while not done:
-                action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+                action = argmax_nsw(0, gamma*Q_table[state], nsw_lambda)
                 next, reward, done = env.step(action)
                 # reward = np.sum(reward) # for scalar reward with NSW Q-table
                 if render == True: env.render()
@@ -61,7 +60,7 @@ def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, episodes=20,
             
             print('Accumulated Reward, episode {}: {}\n'.format(i, R_acc))
         #env._output_csv()
-    return print("FINSIH EVALUATE NSW Q LEARNING")
+    return print("FINSIH EVALUATE NSW Q LEARNING\n")
 
 def eval_ql(Q_table, taxi_loc=None, pass_dest=None, episodes=20):
     for i in range(1, episodes+1):
@@ -77,12 +76,13 @@ def eval_ql(Q_table, taxi_loc=None, pass_dest=None, episodes=20):
             env.render()
             state = next
         # env._output_csv()
-    return print("FINISH EVALUATE Q LEARNING")
+    return print("FINISH EVALUATE Q LEARNING\n")
 
-def check_all_locs(q_table, size, eval_steps, gamma, nsw, nsw_lambda=1e-4):
+def check_all_locs(q_table, eval_steps, gamma, nsw, nsw_lambda=1e-4):
     invalid, prev, valid = [], 0, []
-    for i in range(size):
-        for j in range(size):
+    print('Check initial locations...\n')
+    for i in range(env.size):
+        for j in range(env.size):
             count = 0
             R_acc = np.zeros(len(env.loc_coords))
             state = env.reset([i,j])
@@ -103,24 +103,27 @@ def check_all_locs(q_table, size, eval_steps, gamma, nsw, nsw_lambda=1e-4):
                 if nsw == True: R_acc += reward
             if count < 5: valid.append([i,j]) # append valid initial states
             
-    if len(invalid) == 0: return print('All initial locations WORK')
-    elif len(invalid) == size*size: return print('All initial locations FAIL')
-    elif len(invalid) >= int(size*size/2): print('These initial locations WORK: {}'.format(valid))
-    else: return print('These initial locations FAIL: {}'.format(invalid))
+    if len(invalid) == 0: return print('Result: All initial locations WORK')
+    elif len(invalid) == size*size: return print('Result: All initial locations FAIL')
+    elif len(invalid) >= int(size*size/2): print('Result: These initial locations WORK: {}'.format(valid))
+    else: return print('Result: These initial locations FAIL: {}'.format(invalid))
 
 if __name__ == '__main__':
-    size = 5
-    loc_coords = [[0,0], [3,2]]
-    dest_coords = [[0,4], [3,3]]
+    # size = 5
+    # loc_coords = [[0,0], [3,2]]
+    # dest_coords = [[0,4], [3,3]]
+    size = 6
+    loc_coords = [[0,0], [0,5], [3,2]]
+    dest_coords = [[0,4], [5,0], [3,3]]
     fuel = 10000
     
-    env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 15)
+    env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 8)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
-    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size5_locs2_1.npy')
-    eval_nsw(q_table, taxi_loc=[0,0], pass_dest=None, nsw_lambda=1e-4,
-               gamma=0.95, episodes=1, render=True,  check_dest=False)
-    # print(env.decode(128))
-    # check_all_locs(q_table, size, eval_steps=10000, gamma=0.8, nsw_lambda=1e-4, nsw=True)
+    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size6_locs3_2.npy')
+    eval_nsw(q_table, taxi_loc=[5,5], pass_dest=None, nsw_lambda=1e-4,
+               gamma=0.95, episodes=1, render=False,  check_dest=True)
+    
+    check_all_locs(q_table, eval_steps=10000, gamma=0.95, nsw_lambda=1e-4, nsw=True)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
     #eval_ql(q_table, taxi_loc=[2,2], pass_dest=None, episodes=1)

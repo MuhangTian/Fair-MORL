@@ -71,7 +71,7 @@ if __name__ == '__main__':
     
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
-    prs.add_argument("-f", dest="fuel", type=int, default=100000000, required=False, help="Timesteps each episode\n")
+    prs.add_argument("-f", dest="fuel", type=int, default=50000000, required=False, help="Timesteps each episode\n")
     prs.add_argument("-ep", dest="episodes", type=int, default=1, required=False, help="Episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
@@ -88,9 +88,13 @@ if __name__ == '__main__':
     # loc_coords = [[0,0], [3,2]]
     # dest_coords = [[0,4], [3,3]]
     
-    size = 6
-    loc_coords = [[0,0], [0,5], [3,2]]
-    dest_coords = [[0,4], [5,0], [3,3]]
+    # size = 6
+    # loc_coords = [[0,0], [0,5], [3,2], [5,4]]
+    # dest_coords = [[0,4], [5,0], [3,3], [2,0]]
+    
+    size = 8
+    loc_coords = [[0,0], [0,5], [3,2], [5,4], [3,7], [5,6]]
+    dest_coords = [[0,4], [5,0], [3,3], [2,0], [7,0], [6,6]]
     fuel = args.fuel
     
     fair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
