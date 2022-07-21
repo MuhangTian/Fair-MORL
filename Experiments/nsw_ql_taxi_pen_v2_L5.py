@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 
-def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, alpha_N, file_name):
+def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, file_name, alpha_N):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
     Num = np.full(fair_env.observation_space.n, epsilon, dtype=float)
     Q_table = Q_table + init_val
@@ -24,7 +24,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                 action = fair_env.action_space.sample()
             else:
                 action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
-            
+                
             if alpha_N == True: 
                 a_Num[state, action] += 1
                 alpha = 1/a_Num[state, action]
@@ -38,19 +38,17 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
             state = next_state
             R_acc += reward
         
-            if fair_env.timesteps % 10000 == 0 and fair_env.timesteps != 0:
-                loss = np.sum(np.abs(Q_table - old_table))
-                loss_data.append(loss)
-                print('Accumulated reward at timestep {}: {}\nLoss: {}\n'.format(fair_env.timesteps, R_acc, loss))
-                if loss < tolerance:
-                    loss_count += 1
-                    if loss_count == 10: break # need to be smaller for consecutive loops to satisfy early break
-                else: loss_count = 0
-                old_table = np.copy(Q_table)
-                
-    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
+        loss = np.sum(np.abs(Q_table - old_table))
+        loss_data.append(loss)
+        print('Accumulated reward at episode {}: {}\nLoss: {}\n'.format(i, R_acc, loss))
+        if loss < tolerance:
+            loss_count += 1
+            if loss_count == 10: break  # need to be smaller for consecutive loops to satisfy early break
+        else: loss_count = 0
+        
+    np.save(file='taxi_q_tables/NSW_Penalty_V2_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
             arr=Q_table)
-    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}_loss'.format(fair_env.size,len(fair_env.loc_coords), file_name),
+    np.save(file='taxi_q_tables/NSW_Penalty_V2_size{}_locs{}_{}_loss'.format(fair_env.size,len(fair_env.loc_coords), file_name),
             arr=loss_data)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
@@ -78,8 +76,8 @@ if __name__ == '__main__':
     
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
-    prs.add_argument("-f", dest="fuel", type=int, default=50000000, required=False, help="Timesteps each episode\n")
-    prs.add_argument("-ep", dest="episodes", type=int, default=1, required=False, help="Episodes.\n")
+    prs.add_argument("-f", dest="fuel", type=int, default=10000, required=False, help="Timesteps each episode\n")
+    prs.add_argument("-ep", dest="episodes", type=int, default=5000, required=False, help="Episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-aN", dest="alpha_N", type=bool, default=False, required=False, help="Whether use 1/N for alpha\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
@@ -101,10 +99,10 @@ if __name__ == '__main__':
     # dest_coords = [[0,4], [5,0], [3,3], [2,0]]
     
     size = 8
-    loc_coords = [[0,0], [0,5], [3,2], [3,7]]
-    dest_coords = [[0,4], [5,0], [3,3], [7,0]]
-    fuel = args.fuel
+    loc_coords = [[0,0], [0,5], [3,2], [3,7], [5,6]]
+    dest_coords = [[0,4], [5,0], [3,3], [7,0], [6,6]]
     
+    fuel = args.fuel
     fair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
     fair_env.seed(args.seed)

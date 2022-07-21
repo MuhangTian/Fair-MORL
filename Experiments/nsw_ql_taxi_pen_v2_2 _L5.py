@@ -101,8 +101,8 @@ if __name__ == '__main__':
     # dest_coords = [[0,4], [5,0], [3,3], [2,0]]
     
     size = 8
-    loc_coords = [[0,0], [0,5], [3,2], [3,7]]
-    dest_coords = [[0,4], [5,0], [3,3], [7,0]]
+    loc_coords = [[0,0], [0,5], [3,2], [3,7], [5,6]]
+    dest_coords = [[0,4], [5,0], [3,3], [7,0], [6,6]]
     fuel = args.fuel
     
     fair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
