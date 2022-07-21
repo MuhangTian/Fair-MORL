@@ -47,10 +47,11 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
                     if loss_count == 10: break # need to be smaller for consecutive loops to satisfy early break
                 else: loss_count = 0
                 old_table = np.copy(Q_table)
-                
-    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}'.format(fair_env.size,len(fair_env.loc_coords), file_name),
+    
+    aN = 'aN_' if alpha_N == True else ''            
+    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}{}'.format(fair_env.size,len(fair_env.loc_coords), aN, file_name),
             arr=Q_table)
-    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}_loss'.format(fair_env.size,len(fair_env.loc_coords), file_name),
+    np.save(file='taxi_q_tables/NSW_Cont_Penalty_V2_size{}_locs{}_{}{}_loss'.format(fair_env.size,len(fair_env.loc_coords), aN, file_name),
             arr=loss_data)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q_table
