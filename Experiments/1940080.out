@@ -25950,3 +25950,4052 @@ Loss: 3.6452503215792085
 
 Accumulated reward at episode 8651: [ 4530.  4530. 43260.]
 Loss: 7.806024311825337
+
+Accumulated reward at episode 8652: [ 4530.  4530. 43200.]
+Loss: 22.151261042757366
+
+Accumulated reward at episode 8653: [ 4530.  4530. 43230.]
+Loss: 28.65858435594717
+
+Accumulated reward at episode 8654: [ 4530.  4560. 43140.]
+Loss: 4.894519248359306
+
+Accumulated reward at episode 8655: [ 4530.  4530. 43260.]
+Loss: 2.7969046374180118
+
+Accumulated reward at episode 8656: [ 4530.  4530. 43230.]
+Loss: 3.696017483628227
+
+Accumulated reward at episode 8657: [ 4530.  4530. 43230.]
+Loss: 10.488461378365361
+
+Accumulated reward at episode 8658: [ 4530.  4530. 43290.]
+Loss: 19.068268300276696
+
+Accumulated reward at episode 8659: [ 4530.  4530. 43230.]
+Loss: 26.463069670710013
+
+Accumulated reward at episode 8660: [ 4530.  4530. 43170.]
+Loss: 2.811016116097755
+
+Accumulated reward at episode 8661: [ 4530.  4530. 43170.]
+Loss: 2.2174769059658463
+
+Accumulated reward at episode 8662: [ 4530.  4530. 43260.]
+Loss: 5.354537258528662
+
+Accumulated reward at episode 8663: [ 4530.  4530. 43230.]
+Loss: 2.860892394676314
+
+Accumulated reward at episode 8664: [ 4530.  4530. 43200.]
+Loss: 4.836331992274547
+
+Accumulated reward at episode 8665: [ 4530.  4530. 43170.]
+Loss: 10.816580921243203
+
+Accumulated reward at episode 8666: [ 4530.  4530. 43290.]
+Loss: 16.748652530553418
+
+Accumulated reward at episode 8667: [ 4530.  4530. 43260.]
+Loss: 27.684519710342467
+
+Accumulated reward at episode 8668: [ 4530.  4560. 43140.]
+Loss: 5.174792108179843
+
+Accumulated reward at episode 8669: [ 4530.  4530. 43290.]
+Loss: 2.368198850921682
+
+Accumulated reward at episode 8670: [ 4530.  4530. 43230.]
+Loss: 1.0178859530490503
+
+Accumulated reward at episode 8671: [ 4530.  4530. 43230.]
+Loss: 3.612827391326756
+
+Accumulated reward at episode 8672: [ 4530.  4560. 43140.]
+Loss: 3.7566275417065667
+
+Accumulated reward at episode 8673: [ 4530.  4530. 43230.]
+Loss: 3.9332433456565505
+
+Accumulated reward at episode 8674: [ 4530.  4560. 43140.]
+Loss: 3.5075574220570886
+
+Accumulated reward at episode 8675: [ 4530.  4530. 43230.]
+Loss: 10.381332609264533
+
+Accumulated reward at episode 8676: [ 4530.  4530. 43170.]
+Loss: 23.282301760390954
+
+Accumulated reward at episode 8677: [ 4530.  4560. 43140.]
+Loss: 28.01408841874285
+
+Accumulated reward at episode 8678: [ 4530.  4530. 43230.]
+Loss: 3.992645294683425
+
+Accumulated reward at episode 8679: [ 4530.  4530. 43200.]
+Loss: 2.2754700585651144
+
+Accumulated reward at episode 8680: [ 4530.  4560. 43140.]
+Loss: 3.739291773236118
+
+Accumulated reward at episode 8681: [ 4530.  4530. 43260.]
+Loss: 10.110056220953975
+
+Accumulated reward at episode 8682: [ 4530.  4530. 43260.]
+Loss: 19.376360912351206
+
+Accumulated reward at episode 8683: [ 4530.  4560. 43110.]
+Loss: 26.688739999611563
+
+Accumulated reward at episode 8684: [ 4530.  4530. 43230.]
+Loss: 1.3494954444952576
+
+Accumulated reward at episode 8685: [ 4530.  4530. 43290.]
+Loss: 3.6342244526613996
+
+Accumulated reward at episode 8686: [ 4530.  4530. 43170.]
+Loss: 0.7134464368302175
+
+Accumulated reward at episode 8687: [ 4530.  4530. 43170.]
+Loss: 4.507004065510522
+
+Accumulated reward at episode 8688: [ 4530.  4530. 43170.]
+Loss: 4.110251135401347
+
+Accumulated reward at episode 8689: [ 4530.  4530. 43290.]
+Loss: 8.857610810400185
+
+Accumulated reward at episode 8690: [ 4530.  4530. 43290.]
+Loss: 12.050861906909768
+
+Accumulated reward at episode 8691: [ 4530.  4530. 43230.]
+Loss: 18.83847734722749
+
+Accumulated reward at episode 8692: [ 4530.  4560. 43110.]
+Loss: 12.280732987165164
+
+Accumulated reward at episode 8693: [ 4530.  4560. 43110.]
+Loss: 2.0662298765161724
+
+Accumulated reward at episode 8694: [ 4530.  4530. 43200.]
+Loss: 5.984371509451203
+
+Accumulated reward at episode 8695: [ 4530.  4530. 43290.]
+Loss: 7.011201477444398
+
+Accumulated reward at episode 8696: [ 4530.  4530. 43230.]
+Loss: 16.121375539787675
+
+Accumulated reward at episode 8697: [ 4530.  4530. 43170.]
+Loss: 22.619854452358723
+
+Accumulated reward at episode 8698: [ 4530.  4530. 43200.]
+Loss: 11.874723173025101
+
+Accumulated reward at episode 8699: [ 4530.  4560. 43110.]
+Loss: 7.115942037916441
+
+Accumulated reward at episode 8700: [ 4530.  4530. 43170.]
+Loss: 6.220713999464425
+
+Accumulated reward at episode 8701: [ 4530.  4530. 43230.]
+Loss: 9.3578650450078
+
+Accumulated reward at episode 8702: [ 4530.  4530. 43200.]
+Loss: 19.095881239393897
+
+Accumulated reward at episode 8703: [ 4530.  4530. 43260.]
+Loss: 22.47504904826326
+
+Accumulated reward at episode 8704: [ 4530.  4530. 43230.]
+Loss: 8.49562346226259
+
+Accumulated reward at episode 8705: [ 4530.  4530. 43290.]
+Loss: 2.315064096998032
+
+Accumulated reward at episode 8706: [ 4530.  4560. 43110.]
+Loss: 1.8024573102458412
+
+Accumulated reward at episode 8707: [ 4530.  4530. 43260.]
+Loss: 4.990747977634014
+
+Accumulated reward at episode 8708: [ 4530.  4530. 43260.]
+Loss: 1.7171678376901867
+
+Accumulated reward at episode 8709: [ 4530.  4530. 43170.]
+Loss: 3.4977743227732128
+
+Accumulated reward at episode 8710: [ 4530.  4530. 43200.]
+Loss: 8.65977154324625
+
+Accumulated reward at episode 8711: [ 4530.  4530. 43260.]
+Loss: 19.15408374748805
+
+Accumulated reward at episode 8712: [ 4530.  4530. 43230.]
+Loss: 26.442022958039868
+
+Accumulated reward at episode 8713: [ 4530.  4530. 43170.]
+Loss: 2.5828440284045975
+
+Accumulated reward at episode 8714: [ 4530.  4530. 43200.]
+Loss: 2.0802501976337635
+
+Accumulated reward at episode 8715: [ 4530.  4530. 43230.]
+Loss: 3.0267931141314492
+
+Accumulated reward at episode 8716: [ 4530.  4530. 43260.]
+Loss: 0.3330284379683559
+
+Accumulated reward at episode 8717: [ 4530.  4560. 43110.]
+Loss: 7.0287533221703224
+
+Accumulated reward at episode 8718: [ 4530.  4530. 43200.]
+Loss: 8.93690880571607
+
+Accumulated reward at episode 8719: [ 4530.  4560. 43110.]
+Loss: 16.379244970204848
+
+Accumulated reward at episode 8720: [ 4530.  4530. 43230.]
+Loss: 26.458273887949144
+
+Accumulated reward at episode 8721: [ 4530.  4530. 43230.]
+Loss: 4.027468644607871
+
+Accumulated reward at episode 8722: [ 4530.  4560. 43140.]
+Loss: 3.990266925321481
+
+Accumulated reward at episode 8723: [ 4530.  4530. 43200.]
+Loss: 3.4334394424793473
+
+Accumulated reward at episode 8724: [ 4530.  4560. 43170.]
+Loss: 4.2697528100142526
+
+Accumulated reward at episode 8725: [ 4530.  4560. 43140.]
+Loss: 5.737035043375171
+
+Accumulated reward at episode 8726: [ 4530.  4560. 43140.]
+Loss: 8.454398233801586
+
+Accumulated reward at episode 8727: [ 4530.  4560. 43140.]
+Loss: 18.953353616741182
+
+Accumulated reward at episode 8728: [ 4530.  4560. 43170.]
+Loss: 18.720699210440962
+
+Accumulated reward at episode 8729: [ 4530.  4560. 43110.]
+Loss: 3.661835596705112
+
+Accumulated reward at episode 8730: [ 4530.  4530. 43260.]
+Loss: 5.018436132170578
+
+Accumulated reward at episode 8731: [ 4530.  4530. 43200.]
+Loss: 3.248110698125977
+
+Accumulated reward at episode 8732: [ 4530.  4560. 43110.]
+Loss: 7.8354598508447
+
+Accumulated reward at episode 8733: [ 4530.  4560. 43140.]
+Loss: 16.172100748623475
+
+Accumulated reward at episode 8734: [ 4530.  4560. 43140.]
+Loss: 24.102337800856937
+
+Accumulated reward at episode 8735: [ 4530.  4530. 43230.]
+Loss: 5.085367159973576
+
+Accumulated reward at episode 8736: [ 4530.  4530. 43200.]
+Loss: 3.8959879165220332
+
+Accumulated reward at episode 8737: [ 4530.  4530. 43230.]
+Loss: 2.6092120489032626
+
+Accumulated reward at episode 8738: [ 4530.  4560. 43110.]
+Loss: 4.724535036621702
+
+Accumulated reward at episode 8739: [ 4530.  4530. 43200.]
+Loss: 5.766745970338732
+
+Accumulated reward at episode 8740: [ 4530.  4530. 43290.]
+Loss: 7.329366558370222
+
+Accumulated reward at episode 8741: [ 4530.  4530. 43230.]
+Loss: 21.12243052149808
+
+Accumulated reward at episode 8742: [ 4530.  4530. 43200.]
+Loss: 28.11605616315969
+
+Accumulated reward at episode 8743: [ 4530.  4560. 43140.]
+Loss: 2.4005639682267557
+
+Accumulated reward at episode 8744: [ 4530.  4530. 43260.]
+Loss: 5.035491681622237
+
+Accumulated reward at episode 8745: [ 4530.  4530. 43230.]
+Loss: 1.2891384138415902
+
+Accumulated reward at episode 8746: [ 4530.  4530. 43200.]
+Loss: 0.7885737414588496
+
+Accumulated reward at episode 8747: [ 4530.  4560. 43110.]
+Loss: 4.93480969872436
+
+Accumulated reward at episode 8748: [ 4530.  4530. 43200.]
+Loss: 3.6074249267891476
+
+Accumulated reward at episode 8749: [ 4530.  4530. 43170.]
+Loss: 11.487797989435197
+
+Accumulated reward at episode 8750: [ 4530.  4530. 43230.]
+Loss: 16.218232198437963
+
+Accumulated reward at episode 8751: [ 4530.  4530. 43230.]
+Loss: 27.585423560902118
+
+Accumulated reward at episode 8752: [ 4530.  4530. 43260.]
+Loss: 2.8759001480248045
+
+Accumulated reward at episode 8753: [ 4530.  4530. 43230.]
+Loss: 3.2627125377366784
+
+Accumulated reward at episode 8754: [ 4530.  4530. 43260.]
+Loss: 4.997694124410795
+
+Accumulated reward at episode 8755: [ 4530.  4560. 43140.]
+Loss: 5.876225423564467
+
+Accumulated reward at episode 8756: [ 4530.  4530. 43170.]
+Loss: 11.309090654502208
+
+Accumulated reward at episode 8757: [ 4530.  4530. 43260.]
+Loss: 20.896677405538735
+
+Accumulated reward at episode 8758: [ 4530.  4530. 43200.]
+Loss: 17.79658143854026
+
+Accumulated reward at episode 8759: [ 4530.  4530. 43260.]
+Loss: 4.461500983699124
+
+Accumulated reward at episode 8760: [ 4530.  4530. 43260.]
+Loss: 2.0209028107604823
+
+Accumulated reward at episode 8761: [ 4530.  4530. 43290.]
+Loss: 0.4056415780394815
+
+Accumulated reward at episode 8762: [ 4530.  4530. 43200.]
+Loss: 3.2042129622870807
+
+Accumulated reward at episode 8763: [ 4530.  4560. 43140.]
+Loss: 3.63453256022324
+
+Accumulated reward at episode 8764: [ 4530.  4560. 43140.]
+Loss: 11.886491903547908
+
+Accumulated reward at episode 8765: [ 4530.  4530. 43170.]
+Loss: 18.81795390778801
+
+Accumulated reward at episode 8766: [ 4530.  4560. 43140.]
+Loss: 28.46606372496088
+
+Accumulated reward at episode 8767: [ 4530.  4530. 43230.]
+Loss: 4.330759441368989
+
+Accumulated reward at episode 8768: [ 4530.  4530. 43230.]
+Loss: 4.036487364808537
+
+Accumulated reward at episode 8769: [ 4530.  4530. 43230.]
+Loss: 5.132620071944381
+
+Accumulated reward at episode 8770: [ 4530.  4530. 43260.]
+Loss: 2.6676370161541154
+
+Accumulated reward at episode 8771: [ 4530.  4530. 43200.]
+Loss: 8.819699142448146
+
+Accumulated reward at episode 8772: [ 4530.  4530. 43230.]
+Loss: 22.607155136395047
+
+Accumulated reward at episode 8773: [ 4530.  4530. 43170.]
+Loss: 27.62937122453381
+
+Accumulated reward at episode 8774: [ 4530.  4530. 43230.]
+Loss: 2.1912470399287245
+
+Accumulated reward at episode 8775: [ 4530.  4530. 43200.]
+Loss: 2.3593129639926076
+
+Accumulated reward at episode 8776: [ 4530.  4560. 43140.]
+Loss: 6.259360553207515
+
+Accumulated reward at episode 8777: [ 4530.  4530. 43230.]
+Loss: 2.8519696527229748
+
+Accumulated reward at episode 8778: [ 4530.  4560. 43140.]
+Loss: 4.419891228266492
+
+Accumulated reward at episode 8779: [ 4530.  4530. 43260.]
+Loss: 3.3590337092773543
+
+Accumulated reward at episode 8780: [ 4530.  4530. 43260.]
+Loss: 4.784277959795924
+
+Accumulated reward at episode 8781: [ 4530.  4530. 43230.]
+Loss: 10.705815761555412
+
+Accumulated reward at episode 8782: [ 4530.  4560. 43110.]
+Loss: 17.079967717386012
+
+Accumulated reward at episode 8783: [ 4530.  4560. 43110.]
+Loss: 10.834008847763357
+
+Accumulated reward at episode 8784: [ 4530.  4530. 43200.]
+Loss: 2.6375161889923544
+
+Accumulated reward at episode 8785: [ 4530.  4530. 43230.]
+Loss: 5.325781360846141
+
+Accumulated reward at episode 8786: [ 4530.  4530. 43230.]
+Loss: 3.455491197436201
+
+Accumulated reward at episode 8787: [ 4530.  4560. 43140.]
+Loss: 4.087688891518823
+
+Accumulated reward at episode 8788: [ 4530.  4530. 43260.]
+Loss: 8.527408250380438
+
+Accumulated reward at episode 8789: [ 4530.  4530. 43200.]
+Loss: 13.244941932385242
+
+Accumulated reward at episode 8790: [ 4530.  4530. 43260.]
+Loss: 17.76172367318358
+
+Accumulated reward at episode 8791: [ 4530.  4530. 43230.]
+Loss: 14.166813961188737
+
+Accumulated reward at episode 8792: [ 4530.  4530. 43260.]
+Loss: 1.8127130367436808
+
+Accumulated reward at episode 8793: [ 4530.  4530. 43170.]
+Loss: 2.778836894590492
+
+Accumulated reward at episode 8794: [ 4530.  4530. 43260.]
+Loss: 5.497740164545989
+
+Accumulated reward at episode 8795: [ 4530.  4560. 43110.]
+Loss: 2.2582905789496346
+
+Accumulated reward at episode 8796: [ 4530.  4530. 43200.]
+Loss: 10.909376922275138
+
+Accumulated reward at episode 8797: [ 4530.  4530. 43260.]
+Loss: 21.04490501898634
+
+Accumulated reward at episode 8798: [ 4530.  4530. 43200.]
+Loss: 28.250820639805365
+
+Accumulated reward at episode 8799: [ 4530.  4560. 43170.]
+Loss: 6.18651577660514
+
+Accumulated reward at episode 8800: [ 4530.  4530. 43230.]
+Loss: 5.310241434678503
+
+Accumulated reward at episode 8801: [ 4530.  4530. 43200.]
+Loss: 2.224760863564768
+
+Accumulated reward at episode 8802: [ 4530.  4530. 43170.]
+Loss: 5.984419852929434
+
+Accumulated reward at episode 8803: [ 4530.  4560. 43140.]
+Loss: 8.331397916090305
+
+Accumulated reward at episode 8804: [ 4530.  4530. 43200.]
+Loss: 12.096943272983669
+
+Accumulated reward at episode 8805: [ 4530.  4530. 43260.]
+Loss: 21.031667532994117
+
+Accumulated reward at episode 8806: [ 4530.  4530. 43260.]
+Loss: 4.069816773745379
+
+Accumulated reward at episode 8807: [ 4530.  4530. 43230.]
+Loss: 2.2525358309560377
+
+Accumulated reward at episode 8808: [ 4530.  4530. 43230.]
+Loss: 0.6163510721594063
+
+Accumulated reward at episode 8809: [ 4530.  4530. 43260.]
+Loss: 2.646374192446597
+
+Accumulated reward at episode 8810: [ 4530.  4530. 43200.]
+Loss: 4.039478199657254
+
+Accumulated reward at episode 8811: [ 4530.  4530. 43170.]
+Loss: 10.997759728234312
+
+Accumulated reward at episode 8812: [ 4530.  4560. 43140.]
+Loss: 23.200701855890898
+
+Accumulated reward at episode 8813: [ 4530.  4530. 43290.]
+Loss: 28.616400873386716
+
+Accumulated reward at episode 8814: [ 4530.  4530. 43290.]
+Loss: 2.7681393549419067
+
+Accumulated reward at episode 8815: [ 4530.  4530. 43200.]
+Loss: 2.234280183276428
+
+Accumulated reward at episode 8816: [ 4530.  4530. 43200.]
+Loss: 2.8024053731025473
+
+Accumulated reward at episode 8817: [ 4530.  4530. 43230.]
+Loss: 3.3614522202719193
+
+Accumulated reward at episode 8818: [ 4530.  4530. 43170.]
+Loss: 11.426763762917943
+
+Accumulated reward at episode 8819: [ 4530.  4530. 43230.]
+Loss: 17.509776894456717
+
+Accumulated reward at episode 8820: [ 4530.  4560. 43140.]
+Loss: 28.396347076651736
+
+Accumulated reward at episode 8821: [ 4530.  4530. 43230.]
+Loss: 4.290813834165079
+
+Accumulated reward at episode 8822: [ 4530.  4530. 43290.]
+Loss: 3.609499329024982
+
+Accumulated reward at episode 8823: [ 4530.  4530. 43230.]
+Loss: 0.7656702153750256
+
+Accumulated reward at episode 8824: [ 4530.  4530. 43260.]
+Loss: 3.4505116073701174
+
+Accumulated reward at episode 8825: [ 4530.  4530. 43230.]
+Loss: 3.7470482187130174
+
+Accumulated reward at episode 8826: [ 4530.  4530. 43230.]
+Loss: 5.73721067463951
+
+Accumulated reward at episode 8827: [ 4530.  4530. 43200.]
+Loss: 2.9685903443617936
+
+Accumulated reward at episode 8828: [ 4530.  4530. 43230.]
+Loss: 1.5101537371702525
+
+Accumulated reward at episode 8829: [ 4530.  4560. 43140.]
+Loss: 6.676975991699602
+
+Accumulated reward at episode 8830: [ 4530.  4530. 43170.]
+Loss: 7.749252741613328
+
+Accumulated reward at episode 8831: [ 4530.  4530. 43290.]
+Loss: 18.540584069450894
+
+Accumulated reward at episode 8832: [ 4530.  4530. 43200.]
+Loss: 26.32676919870958
+
+Accumulated reward at episode 8833: [ 4530.  4530. 43230.]
+Loss: 2.3562288326222003
+
+Accumulated reward at episode 8834: [ 4530.  4530. 43290.]
+Loss: 2.0682811212369145
+
+Accumulated reward at episode 8835: [ 4530.  4530. 43200.]
+Loss: 0.664365619983603
+
+Accumulated reward at episode 8836: [ 4530.  4530. 43200.]
+Loss: 7.6870239589566465
+
+Accumulated reward at episode 8837: [ 4530.  4530. 43170.]
+Loss: 3.221441045520677
+
+Accumulated reward at episode 8838: [ 4530.  4530. 43230.]
+Loss: 8.850170635105961
+
+Accumulated reward at episode 8839: [ 4530.  4530. 43260.]
+Loss: 19.77108979275328
+
+Accumulated reward at episode 8840: [ 4530.  4530. 43230.]
+Loss: 26.404313068495004
+
+Accumulated reward at episode 8841: [ 4530.  4530. 43230.]
+Loss: 2.5311653383048105
+
+Accumulated reward at episode 8842: [ 4530.  4530. 43230.]
+Loss: 2.033586770410019
+
+Accumulated reward at episode 8843: [ 4530.  4530. 43260.]
+Loss: 5.448847563977677
+
+Accumulated reward at episode 8844: [ 4530.  4530. 43260.]
+Loss: 3.5509092802319744
+
+Accumulated reward at episode 8845: [ 4530.  4530. 43260.]
+Loss: 4.461662452157699
+
+Accumulated reward at episode 8846: [ 4530.  4560. 43110.]
+Loss: 8.570083156760964
+
+Accumulated reward at episode 8847: [ 4530.  4560. 43110.]
+Loss: 19.15298228522695
+
+Accumulated reward at episode 8848: [ 4530.  4530. 43200.]
+Loss: 27.076889611826164
+
+Accumulated reward at episode 8849: [ 4530.  4530. 43170.]
+Loss: 1.7126086086006338
+
+Accumulated reward at episode 8850: [ 4530.  4530. 43200.]
+Loss: 3.391412066654791
+
+Accumulated reward at episode 8851: [ 4530.  4560. 43140.]
+Loss: 5.922086856063794
+
+Accumulated reward at episode 8852: [ 4530.  4530. 43230.]
+Loss: 3.827874758533919
+
+Accumulated reward at episode 8853: [ 4530.  4530. 43170.]
+Loss: 4.129572972912343
+
+Accumulated reward at episode 8854: [ 4530.  4530. 43200.]
+Loss: 9.32222731100945
+
+Accumulated reward at episode 8855: [ 4530.  4560. 43110.]
+Loss: 21.440183614738523
+
+Accumulated reward at episode 8856: [ 4530.  4530. 43230.]
+Loss: 7.241401815692106
+
+Accumulated reward at episode 8857: [ 4530.  4530. 43230.]
+Loss: 6.83513896177894
+
+Accumulated reward at episode 8858: [ 4530.  4560. 43170.]
+Loss: 4.8691927161005575
+
+Accumulated reward at episode 8859: [ 4530.  4530. 43290.]
+Loss: 2.5439071532510797
+
+Accumulated reward at episode 8860: [ 4530.  4530. 43200.]
+Loss: 1.1158415164844784
+
+Accumulated reward at episode 8861: [ 4530.  4530. 43290.]
+Loss: 0.6632076070985368
+
+Accumulated reward at episode 8862: [ 4530.  4530. 43230.]
+Loss: 4.519764921464719
+
+Accumulated reward at episode 8863: [ 4530.  4530. 43290.]
+Loss: 7.319477765690247
+
+Accumulated reward at episode 8864: [ 4530.  4530. 43200.]
+Loss: 13.547446226338803
+
+Accumulated reward at episode 8865: [ 4530.  4530. 43260.]
+Loss: 17.718231074017645
+
+Accumulated reward at episode 8866: [ 4530.  4530. 43200.]
+Loss: 15.361470111179976
+
+Accumulated reward at episode 8867: [ 4530.  4530. 43230.]
+Loss: 3.0898971059896247
+
+Accumulated reward at episode 8868: [ 4530.  4560. 43110.]
+Loss: 2.1987484885399247
+
+Accumulated reward at episode 8869: [ 4530.  4530. 43200.]
+Loss: 3.918241221222809
+
+Accumulated reward at episode 8870: [ 4530.  4530. 43200.]
+Loss: 3.6604442917169324
+
+Accumulated reward at episode 8871: [ 4530.  4530. 43230.]
+Loss: 3.9505397735522614
+
+Accumulated reward at episode 8872: [ 4530.  4530. 43230.]
+Loss: 3.569567463251866
+
+Accumulated reward at episode 8873: [ 4530.  4530. 43260.]
+Loss: 4.84905644493921
+
+Accumulated reward at episode 8874: [ 4530.  4530. 43230.]
+Loss: 8.72695353078637
+
+Accumulated reward at episode 8875: [ 4530.  4530. 43170.]
+Loss: 20.51379798929153
+
+Accumulated reward at episode 8876: [ 4530.  4560. 43110.]
+Loss: 23.203134163952065
+
+Accumulated reward at episode 8877: [ 4530.  4530. 43230.]
+Loss: 4.297818732229633
+
+Accumulated reward at episode 8878: [ 4530.  4530. 43260.]
+Loss: 1.75855568953695
+
+Accumulated reward at episode 8879: [ 4530.  4530. 43230.]
+Loss: 0.41227362675365353
+
+Accumulated reward at episode 8880: [ 4530.  4530. 43260.]
+Loss: 2.281134375207073
+
+Accumulated reward at episode 8881: [ 4530.  4560. 43140.]
+Loss: 4.01650488725451
+
+Accumulated reward at episode 8882: [ 4530.  4530. 43230.]
+Loss: 10.085008314597069
+
+Accumulated reward at episode 8883: [ 4530.  4530. 43230.]
+Loss: 21.029470275703705
+
+Accumulated reward at episode 8884: [ 4530.  4530. 43200.]
+Loss: 27.46785282351388
+
+Accumulated reward at episode 8885: [ 4530.  4530. 43200.]
+Loss: 4.534585289768809
+
+Accumulated reward at episode 8886: [ 4530.  4530. 43200.]
+Loss: 2.8933870184636286
+
+Accumulated reward at episode 8887: [ 4530.  4530. 43260.]
+Loss: 3.295586188051846
+
+Accumulated reward at episode 8888: [ 4530.  4530. 43200.]
+Loss: 10.883020766802101
+
+Accumulated reward at episode 8889: [ 4530.  4530. 43260.]
+Loss: 19.473764711194143
+
+Accumulated reward at episode 8890: [ 4530.  4560. 43140.]
+Loss: 24.76560467495471
+
+Accumulated reward at episode 8891: [ 4530.  4530. 43260.]
+Loss: 3.3829475606248463
+
+Accumulated reward at episode 8892: [ 4530.  4560. 43140.]
+Loss: 1.5484479359581496
+
+Accumulated reward at episode 8893: [ 4530.  4560. 43140.]
+Loss: 6.387856512270828
+
+Accumulated reward at episode 8894: [ 4530.  4560. 43110.]
+Loss: 5.124732484010157
+
+Accumulated reward at episode 8895: [ 4530.  4530. 43260.]
+Loss: 7.5197187821580265
+
+Accumulated reward at episode 8896: [ 4530.  4530. 43230.]
+Loss: 21.17471592720213
+
+Accumulated reward at episode 8897: [ 4530.  4560. 43110.]
+Loss: 26.390118736172123
+
+Accumulated reward at episode 8898: [ 4530.  4530. 43200.]
+Loss: 2.791918708471608
+
+Accumulated reward at episode 8899: [ 4530.  4530. 43230.]
+Loss: 4.213159277694794
+
+Accumulated reward at episode 8900: [ 4530.  4530. 43200.]
+Loss: 0.8929997728140215
+
+Accumulated reward at episode 8901: [ 4530.  4530. 43170.]
+Loss: 6.122720231272203
+
+Accumulated reward at episode 8902: [ 4530.  4560. 43140.]
+Loss: 2.6009161172416424
+
+Accumulated reward at episode 8903: [ 4530.  4530. 43260.]
+Loss: 8.799738245751726
+
+Accumulated reward at episode 8904: [ 4530.  4530. 43230.]
+Loss: 18.178525381703068
+
+Accumulated reward at episode 8905: [ 4530.  4530. 43230.]
+Loss: 24.289383746581006
+
+Accumulated reward at episode 8906: [ 4530.  4530. 43230.]
+Loss: 5.215003605124889
+
+Accumulated reward at episode 8907: [ 4530.  4530. 43170.]
+Loss: 4.253759380423597
+
+Accumulated reward at episode 8908: [ 4530.  4530. 43230.]
+Loss: 4.8961371429424325
+
+Accumulated reward at episode 8909: [ 4530.  4530. 43260.]
+Loss: 0.7271356034655305
+
+Accumulated reward at episode 8910: [ 4530.  4530. 43200.]
+Loss: 3.6942013945053715
+
+Accumulated reward at episode 8911: [ 4530.  4530. 43230.]
+Loss: 6.818384871321477
+
+Accumulated reward at episode 8912: [ 4530.  4530. 43170.]
+Loss: 4.350665768277564
+
+Accumulated reward at episode 8913: [ 4530.  4560. 43170.]
+Loss: 9.245967692867117
+
+Accumulated reward at episode 8914: [ 4530.  4530. 43260.]
+Loss: 19.929736764041063
+
+Accumulated reward at episode 8915: [ 4530.  4530. 43230.]
+Loss: 27.03393193038575
+
+Accumulated reward at episode 8916: [ 4530.  4530. 43230.]
+Loss: 4.900726908056847
+
+Accumulated reward at episode 8917: [ 4530.  4530. 43260.]
+Loss: 3.54898966586319
+
+Accumulated reward at episode 8918: [ 4530.  4530. 43230.]
+Loss: 1.1725055838056253
+
+Accumulated reward at episode 8919: [ 4530.  4530. 43200.]
+Loss: 6.228759496669343
+
+Accumulated reward at episode 8920: [ 4530.  4530. 43230.]
+Loss: 3.0602512453723856
+
+Accumulated reward at episode 8921: [ 4530.  4560. 43140.]
+Loss: 9.661953023089314
+
+Accumulated reward at episode 8922: [ 4530.  4530. 43170.]
+Loss: 20.455153450399706
+
+Accumulated reward at episode 8923: [ 4530.  4530. 43170.]
+Loss: 29.979448753870866
+
+Accumulated reward at episode 8924: [ 4530.  4530. 43200.]
+Loss: 4.3385512571376275
+
+Accumulated reward at episode 8925: [ 4530.  4530. 43230.]
+Loss: 3.844360277822298
+
+Accumulated reward at episode 8926: [ 4530.  4530. 43200.]
+Loss: 3.373747214869884
+
+Accumulated reward at episode 8927: [ 4530.  4530. 43260.]
+Loss: 4.018764004470202
+
+Accumulated reward at episode 8928: [ 4530.  4530. 43260.]
+Loss: 8.00164595989849
+
+Accumulated reward at episode 8929: [ 4530.  4530. 43260.]
+Loss: 11.699352272874354
+
+Accumulated reward at episode 8930: [ 4530.  4530. 43230.]
+Loss: 21.80801233669455
+
+Accumulated reward at episode 8931: [ 4530.  4530. 43200.]
+Loss: 28.842198654508273
+
+Accumulated reward at episode 8932: [ 4530.  4530. 43230.]
+Loss: 2.8159925016846548
+
+Accumulated reward at episode 8933: [ 4530.  4530. 43200.]
+Loss: 2.9234038772464626
+
+Accumulated reward at episode 8934: [ 4530.  4530. 43200.]
+Loss: 6.090549395711884
+
+Accumulated reward at episode 8935: [ 4530.  4530. 43230.]
+Loss: 7.475218257020324
+
+Accumulated reward at episode 8936: [ 4530.  4530. 43230.]
+Loss: 17.567299496023804
+
+Accumulated reward at episode 8937: [ 4530.  4530. 43170.]
+Loss: 27.10077175959905
+
+Accumulated reward at episode 8938: [ 4530.  4530. 43230.]
+Loss: 4.367465716875617
+
+Accumulated reward at episode 8939: [ 4530.  4560. 43170.]
+Loss: 2.231598882033993
+
+Accumulated reward at episode 8940: [ 4530.  4530. 43200.]
+Loss: 3.0372973059292168
+
+Accumulated reward at episode 8941: [ 4530.  4560. 43110.]
+Loss: 3.7593054390343736
+
+Accumulated reward at episode 8942: [ 4530.  4530. 43260.]
+Loss: 9.46647605651919
+
+Accumulated reward at episode 8943: [ 4530.  4530. 43230.]
+Loss: 12.612514376479023
+
+Accumulated reward at episode 8944: [ 4530.  4530. 43260.]
+Loss: 19.079272891489925
+
+Accumulated reward at episode 8945: [ 4530.  4530. 43260.]
+Loss: 17.077712048767445
+
+Accumulated reward at episode 8946: [ 4530.  4560. 43140.]
+Loss: 3.5568339874888784
+
+Accumulated reward at episode 8947: [ 4530.  4560. 43140.]
+Loss: 1.2295966268912393
+
+Accumulated reward at episode 8948: [ 4530.  4530. 43170.]
+Loss: 5.640460862690352
+
+Accumulated reward at episode 8949: [ 4530.  4530. 43230.]
+Loss: 2.768451069323818
+
+Accumulated reward at episode 8950: [ 4530.  4530. 43200.]
+Loss: 8.654934062989025
+
+Accumulated reward at episode 8951: [ 4530.  4530. 43230.]
+Loss: 21.01346202252921
+
+Accumulated reward at episode 8952: [ 4530.  4530. 43200.]
+Loss: 27.41565878972984
+
+Accumulated reward at episode 8953: [ 4530.  4530. 43290.]
+Loss: 3.9222016804656397
+
+Accumulated reward at episode 8954: [ 4530.  4530. 43230.]
+Loss: 2.2383581999323416
+
+Accumulated reward at episode 8955: [ 4530.  4530. 43230.]
+Loss: 2.4404012022887995
+
+Accumulated reward at episode 8956: [ 4530.  4560. 43140.]
+Loss: 3.969869602116637
+
+Accumulated reward at episode 8957: [ 4530.  4560. 43170.]
+Loss: 11.598687599804121
+
+Accumulated reward at episode 8958: [ 4530.  4530. 43290.]
+Loss: 19.457771058368
+
+Accumulated reward at episode 8959: [ 4530.  4530. 43200.]
+Loss: 26.591471878883784
+
+Accumulated reward at episode 8960: [ 4530.  4530. 43230.]
+Loss: 3.62968415077184
+
+Accumulated reward at episode 8961: [ 4530.  4560. 43110.]
+Loss: 6.085389198242291
+
+Accumulated reward at episode 8962: [ 4530.  4530. 43200.]
+Loss: 7.7418661719650235
+
+Accumulated reward at episode 8963: [ 4530.  4530. 43230.]
+Loss: 21.550224171232927
+
+Accumulated reward at episode 8964: [ 4530.  4530. 43200.]
+Loss: 27.620933972417056
+
+Accumulated reward at episode 8965: [ 4530.  4530. 43260.]
+Loss: 3.9608576595226177
+
+Accumulated reward at episode 8966: [ 4530.  4530. 43170.]
+Loss: 4.096387447114427
+
+Accumulated reward at episode 8967: [ 4530.  4530. 43230.]
+Loss: 2.727877686366246
+
+Accumulated reward at episode 8968: [ 4530.  4530. 43230.]
+Loss: 4.547979300838151
+
+Accumulated reward at episode 8969: [ 4530.  4530. 43200.]
+Loss: 8.086469751457004
+
+Accumulated reward at episode 8970: [ 4530.  4530. 43170.]
+Loss: 23.226789026841395
+
+Accumulated reward at episode 8971: [ 4530.  4530. 43200.]
+Loss: 31.32971827883867
+
+Accumulated reward at episode 8972: [ 4530.  4530. 43230.]
+Loss: 4.895991186931851
+
+Accumulated reward at episode 8973: [ 4530.  4530. 43260.]
+Loss: 0.267984206441503
+
+Accumulated reward at episode 8974: [ 4530.  4530. 43230.]
+Loss: 3.887458085591632
+
+Accumulated reward at episode 8975: [ 4530.  4530. 43230.]
+Loss: 2.1177235572229223
+
+Accumulated reward at episode 8976: [ 4530.  4530. 43290.]
+Loss: 3.2801253714793495
+
+Accumulated reward at episode 8977: [ 4530.  4530. 43230.]
+Loss: 4.192470212581363
+
+Accumulated reward at episode 8978: [ 4530.  4530. 43230.]
+Loss: 4.482609875637664
+
+Accumulated reward at episode 8979: [ 4530.  4530. 43170.]
+Loss: 4.7903041456280535
+
+Accumulated reward at episode 8980: [ 4530.  4560. 43140.]
+Loss: 7.7759452444616475
+
+Accumulated reward at episode 8981: [ 4530.  4530. 43230.]
+Loss: 4.913209374266447
+
+Accumulated reward at episode 8982: [ 4530.  4530. 43200.]
+Loss: 19.385816507241525
+
+Accumulated reward at episode 8983: [ 4530.  4560. 43170.]
+Loss: 27.51458428667466
+
+Accumulated reward at episode 8984: [ 4530.  4530. 43290.]
+Loss: 4.051023310005721
+
+Accumulated reward at episode 8985: [ 4530.  4560. 43140.]
+Loss: 2.6047348603507965
+
+Accumulated reward at episode 8986: [ 4530.  4560. 43140.]
+Loss: 6.445430706564862
+
+Accumulated reward at episode 8987: [ 4530.  4530. 43230.]
+Loss: 3.656020103544981
+
+Accumulated reward at episode 8988: [ 4530.  4560. 43110.]
+Loss: 3.4473985374722056
+
+Accumulated reward at episode 8989: [ 4530.  4530. 43230.]
+Loss: 8.869023611677305
+
+Accumulated reward at episode 8990: [ 4530.  4530. 43260.]
+Loss: 17.406871394771112
+
+Accumulated reward at episode 8991: [ 4530.  4530. 43230.]
+Loss: 26.489516682393887
+
+Accumulated reward at episode 8992: [ 4530.  4530. 43230.]
+Loss: 1.5437026458649798
+
+Accumulated reward at episode 8993: [ 4530.  4530. 43200.]
+Loss: 3.342909917364011
+
+Accumulated reward at episode 8994: [ 4530.  4530. 43200.]
+Loss: 2.288313237093237
+
+Accumulated reward at episode 8995: [ 4530.  4530. 43230.]
+Loss: 2.794027875083471
+
+Accumulated reward at episode 8996: [ 4530.  4530. 43230.]
+Loss: 5.728551362797535
+
+Accumulated reward at episode 8997: [ 4530.  4560. 43140.]
+Loss: 8.413115466657908
+
+Accumulated reward at episode 8998: [ 4530.  4530. 43200.]
+Loss: 6.584382908454434
+
+Accumulated reward at episode 8999: [ 4530.  4530. 43230.]
+Loss: 21.872903470391858
+
+Accumulated reward at episode 9000: [ 4530.  4530. 43200.]
+Loss: 27.7123028986354
+
+Accumulated reward at episode 9001: [ 4530.  4530. 43230.]
+Loss: 3.2944334310416483
+
+Accumulated reward at episode 9002: [ 4530.  4530. 43260.]
+Loss: 2.4357268556886975
+
+Accumulated reward at episode 9003: [ 4530.  4530. 43260.]
+Loss: 5.508709968881767
+
+Accumulated reward at episode 9004: [ 4530.  4530. 43200.]
+Loss: 1.0859696939794525
+
+Accumulated reward at episode 9005: [ 4530.  4530. 43170.]
+Loss: 0.354131256414119
+
+Accumulated reward at episode 9006: [ 4530.  4530. 43230.]
+Loss: 5.442502371562557
+
+Accumulated reward at episode 9007: [ 4530.  4530. 43200.]
+Loss: 7.2008347390106735
+
+Accumulated reward at episode 9008: [ 4530.  4560. 43170.]
+Loss: 24.67054463063151
+
+Accumulated reward at episode 9009: [ 4530.  4560. 43170.]
+Loss: 27.606559669399804
+
+Accumulated reward at episode 9010: [ 4530.  4530. 43260.]
+Loss: 2.7081142624647874
+
+Accumulated reward at episode 9011: [ 4530.  4530. 43230.]
+Loss: 2.731500426203086
+
+Accumulated reward at episode 9012: [ 4530.  4530. 43200.]
+Loss: 0.491218297230422
+
+Accumulated reward at episode 9013: [ 4530.  4530. 43230.]
+Loss: 1.7673802464233406
+
+Accumulated reward at episode 9014: [ 4530.  4530. 43200.]
+Loss: 5.828304440865985
+
+Accumulated reward at episode 9015: [ 4530.  4530. 43200.]
+Loss: 4.330020782736052
+
+Accumulated reward at episode 9016: [ 4530.  4530. 43230.]
+Loss: 9.050222822974753
+
+Accumulated reward at episode 9017: [ 4530.  4560. 43110.]
+Loss: 20.30603115452921
+
+Accumulated reward at episode 9018: [ 4530.  4530. 43200.]
+Loss: 21.174603784101933
+
+Accumulated reward at episode 9019: [ 4530.  4560. 43110.]
+Loss: 3.412710564759675
+
+Accumulated reward at episode 9020: [ 4530.  4530. 43230.]
+Loss: 3.7559937925560845
+
+Accumulated reward at episode 9021: [ 4530.  4530. 43200.]
+Loss: 5.060815412506931
+
+Accumulated reward at episode 9022: [ 4530.  4530. 43260.]
+Loss: 0.5157602903471786
+
+Accumulated reward at episode 9023: [ 4530.  4530. 43200.]
+Loss: 0.560854488405966
+
+Accumulated reward at episode 9024: [ 4530.  4560. 43140.]
+Loss: 6.629907440378405
+
+Accumulated reward at episode 9025: [ 4530.  4530. 43200.]
+Loss: 5.850110966900921
+
+Accumulated reward at episode 9026: [ 4530.  4530. 43200.]
+Loss: 20.464977515455203
+
+Accumulated reward at episode 9027: [ 4530.  4530. 43200.]
+Loss: 27.9693021070419
+
+Accumulated reward at episode 9028: [ 4530.  4560. 43110.]
+Loss: 2.1642473037972323
+
+Accumulated reward at episode 9029: [ 4530.  4530. 43200.]
+Loss: 3.1210192090747375
+
+Accumulated reward at episode 9030: [ 4530.  4530. 43260.]
+Loss: 2.170528116152308
+
+Accumulated reward at episode 9031: [ 4530.  4530. 43260.]
+Loss: 3.31448813803397
+
+Accumulated reward at episode 9032: [ 4530.  4530. 43200.]
+Loss: 6.95350309394582
+
+Accumulated reward at episode 9033: [ 4530.  4530. 43260.]
+Loss: 6.45251139533867
+
+Accumulated reward at episode 9034: [ 4530.  4560. 43140.]
+Loss: 17.683569099769553
+
+Accumulated reward at episode 9035: [ 4530.  4560. 43110.]
+Loss: 25.51645161403643
+
+Accumulated reward at episode 9036: [ 4530.  4530. 43290.]
+Loss: 3.2759211423843326
+
+Accumulated reward at episode 9037: [ 4530.  4530. 43230.]
+Loss: 2.3927507912484436
+
+Accumulated reward at episode 9038: [ 4530.  4530. 43200.]
+Loss: 2.56214357149786
+
+Accumulated reward at episode 9039: [ 4530.  4530. 43200.]
+Loss: 4.914945292941476
+
+Accumulated reward at episode 9040: [ 4530.  4560. 43140.]
+Loss: 7.756979850560611
+
+Accumulated reward at episode 9041: [ 4530.  4530. 43230.]
+Loss: 11.099653075676562
+
+Accumulated reward at episode 9042: [ 4530.  4560. 43140.]
+Loss: 18.836709488894968
+
+Accumulated reward at episode 9043: [ 4530.  4530. 43230.]
+Loss: 14.819103302402917
+
+Accumulated reward at episode 9044: [ 4530.  4560. 43140.]
+Loss: 2.281682258571836
+
+Accumulated reward at episode 9045: [ 4530.  4530. 43230.]
+Loss: 2.499794073108714
+
+Accumulated reward at episode 9046: [ 4530.  4560. 43170.]
+Loss: 3.694938830191063
+
+Accumulated reward at episode 9047: [ 4530.  4560. 43140.]
+Loss: 11.066072300836021
+
+Accumulated reward at episode 9048: [ 4530.  4530. 43260.]
+Loss: 20.768976673362474
+
+Accumulated reward at episode 9049: [ 4530.  4530. 43260.]
+Loss: 27.903250274096237
+
+Accumulated reward at episode 9050: [ 4530.  4530. 43260.]
+Loss: 3.994598046116543
+
+Accumulated reward at episode 9051: [ 4530.  4530. 43260.]
+Loss: 4.000806108000468
+
+Accumulated reward at episode 9052: [ 4530.  4530. 43230.]
+Loss: 2.673414584548005
+
+Accumulated reward at episode 9053: [ 4530.  4530. 43260.]
+Loss: 0.6342594300331529
+
+Accumulated reward at episode 9054: [ 4530.  4530. 43260.]
+Loss: 7.26770189793254
+
+Accumulated reward at episode 9055: [ 4530.  4560. 43140.]
+Loss: 6.523012613972392
+
+Accumulated reward at episode 9056: [ 4530.  4530. 43260.]
+Loss: 6.197344431580329
+
+Accumulated reward at episode 9057: [ 4530.  4530. 43260.]
+Loss: 15.339558917180463
+
+Accumulated reward at episode 9058: [ 4530.  4530. 43290.]
+Loss: 20.83188962974609
+
+Accumulated reward at episode 9059: [ 4530.  4530. 43260.]
+Loss: 6.6085986269543335
+
+Accumulated reward at episode 9060: [ 4530.  4560. 43140.]
+Loss: 2.384085605688835
+
+Accumulated reward at episode 9061: [ 4530.  4560. 43110.]
+Loss: 5.784184642054754
+
+Accumulated reward at episode 9062: [ 4530.  4530. 43230.]
+Loss: 7.223099328269807
+
+Accumulated reward at episode 9063: [ 4530.  4530. 43260.]
+Loss: 11.83694423326966
+
+Accumulated reward at episode 9064: [ 4530.  4530. 43170.]
+Loss: 18.42733721194645
+
+Accumulated reward at episode 9065: [ 4530.  4530. 43230.]
+Loss: 6.99631665965544
+
+Accumulated reward at episode 9066: [ 4530.  4560. 43140.]
+Loss: 2.5096127670270705
+
+Accumulated reward at episode 9067: [ 4530.  4530. 43230.]
+Loss: 2.835377395915851
+
+Accumulated reward at episode 9068: [ 4530.  4530. 43230.]
+Loss: 0.23724671660016233
+
+Accumulated reward at episode 9069: [ 4530.  4530. 43290.]
+Loss: 1.4032910807411874
+
+Accumulated reward at episode 9070: [ 4530.  4560. 43140.]
+Loss: 5.4551857278020215
+
+Accumulated reward at episode 9071: [ 4530.  4530. 43290.]
+Loss: 8.71497890638861
+
+Accumulated reward at episode 9072: [ 4530.  4530. 43230.]
+Loss: 22.436850964871496
+
+Accumulated reward at episode 9073: [ 4530.  4530. 43260.]
+Loss: 23.669844086426306
+
+Accumulated reward at episode 9074: [ 4530.  4530. 43290.]
+Loss: 12.052628484114056
+
+Accumulated reward at episode 9075: [ 4530.  4530. 43290.]
+Loss: 6.822802843895941
+
+Accumulated reward at episode 9076: [ 4530.  4530. 43260.]
+Loss: 1.1228920054520681
+
+Accumulated reward at episode 9077: [ 4530.  4530. 43230.]
+Loss: 6.247470213079999
+
+Accumulated reward at episode 9078: [ 4530.  4530. 43260.]
+Loss: 3.7241497451446692
+
+Accumulated reward at episode 9079: [ 4530.  4560. 43140.]
+Loss: 12.459081334803155
+
+Accumulated reward at episode 9080: [ 4530.  4530. 43260.]
+Loss: 15.458461650339274
+
+Accumulated reward at episode 9081: [ 4530.  4560. 43110.]
+Loss: 27.273884348505696
+
+Accumulated reward at episode 9082: [ 4530.  4530. 43230.]
+Loss: 4.385586243367129
+
+Accumulated reward at episode 9083: [ 4530.  4530. 43230.]
+Loss: 2.0280363995454582
+
+Accumulated reward at episode 9084: [ 4530.  4560. 43110.]
+Loss: 5.339467249192837
+
+Accumulated reward at episode 9085: [ 4530.  4530. 43260.]
+Loss: 4.757876750736653
+
+Accumulated reward at episode 9086: [ 4530.  4530. 43230.]
+Loss: 0.5327270658457139
+
+Accumulated reward at episode 9087: [ 4530.  4530. 43230.]
+Loss: 4.200549061384628
+
+Accumulated reward at episode 9088: [ 4530.  4530. 43200.]
+Loss: 8.25786815423823
+
+Accumulated reward at episode 9089: [ 4530.  4560. 43110.]
+Loss: 17.50489514282241
+
+Accumulated reward at episode 9090: [ 4530.  4530. 43260.]
+Loss: 26.184692906162798
+
+Accumulated reward at episode 9091: [ 4530.  4560. 43140.]
+Loss: 2.3462049149166093
+
+Accumulated reward at episode 9092: [ 4530.  4530. 43260.]
+Loss: 3.207066718629741
+
+Accumulated reward at episode 9093: [ 4530.  4530. 43230.]
+Loss: 3.614320958998024
+
+Accumulated reward at episode 9094: [ 4530.  4530. 43230.]
+Loss: 3.758579807318336
+
+Accumulated reward at episode 9095: [ 4530.  4530. 43200.]
+Loss: 10.564568479160176
+
+Accumulated reward at episode 9096: [ 4530.  4560. 43110.]
+Loss: 23.085436392654657
+
+Accumulated reward at episode 9097: [ 4530.  4560. 43110.]
+Loss: 28.16705174719363
+
+Accumulated reward at episode 9098: [ 4530.  4560. 43140.]
+Loss: 3.8333047709951766
+
+Accumulated reward at episode 9099: [ 4530.  4560. 43140.]
+Loss: 5.144913061372721
+
+Accumulated reward at episode 9100: [ 4530.  4530. 43230.]
+Loss: 3.7066397642412383
+
+Accumulated reward at episode 9101: [ 4530.  4560. 43140.]
+Loss: 3.8846129287299034
+
+Accumulated reward at episode 9102: [ 4530.  4530. 43260.]
+Loss: 7.954630849354421
+
+Accumulated reward at episode 9103: [ 4530.  4530. 43170.]
+Loss: 22.51310107834677
+
+Accumulated reward at episode 9104: [ 4530.  4530. 43260.]
+Loss: 28.320359311995553
+
+Accumulated reward at episode 9105: [ 4530.  4530. 43170.]
+Loss: 3.8241058049652668
+
+Accumulated reward at episode 9106: [ 4530.  4560. 43140.]
+Loss: 5.321541089738568
+
+Accumulated reward at episode 9107: [ 4530.  4530. 43200.]
+Loss: 2.6123893377684433
+
+Accumulated reward at episode 9108: [ 4530.  4530. 43230.]
+Loss: 1.5207682621386622
+
+Accumulated reward at episode 9109: [ 4530.  4530. 43290.]
+Loss: 0.46228544328450577
+
+Accumulated reward at episode 9110: [ 4530.  4530. 43260.]
+Loss: 0.18308981065458774
+
+Accumulated reward at episode 9111: [ 4530.  4530. 43260.]
+Loss: 0.17455157947992636
+
+Accumulated reward at episode 9112: [ 4530.  4530. 43170.]
+Loss: 0.7634566208749098
+
+Accumulated reward at episode 9113: [ 4530.  4530. 43260.]
+Loss: 0.6999197488551026
+
+Accumulated reward at episode 9114: [ 4530.  4530. 43230.]
+Loss: 0.3519494882124492
+
+Accumulated reward at episode 9115: [ 4530.  4560. 43140.]
+Loss: 3.6803210909128024
+
+Accumulated reward at episode 9116: [ 4530.  4530. 43230.]
+Loss: 5.79106292822051
+
+Accumulated reward at episode 9117: [ 4530.  4530. 43200.]
+Loss: 9.792737372563874
+
+Accumulated reward at episode 9118: [ 4530.  4530. 43200.]
+Loss: 18.86271711233774
+
+Accumulated reward at episode 9119: [ 4530.  4530. 43200.]
+Loss: 9.640022293194093
+
+Accumulated reward at episode 9120: [ 4530.  4530. 43290.]
+Loss: 3.1144799818585795
+
+Accumulated reward at episode 9121: [ 4530.  4530. 43200.]
+Loss: 6.208514912409867
+
+Accumulated reward at episode 9122: [ 4530.  4530. 43230.]
+Loss: 1.2467966004915692
+
+Accumulated reward at episode 9123: [ 4530.  4530. 43170.]
+Loss: 0.9100599560364009
+
+Accumulated reward at episode 9124: [ 4530.  4560. 43110.]
+Loss: 7.179731306511543
+
+Accumulated reward at episode 9125: [ 4530.  4530. 43170.]
+Loss: 8.72230967508934
+
+Accumulated reward at episode 9126: [ 4530.  4530. 43260.]
+Loss: 18.317337705867754
+
+Accumulated reward at episode 9127: [ 4530.  4530. 43260.]
+Loss: 25.91443486767186
+
+Accumulated reward at episode 9128: [ 4530.  4560. 43140.]
+Loss: 4.3440808471526005
+
+Accumulated reward at episode 9129: [ 4530.  4560. 43110.]
+Loss: 5.295470070524043
+
+Accumulated reward at episode 9130: [ 4530.  4530. 43230.]
+Loss: 4.393401175797524
+
+Accumulated reward at episode 9131: [ 4530.  4530. 43230.]
+Loss: 6.625334885635086
+
+Accumulated reward at episode 9132: [ 4530.  4530. 43260.]
+Loss: 0.5226738275757102
+
+Accumulated reward at episode 9133: [ 4530.  4530. 43200.]
+Loss: 0.6323578480937697
+
+Accumulated reward at episode 9134: [ 4530.  4530. 43260.]
+Loss: 0.4117146560330469
+
+Accumulated reward at episode 9135: [ 4530.  4560. 43140.]
+Loss: 3.7816668247670915
+
+Accumulated reward at episode 9136: [ 4530.  4530. 43200.]
+Loss: 3.0279298531087586
+
+Accumulated reward at episode 9137: [ 4530.  4530. 43200.]
+Loss: 3.439455526038008
+
+Accumulated reward at episode 9138: [ 4530.  4560. 43140.]
+Loss: 15.763324554669731
+
+Accumulated reward at episode 9139: [ 4530.  4530. 43260.]
+Loss: 20.41690322902081
+
+Accumulated reward at episode 9140: [ 4530.  4530. 43230.]
+Loss: 6.3744459088170995
+
+Accumulated reward at episode 9141: [ 4530.  4560. 43110.]
+Loss: 3.819225933833305
+
+Accumulated reward at episode 9142: [ 4530.  4530. 43200.]
+Loss: 3.6547008900731663
+
+Accumulated reward at episode 9143: [ 4530.  4530. 43230.]
+Loss: 6.475020077057689
+
+Accumulated reward at episode 9144: [ 4530.  4560. 43110.]
+Loss: 8.605012809125624
+
+Accumulated reward at episode 9145: [ 4530.  4530. 43200.]
+Loss: 9.569047084026538
+
+Accumulated reward at episode 9146: [ 4530.  4530. 43230.]
+Loss: 20.986416806827638
+
+Accumulated reward at episode 9147: [ 4530.  4530. 43200.]
+Loss: 27.777755487578727
+
+Accumulated reward at episode 9148: [ 4530.  4530. 43260.]
+Loss: 1.440791002504754
+
+Accumulated reward at episode 9149: [ 4530.  4560. 43140.]
+Loss: 4.322450443531264
+
+Accumulated reward at episode 9150: [ 4530.  4530. 43200.]
+Loss: 2.9881431878871356
+
+Accumulated reward at episode 9151: [ 4530.  4530. 43260.]
+Loss: 3.8584415260508877
+
+Accumulated reward at episode 9152: [ 4530.  4530. 43260.]
+Loss: 3.8751167829980133
+
+Accumulated reward at episode 9153: [ 4530.  4530. 43200.]
+Loss: 8.264291800167015
+
+Accumulated reward at episode 9154: [ 4530.  4530. 43260.]
+Loss: 17.093111639219646
+
+Accumulated reward at episode 9155: [ 4530.  4530. 43230.]
+Loss: 27.54862188041659
+
+Accumulated reward at episode 9156: [ 4530.  4530. 43230.]
+Loss: 4.406066512786094
+
+Accumulated reward at episode 9157: [ 4530.  4530. 43290.]
+Loss: 1.822470203434257
+
+Accumulated reward at episode 9158: [ 4530.  4560. 43140.]
+Loss: 0.9462710882966007
+
+Accumulated reward at episode 9159: [ 4530.  4530. 43200.]
+Loss: 6.129059515729027
+
+Accumulated reward at episode 9160: [ 4530.  4530. 43260.]
+Loss: 3.5267681330007057
+
+Accumulated reward at episode 9161: [ 4530.  4530. 43200.]
+Loss: 1.6988096505597443
+
+Accumulated reward at episode 9162: [ 4530.  4560. 43110.]
+Loss: 6.972530653382361
+
+Accumulated reward at episode 9163: [ 4530.  4560. 43110.]
+Loss: 10.501207592837767
+
+Accumulated reward at episode 9164: [ 4530.  4530. 43200.]
+Loss: 23.04390058227934
+
+Accumulated reward at episode 9165: [ 4530.  4530. 43260.]
+Loss: 20.09734581981335
+
+Accumulated reward at episode 9166: [ 4530.  4530. 43260.]
+Loss: 8.534193814337783
+
+Accumulated reward at episode 9167: [ 4530.  4530. 43200.]
+Loss: 6.300667900451405
+
+Accumulated reward at episode 9168: [ 4530.  4530. 43290.]
+Loss: 1.2427025817224624
+
+Accumulated reward at episode 9169: [ 4530.  4560. 43140.]
+Loss: 2.82351557638845
+
+Accumulated reward at episode 9170: [ 4530.  4530. 43200.]
+Loss: 3.110045194127262
+
+Accumulated reward at episode 9171: [ 4530.  4530. 43230.]
+Loss: 6.60602266317727
+
+Accumulated reward at episode 9172: [ 4530.  4560. 43140.]
+Loss: 7.95088340638111
+
+Accumulated reward at episode 9173: [ 4530.  4530. 43290.]
+Loss: 12.238758623646538
+
+Accumulated reward at episode 9174: [ 4530.  4530. 43290.]
+Loss: 20.137013513272375
+
+Accumulated reward at episode 9175: [ 4530.  4530. 43290.]
+Loss: 7.1252366463942325
+
+Accumulated reward at episode 9176: [ 4530.  4530. 43200.]
+Loss: 7.482056074165797
+
+Accumulated reward at episode 9177: [ 4530.  4560. 43110.]
+Loss: 6.944946468801453
+
+Accumulated reward at episode 9178: [ 4530.  4530. 43230.]
+Loss: 4.857186688238821
+
+Accumulated reward at episode 9179: [ 4530.  4530. 43260.]
+Loss: 5.072741814342954
+
+Accumulated reward at episode 9180: [ 4530.  4530. 43290.]
+Loss: 3.509063903150871
+
+Accumulated reward at episode 9181: [ 4530.  4530. 43230.]
+Loss: 8.921087349714586
+
+Accumulated reward at episode 9182: [ 4530.  4530. 43290.]
+Loss: 19.20861907675482
+
+Accumulated reward at episode 9183: [ 4530.  4530. 43230.]
+Loss: 26.626131414783845
+
+Accumulated reward at episode 9184: [ 4530.  4530. 43260.]
+Loss: 2.284870262924774
+
+Accumulated reward at episode 9185: [ 4530.  4530. 43200.]
+Loss: 2.6610462966269703
+
+Accumulated reward at episode 9186: [ 4530.  4530. 43260.]
+Loss: 5.3188583568587
+
+Accumulated reward at episode 9187: [ 4530.  4530. 43260.]
+Loss: 3.4451469610186436
+
+Accumulated reward at episode 9188: [ 4530.  4530. 43200.]
+Loss: 9.851961527849333
+
+Accumulated reward at episode 9189: [ 4530.  4530. 43200.]
+Loss: 21.02695016689017
+
+Accumulated reward at episode 9190: [ 4530.  4530. 43260.]
+Loss: 28.6255839277467
+
+Accumulated reward at episode 9191: [ 4530.  4530. 43260.]
+Loss: 4.550166239452353
+
+Accumulated reward at episode 9192: [ 4530.  4530. 43200.]
+Loss: 4.250149778058944
+
+Accumulated reward at episode 9193: [ 4530.  4530. 43230.]
+Loss: 5.2713493866911945
+
+Accumulated reward at episode 9194: [ 4530.  4530. 43290.]
+Loss: 3.5897510327464044
+
+Accumulated reward at episode 9195: [ 4530.  4530. 43230.]
+Loss: 1.5816037127352063
+
+Accumulated reward at episode 9196: [ 4530.  4530. 43230.]
+Loss: 4.829345734180026
+
+Accumulated reward at episode 9197: [ 4530.  4530. 43290.]
+Loss: 6.017435789315173
+
+Accumulated reward at episode 9198: [ 4530.  4560. 43140.]
+Loss: 17.56561731563327
+
+Accumulated reward at episode 9199: [ 4530.  4530. 43230.]
+Loss: 25.365260661271922
+
+Accumulated reward at episode 9200: [ 4530.  4530. 43170.]
+Loss: 4.581995778723131
+
+Accumulated reward at episode 9201: [ 4530.  4530. 43230.]
+Loss: 3.23702978091013
+
+Accumulated reward at episode 9202: [ 4530.  4530. 43170.]
+Loss: 2.5728363329419563
+
+Accumulated reward at episode 9203: [ 4530.  4530. 43200.]
+Loss: 5.962302488716636
+
+Accumulated reward at episode 9204: [ 4530.  4530. 43230.]
+Loss: 10.286618343439034
+
+Accumulated reward at episode 9205: [ 4530.  4530. 43260.]
+Loss: 17.903191154012028
+
+Accumulated reward at episode 9206: [ 4530.  4530. 43230.]
+Loss: 26.470873645748135
+
+Accumulated reward at episode 9207: [ 4530.  4530. 43230.]
+Loss: 4.298865900400632
+
+Accumulated reward at episode 9208: [ 4530.  4530. 43230.]
+Loss: 2.061144026801273
+
+Accumulated reward at episode 9209: [ 4530.  4560. 43110.]
+Loss: 0.7042585659228695
+
+Accumulated reward at episode 9210: [ 4530.  4530. 43290.]
+Loss: 3.2447655582637758
+
+Accumulated reward at episode 9211: [ 4530.  4560. 43140.]
+Loss: 3.580838661247464
+
+Accumulated reward at episode 9212: [ 4530.  4530. 43290.]
+Loss: 3.527355887950225
+
+Accumulated reward at episode 9213: [ 4530.  4530. 43200.]
+Loss: 0.7768202129576652
+
+Accumulated reward at episode 9214: [ 4530.  4530. 43260.]
+Loss: 3.2835806584925606
+
+Accumulated reward at episode 9215: [ 4530.  4530. 43230.]
+Loss: 3.2318443689248313
+
+Accumulated reward at episode 9216: [ 4530.  4530. 43170.]
+Loss: 4.190816858421908
+
+Accumulated reward at episode 9217: [ 4530.  4530. 43230.]
+Loss: 3.294800049667942
+
+Accumulated reward at episode 9218: [ 4530.  4560. 43140.]
+Loss: 23.969071853955253
+
+Accumulated reward at episode 9219: [ 4530.  4530. 43230.]
+Loss: 24.00945985973199
+
+Accumulated reward at episode 9220: [ 4530.  4530. 43260.]
+Loss: 8.420205242261169
+
+Accumulated reward at episode 9221: [ 4530.  4530. 43200.]
+Loss: 2.3329450854685856
+
+Accumulated reward at episode 9222: [ 4530.  4530. 43290.]
+Loss: 1.0745421938200084
+
+Accumulated reward at episode 9223: [ 4530.  4560. 43140.]
+Loss: 0.659354382587908
+
+Accumulated reward at episode 9224: [ 4530.  4530. 43290.]
+Loss: 5.413509945848428
+
+Accumulated reward at episode 9225: [ 4530.  4530. 43200.]
+Loss: 2.6849268175565624
+
+Accumulated reward at episode 9226: [ 4530.  4530. 43230.]
+Loss: 10.343281993030592
+
+Accumulated reward at episode 9227: [ 4530.  4530. 43170.]
+Loss: 19.369203106384617
+
+Accumulated reward at episode 9228: [ 4530.  4530. 43200.]
+Loss: 30.887185365505008
+
+Accumulated reward at episode 9229: [ 4530.  4530. 43230.]
+Loss: 4.487753194343138
+
+Accumulated reward at episode 9230: [ 4530.  4530. 43230.]
+Loss: 2.2439535615943615
+
+Accumulated reward at episode 9231: [ 4530.  4530. 43170.]
+Loss: 3.9918851692629627
+
+Accumulated reward at episode 9232: [ 4530.  4530. 43170.]
+Loss: 4.522177606051156
+
+Accumulated reward at episode 9233: [ 4530.  4530. 43170.]
+Loss: 9.615856105047676
+
+Accumulated reward at episode 9234: [ 4530.  4530. 43230.]
+Loss: 20.89167522464269
+
+Accumulated reward at episode 9235: [ 4530.  4530. 43230.]
+Loss: 25.416669733077942
+
+Accumulated reward at episode 9236: [ 4530.  4530. 43200.]
+Loss: 4.147351113888241
+
+Accumulated reward at episode 9237: [ 4530.  4530. 43230.]
+Loss: 2.8369005306979216
+
+Accumulated reward at episode 9238: [ 4530.  4530. 43200.]
+Loss: 1.2121409452609717
+
+Accumulated reward at episode 9239: [ 4530.  4530. 43230.]
+Loss: 3.014481886972182
+
+Accumulated reward at episode 9240: [ 4530.  4530. 43230.]
+Loss: 4.496356893308369
+
+Accumulated reward at episode 9241: [ 4530.  4530. 43200.]
+Loss: 5.2123516089548545
+
+Accumulated reward at episode 9242: [ 4530.  4530. 43200.]
+Loss: 13.25015549597789
+
+Accumulated reward at episode 9243: [ 4530.  4530. 43230.]
+Loss: 18.133551365889065
+
+Accumulated reward at episode 9244: [ 4530.  4530. 43230.]
+Loss: 15.466155714273272
+
+Accumulated reward at episode 9245: [ 4530.  4560. 43140.]
+Loss: 3.300664864917092
+
+Accumulated reward at episode 9246: [ 4530.  4530. 43200.]
+Loss: 3.2093321952902216
+
+Accumulated reward at episode 9247: [ 4530.  4530. 43230.]
+Loss: 3.9231811354441994
+
+Accumulated reward at episode 9248: [ 4530.  4530. 43200.]
+Loss: 10.972038244214167
+
+Accumulated reward at episode 9249: [ 4530.  4530. 43260.]
+Loss: 19.491096195362257
+
+Accumulated reward at episode 9250: [ 4530.  4530. 43200.]
+Loss: 26.961158978277
+
+Accumulated reward at episode 9251: [ 4530.  4530. 43170.]
+Loss: 1.8467082636277574
+
+Accumulated reward at episode 9252: [ 4530.  4530. 43170.]
+Loss: 3.4467903605206973
+
+Accumulated reward at episode 9253: [ 4530.  4530. 43200.]
+Loss: 4.863924082131737
+
+Accumulated reward at episode 9254: [ 4530.  4530. 43260.]
+Loss: 3.7388657850940863
+
+Accumulated reward at episode 9255: [ 4530.  4530. 43230.]
+Loss: 0.5498490027821888
+
+Accumulated reward at episode 9256: [ 4530.  4530. 43200.]
+Loss: 4.116431913765249
+
+Accumulated reward at episode 9257: [ 4530.  4530. 43230.]
+Loss: 8.131187779685332
+
+Accumulated reward at episode 9258: [ 4530.  4530. 43230.]
+Loss: 16.0275421338703
+
+Accumulated reward at episode 9259: [ 4530.  4530. 43260.]
+Loss: 20.329730822580615
+
+Accumulated reward at episode 9260: [ 4530.  4530. 43200.]
+Loss: 14.249819182761776
+
+Accumulated reward at episode 9261: [ 4530.  4530. 43200.]
+Loss: 6.49212131517839
+
+Accumulated reward at episode 9262: [ 4530.  4560. 43170.]
+Loss: 6.822093880919939
+
+Accumulated reward at episode 9263: [ 4530.  4530. 43260.]
+Loss: 6.06158880761026
+
+Accumulated reward at episode 9264: [ 4530.  4560. 43110.]
+Loss: 5.590058387210927
+
+Accumulated reward at episode 9265: [ 4530.  4530. 43230.]
+Loss: 8.351975315285546
+
+Accumulated reward at episode 9266: [ 4530.  4530. 43170.]
+Loss: 21.47780731890074
+
+Accumulated reward at episode 9267: [ 4530.  4530. 43230.]
+Loss: 27.30509344858522
+
+Accumulated reward at episode 9268: [ 4530.  4530. 43230.]
+Loss: 4.047647629537869
+
+Accumulated reward at episode 9269: [ 4530.  4530. 43290.]
+Loss: 2.6903690124606383
+
+Accumulated reward at episode 9270: [ 4530.  4530. 43170.]
+Loss: 2.715690824284534
+
+Accumulated reward at episode 9271: [ 4530.  4530. 43290.]
+Loss: 5.107547506147323
+
+Accumulated reward at episode 9272: [ 4530.  4560. 43140.]
+Loss: 2.6310827317885632
+
+Accumulated reward at episode 9273: [ 4530.  4530. 43200.]
+Loss: 5.648452881742183
+
+Accumulated reward at episode 9274: [ 4530.  4530. 43200.]
+Loss: 9.622345844235213
+
+Accumulated reward at episode 9275: [ 4530.  4530. 43230.]
+Loss: 21.002296928151903
+
+Accumulated reward at episode 9276: [ 4530.  4560. 43110.]
+Loss: 28.532292797835236
+
+Accumulated reward at episode 9277: [ 4530.  4530. 43230.]
+Loss: 2.685478368785792
+
+Accumulated reward at episode 9278: [ 4530.  4530. 43170.]
+Loss: 1.9704524433928143
+
+Accumulated reward at episode 9279: [ 4530.  4530. 43230.]
+Loss: 3.3419826129322217
+
+Accumulated reward at episode 9280: [ 4530.  4530. 43230.]
+Loss: 5.712471275162774
+
+Accumulated reward at episode 9281: [ 4530.  4530. 43260.]
+Loss: 0.3577096637091376
+
+Accumulated reward at episode 9282: [ 4530.  4530. 43230.]
+Loss: 0.4282187693954564
+
+Accumulated reward at episode 9283: [ 4530.  4530. 43230.]
+Loss: 3.713506711278449
+
+Accumulated reward at episode 9284: [ 4530.  4530. 43260.]
+Loss: 5.053838524567947
+
+Accumulated reward at episode 9285: [ 4530.  4530. 43260.]
+Loss: 9.958206257474407
+
+Accumulated reward at episode 9286: [ 4530.  4530. 43230.]
+Loss: 21.725045349544434
+
+Accumulated reward at episode 9287: [ 4530.  4530. 43200.]
+Loss: 27.026763837767618
+
+Accumulated reward at episode 9288: [ 4530.  4560. 43110.]
+Loss: 6.463203777628646
+
+Accumulated reward at episode 9289: [ 4530.  4530. 43230.]
+Loss: 5.160128391485473
+
+Accumulated reward at episode 9290: [ 4530.  4530. 43200.]
+Loss: 3.1534038370621333
+
+Accumulated reward at episode 9291: [ 4530.  4560. 43110.]
+Loss: 3.5666655944223375
+
+Accumulated reward at episode 9292: [ 4530.  4560. 43140.]
+Loss: 8.854197029669574
+
+Accumulated reward at episode 9293: [ 4530.  4560. 43110.]
+Loss: 17.763499429155335
+
+Accumulated reward at episode 9294: [ 4530.  4530. 43230.]
+Loss: 23.33813880727849
+
+Accumulated reward at episode 9295: [ 4530.  4530. 43200.]
+Loss: 5.9533418085965515
+
+Accumulated reward at episode 9296: [ 4530.  4530. 43200.]
+Loss: 4.266215400758109
+
+Accumulated reward at episode 9297: [ 4530.  4530. 43170.]
+Loss: 5.264790138495478
+
+Accumulated reward at episode 9298: [ 4530.  4530. 43230.]
+Loss: 2.1030661797584753
+
+Accumulated reward at episode 9299: [ 4530.  4560. 43140.]
+Loss: 3.7546697113702723
+
+Accumulated reward at episode 9300: [ 4530.  4530. 43230.]
+Loss: 11.062154471856482
+
+Accumulated reward at episode 9301: [ 4530.  4530. 43200.]
+Loss: 7.009176626071735
+
+Accumulated reward at episode 9302: [ 4530.  4530. 43260.]
+Loss: 19.110287095755975
+
+Accumulated reward at episode 9303: [ 4530.  4530. 43230.]
+Loss: 24.321289449014266
+
+Accumulated reward at episode 9304: [ 4530.  4560. 43110.]
+Loss: 6.663241073609376
+
+Accumulated reward at episode 9305: [ 4530.  4530. 43230.]
+Loss: 2.771905440499645
+
+Accumulated reward at episode 9306: [ 4530.  4530. 43260.]
+Loss: 6.577316599825158
+
+Accumulated reward at episode 9307: [ 4530.  4560. 43110.]
+Loss: 10.787732257531125
+
+Accumulated reward at episode 9308: [ 4530.  4560. 43110.]
+Loss: 21.564356135127344
+
+Accumulated reward at episode 9309: [ 4530.  4530. 43170.]
+Loss: 24.36160894708437
+
+Accumulated reward at episode 9310: [ 4530.  4530. 43290.]
+Loss: 1.9823731122441426
+
+Accumulated reward at episode 9311: [ 4530.  4530. 43230.]
+Loss: 3.3528240150661146
+
+Accumulated reward at episode 9312: [ 4530.  4530. 43230.]
+Loss: 4.557335834418793
+
+Accumulated reward at episode 9313: [ 4530.  4530. 43260.]
+Loss: 4.099991695562313
+
+Accumulated reward at episode 9314: [ 4530.  4560. 43170.]
+Loss: 10.65699664548451
+
+Accumulated reward at episode 9315: [ 4530.  4530. 43230.]
+Loss: 14.924195828553648
+
+Accumulated reward at episode 9316: [ 4530.  4530. 43290.]
+Loss: 20.430506332527163
+
+Accumulated reward at episode 9317: [ 4530.  4560. 43140.]
+Loss: 15.332657077644326
+
+Accumulated reward at episode 9318: [ 4530.  4530. 43260.]
+Loss: 2.834029530511317
+
+Accumulated reward at episode 9319: [ 4530.  4530. 43200.]
+Loss: 2.3395654440315465
+
+Accumulated reward at episode 9320: [ 4530.  4530. 43290.]
+Loss: 3.6703749062852564
+
+Accumulated reward at episode 9321: [ 4530.  4530. 43260.]
+Loss: 4.329717707671587
+
+Accumulated reward at episode 9322: [ 4530.  4530. 43260.]
+Loss: 4.606359761084129
+
+Accumulated reward at episode 9323: [ 4530.  4530. 43260.]
+Loss: 3.985318120984162
+
+Accumulated reward at episode 9324: [ 4530.  4560. 43110.]
+Loss: 10.88875627149922
+
+Accumulated reward at episode 9325: [ 4530.  4530. 43230.]
+Loss: 20.657939142509655
+
+Accumulated reward at episode 9326: [ 4530.  4530. 43170.]
+Loss: 27.60006082077646
+
+Accumulated reward at episode 9327: [ 4530.  4560. 43110.]
+Loss: 3.877354829135574
+
+Accumulated reward at episode 9328: [ 4530.  4530. 43260.]
+Loss: 4.550426116854667
+
+Accumulated reward at episode 9329: [ 4530.  4530. 43200.]
+Loss: 2.6567261733857506
+
+Accumulated reward at episode 9330: [ 4530.  4530. 43200.]
+Loss: 10.247043744508153
+
+Accumulated reward at episode 9331: [ 4530.  4560. 43140.]
+Loss: 15.776932349971451
+
+Accumulated reward at episode 9332: [ 4530.  4530. 43230.]
+Loss: 20.01432117630788
+
+Accumulated reward at episode 9333: [ 4530.  4530. 43170.]
+Loss: 8.582775877348968
+
+Accumulated reward at episode 9334: [ 4530.  4560. 43110.]
+Loss: 2.332915830066061
+
+Accumulated reward at episode 9335: [ 4530.  4530. 43290.]
+Loss: 4.2911137573826945
+
+Accumulated reward at episode 9336: [ 4530.  4530. 43200.]
+Loss: 4.731124103868777
+
+Accumulated reward at episode 9337: [ 4530.  4560. 43140.]
+Loss: 2.5483749538282052
+
+Accumulated reward at episode 9338: [ 4530.  4560. 43140.]
+Loss: 2.7507909074174917
+
+Accumulated reward at episode 9339: [ 4530.  4530. 43230.]
+Loss: 7.372729819693237
+
+Accumulated reward at episode 9340: [ 4530.  4530. 43230.]
+Loss: 6.157736303373533
+
+Accumulated reward at episode 9341: [ 4530.  4560. 43110.]
+Loss: 24.538189674093452
+
+Accumulated reward at episode 9342: [ 4530.  4560. 43140.]
+Loss: 27.997775997544036
+
+Accumulated reward at episode 9343: [ 4530.  4560. 43110.]
+Loss: 3.6463940475788252
+
+Accumulated reward at episode 9344: [ 4530.  4530. 43230.]
+Loss: 2.2449580768057067
+
+Accumulated reward at episode 9345: [ 4530.  4560. 43110.]
+Loss: 4.605256602547021
+
+Accumulated reward at episode 9346: [ 4530.  4560. 43110.]
+Loss: 3.609331621118584
+
+Accumulated reward at episode 9347: [ 4530.  4530. 43200.]
+Loss: 5.6893202280065225
+
+Accumulated reward at episode 9348: [ 4530.  4530. 43200.]
+Loss: 9.108275070874654
+
+Accumulated reward at episode 9349: [ 4530.  4530. 43200.]
+Loss: 20.788041779167916
+
+Accumulated reward at episode 9350: [ 4530.  4560. 43140.]
+Loss: 27.198753136712845
+
+Accumulated reward at episode 9351: [ 4530.  4530. 43290.]
+Loss: 1.3733766170521822
+
+Accumulated reward at episode 9352: [ 4530.  4530. 43230.]
+Loss: 2.831167495015589
+
+Accumulated reward at episode 9353: [ 4530.  4530. 43260.]
+Loss: 1.9706984844451725
+
+Accumulated reward at episode 9354: [ 4530.  4530. 43230.]
+Loss: 3.206073652338199
+
+Accumulated reward at episode 9355: [ 4530.  4560. 43170.]
+Loss: 3.477272349416056
+
+Accumulated reward at episode 9356: [ 4530.  4530. 43200.]
+Loss: 6.005179632750949
+
+Accumulated reward at episode 9357: [ 4530.  4530. 43230.]
+Loss: 12.130882513219515
+
+Accumulated reward at episode 9358: [ 4530.  4560. 43140.]
+Loss: 17.695793495243546
+
+Accumulated reward at episode 9359: [ 4530.  4560. 43140.]
+Loss: 7.453494232050499
+
+Accumulated reward at episode 9360: [ 4530.  4530. 43290.]
+Loss: 2.3378512410456347
+
+Accumulated reward at episode 9361: [ 4530.  4560. 43140.]
+Loss: 1.999538876134162
+
+Accumulated reward at episode 9362: [ 4530.  4530. 43230.]
+Loss: 3.6309587315649265
+
+Accumulated reward at episode 9363: [ 4530.  4560. 43110.]
+Loss: 4.506259752609623
+
+Accumulated reward at episode 9364: [ 4530.  4530. 43230.]
+Loss: 6.389298837204873
+
+Accumulated reward at episode 9365: [ 4530.  4530. 43200.]
+Loss: 6.158849739997067
+
+Accumulated reward at episode 9366: [ 4530.  4530. 43290.]
+Loss: 17.71374518428317
+
+Accumulated reward at episode 9367: [ 4530.  4530. 43260.]
+Loss: 19.27922232320994
+
+Accumulated reward at episode 9368: [ 4530.  4530. 43200.]
+Loss: 8.656078873327022
+
+Accumulated reward at episode 9369: [ 4530.  4530. 43230.]
+Loss: 3.218019802657252
+
+Accumulated reward at episode 9370: [ 4530.  4530. 43260.]
+Loss: 2.203519695207342
+
+Accumulated reward at episode 9371: [ 4530.  4530. 43290.]
+Loss: 4.43611862138312
+
+Accumulated reward at episode 9372: [ 4530.  4530. 43170.]
+Loss: 1.238121455504329
+
+Accumulated reward at episode 9373: [ 4530.  4530. 43230.]
+Loss: 5.467074217931108
+
+Accumulated reward at episode 9374: [ 4530.  4530. 43200.]
+Loss: 7.3853795841905745
+
+Accumulated reward at episode 9375: [ 4530.  4530. 43200.]
+Loss: 23.400987013652816
+
+Accumulated reward at episode 9376: [ 4530.  4560. 43170.]
+Loss: 27.766426604683904
+
+Accumulated reward at episode 9377: [ 4530.  4530. 43170.]
+Loss: 6.196015380060146
+
+Accumulated reward at episode 9378: [ 4530.  4530. 43290.]
+Loss: 6.522595180512618
+
+Accumulated reward at episode 9379: [ 4530.  4560. 43170.]
+Loss: 3.183483498815868
+
+Accumulated reward at episode 9380: [ 4530.  4530. 43230.]
+Loss: 4.8782250893406935
+
+Accumulated reward at episode 9381: [ 4530.  4530. 43290.]
+Loss: 4.104022829922316
+
+Accumulated reward at episode 9382: [ 4530.  4530. 43170.]
+Loss: 10.054163983864647
+
+Accumulated reward at episode 9383: [ 4530.  4530. 43230.]
+Loss: 21.379690891731133
+
+Accumulated reward at episode 9384: [ 4530.  4530. 43260.]
+Loss: 15.048398102744605
+
+Accumulated reward at episode 9385: [ 4530.  4530. 43260.]
+Loss: 3.078170188370512
+
+Accumulated reward at episode 9386: [ 4530.  4530. 43230.]
+Loss: 3.5251268472364594
+
+Accumulated reward at episode 9387: [ 4530.  4530. 43260.]
+Loss: 2.254128856678668
+
+Accumulated reward at episode 9388: [ 4530.  4530. 43230.]
+Loss: 7.096407022062723
+
+Accumulated reward at episode 9389: [ 4530.  4530. 43230.]
+Loss: 3.837149788492041
+
+Accumulated reward at episode 9390: [ 4530.  4560. 43140.]
+Loss: 12.354125474080078
+
+Accumulated reward at episode 9391: [ 4530.  4530. 43260.]
+Loss: 14.17746818196875
+
+Accumulated reward at episode 9392: [ 4530.  4530. 43170.]
+Loss: 21.225953364586122
+
+Accumulated reward at episode 9393: [ 4530.  4530. 43260.]
+Loss: 8.010823855888182
+
+Accumulated reward at episode 9394: [ 4530.  4530. 43230.]
+Loss: 2.278785134961484
+
+Accumulated reward at episode 9395: [ 4530.  4530. 43170.]
+Loss: 0.4759751170844495
+
+Accumulated reward at episode 9396: [ 4530.  4530. 43290.]
+Loss: 5.323799579746325
+
+Accumulated reward at episode 9397: [ 4530.  4530. 43290.]
+Loss: 7.438504405965583
+
+Accumulated reward at episode 9398: [ 4530.  4560. 43140.]
+Loss: 16.914872852279682
+
+Accumulated reward at episode 9399: [ 4530.  4530. 43290.]
+Loss: 25.562949096229605
+
+Accumulated reward at episode 9400: [ 4530.  4530. 43260.]
+Loss: 3.3375822866590443
+
+Accumulated reward at episode 9401: [ 4530.  4530. 43230.]
+Loss: 2.234800822491415
+
+Accumulated reward at episode 9402: [ 4530.  4560. 43140.]
+Loss: 3.869103496017
+
+Accumulated reward at episode 9403: [ 4530.  4530. 43200.]
+Loss: 6.5701594944649635
+
+Accumulated reward at episode 9404: [ 4530.  4530. 43260.]
+Loss: 8.971089548062153
+
+Accumulated reward at episode 9405: [ 4530.  4530. 43260.]
+Loss: 12.694380625094443
+
+Accumulated reward at episode 9406: [ 4530.  4530. 43260.]
+Loss: 20.884267018087826
+
+Accumulated reward at episode 9407: [ 4530.  4530. 43170.]
+Loss: 14.730374816057191
+
+Accumulated reward at episode 9408: [ 4530.  4530. 43230.]
+Loss: 1.990764334386203
+
+Accumulated reward at episode 9409: [ 4530.  4530. 43230.]
+Loss: 1.269782191502687
+
+Accumulated reward at episode 9410: [ 4530.  4560. 43140.]
+Loss: 1.6342239939714371
+
+Accumulated reward at episode 9411: [ 4530.  4530. 43230.]
+Loss: 1.934732926781779
+
+Accumulated reward at episode 9412: [ 4530.  4530. 43230.]
+Loss: 3.7251285911000593
+
+Accumulated reward at episode 9413: [ 4530.  4560. 43140.]
+Loss: 11.883120540449568
+
+Accumulated reward at episode 9414: [ 4530.  4530. 43260.]
+Loss: 21.2760919434631
+
+Accumulated reward at episode 9415: [ 4530.  4530. 43200.]
+Loss: 28.661301524326813
+
+Accumulated reward at episode 9416: [ 4530.  4530. 43200.]
+Loss: 4.353815135682837
+
+Accumulated reward at episode 9417: [ 4530.  4530. 43230.]
+Loss: 3.7795924421219653
+
+Accumulated reward at episode 9418: [ 4530.  4530. 43170.]
+Loss: 5.665650595270336
+
+Accumulated reward at episode 9419: [ 4530.  4530. 43260.]
+Loss: 6.827529735018098
+
+Accumulated reward at episode 9420: [ 4530.  4530. 43230.]
+Loss: 18.890942784057398
+
+Accumulated reward at episode 9421: [ 4530.  4560. 43110.]
+Loss: 27.713820845802132
+
+Accumulated reward at episode 9422: [ 4530.  4560. 43170.]
+Loss: 3.8682069906207746
+
+Accumulated reward at episode 9423: [ 4530.  4560. 43170.]
+Loss: 1.5994668701702568
+
+Accumulated reward at episode 9424: [ 4530.  4560. 43140.]
+Loss: 5.423267015908555
+
+Accumulated reward at episode 9425: [ 4530.  4530. 43230.]
+Loss: 3.811567447968955
+
+Accumulated reward at episode 9426: [ 4530.  4530. 43260.]
+Loss: 6.566087131763439
+
+Accumulated reward at episode 9427: [ 4530.  4560. 43110.]
+Loss: 11.053244465744392
+
+Accumulated reward at episode 9428: [ 4530.  4530. 43230.]
+Loss: 18.68708286738595
+
+Accumulated reward at episode 9429: [ 4530.  4560. 43140.]
+Loss: 26.60727506417883
+
+Accumulated reward at episode 9430: [ 4530.  4530. 43200.]
+Loss: 3.7757355986773518
+
+Accumulated reward at episode 9431: [ 4530.  4530. 43260.]
+Loss: 1.636685398940697
+
+Accumulated reward at episode 9432: [ 4530.  4530. 43290.]
+Loss: 3.581521872313127
+
+Accumulated reward at episode 9433: [ 4530.  4560. 43140.]
+Loss: 12.589596234669948
+
+Accumulated reward at episode 9434: [ 4530.  4560. 43140.]
+Loss: 22.554478471615546
+
+Accumulated reward at episode 9435: [ 4530.  4530. 43230.]
+Loss: 27.059662161701947
+
+Accumulated reward at episode 9436: [ 4530.  4530. 43260.]
+Loss: 2.4410237681557114
+
+Accumulated reward at episode 9437: [ 4530.  4530. 43200.]
+Loss: 3.7219229901557767
+
+Accumulated reward at episode 9438: [ 4530.  4530. 43260.]
+Loss: 3.1377715416163863
+
+Accumulated reward at episode 9439: [ 4530.  4530. 43230.]
+Loss: 3.177905969309772
+
+Accumulated reward at episode 9440: [ 4530.  4560. 43110.]
+Loss: 2.7349492077084414
+
+Accumulated reward at episode 9441: [ 4530.  4560. 43140.]
+Loss: 6.99128476731564
+
+Accumulated reward at episode 9442: [ 4530.  4530. 43260.]
+Loss: 9.056116913748934
+
+Accumulated reward at episode 9443: [ 4530.  4530. 43170.]
+Loss: 19.238291700149286
+
+Accumulated reward at episode 9444: [ 4530.  4530. 43230.]
+Loss: 30.57653621514319
+
+Accumulated reward at episode 9445: [ 4530.  4560. 43170.]
+Loss: 1.9938639575473478
+
+Accumulated reward at episode 9446: [ 4530.  4530. 43230.]
+Loss: 1.8556056886042172
+
+Accumulated reward at episode 9447: [ 4530.  4530. 43290.]
+Loss: 2.2257280674751287
+
+Accumulated reward at episode 9448: [ 4530.  4560. 43110.]
+Loss: 4.453615470678058
+
+Accumulated reward at episode 9449: [ 4530.  4560. 43140.]
+Loss: 11.656075441381013
+
+Accumulated reward at episode 9450: [ 4530.  4530. 43290.]
+Loss: 14.854426176321015
+
+Accumulated reward at episode 9451: [ 4530.  4530. 43230.]
+Loss: 28.139449653422187
+
+Accumulated reward at episode 9452: [ 4530.  4530. 43290.]
+Loss: 1.1959326807184893
+
+Accumulated reward at episode 9453: [ 4530.  4530. 43260.]
+Loss: 2.8922235744658047
+
+Accumulated reward at episode 9454: [ 4530.  4530. 43170.]
+Loss: 1.6694534391105844
+
+Accumulated reward at episode 9455: [ 4530.  4560. 43110.]
+Loss: 1.1266382427087316
+
+Accumulated reward at episode 9456: [ 4530.  4530. 43200.]
+Loss: 5.991990862320039
+
+Accumulated reward at episode 9457: [ 4530.  4530. 43290.]
+Loss: 2.666080861544639
+
+Accumulated reward at episode 9458: [ 4530.  4530. 43290.]
+Loss: 3.396057617094011
+
+Accumulated reward at episode 9459: [ 4530.  4530. 43230.]
+Loss: 8.595183864716924
+
+Accumulated reward at episode 9460: [ 4530.  4530. 43230.]
+Loss: 19.79051105308853
+
+Accumulated reward at episode 9461: [ 4530.  4560. 43140.]
+Loss: 26.46083804882691
+
+Accumulated reward at episode 9462: [ 4530.  4530. 43230.]
+Loss: 5.831242356090532
+
+Accumulated reward at episode 9463: [ 4530.  4560. 43110.]
+Loss: 6.808791626490638
+
+Accumulated reward at episode 9464: [ 4530.  4560. 43140.]
+Loss: 6.508199805118564
+
+Accumulated reward at episode 9465: [ 4530.  4530. 43230.]
+Loss: 4.192684020808603
+
+Accumulated reward at episode 9466: [ 4530.  4530. 43170.]
+Loss: 11.122861630719461
+
+Accumulated reward at episode 9467: [ 4530.  4530. 43230.]
+Loss: 15.849468875533914
+
+Accumulated reward at episode 9468: [ 4530.  4530. 43200.]
+Loss: 27.9108335334789
+
+Accumulated reward at episode 9469: [ 4530.  4530. 43230.]
+Loss: 4.28707825581872
+
+Accumulated reward at episode 9470: [ 4530.  4530. 43260.]
+Loss: 1.9268684883964995
+
+Accumulated reward at episode 9471: [ 4530.  4530. 43260.]
+Loss: 2.410644325235701
+
+Accumulated reward at episode 9472: [ 4530.  4530. 43200.]
+Loss: 4.345511560474949
+
+Accumulated reward at episode 9473: [ 4530.  4530. 43230.]
+Loss: 10.201343021495601
+
+Accumulated reward at episode 9474: [ 4530.  4530. 43200.]
+Loss: 21.929526015295348
+
+Accumulated reward at episode 9475: [ 4530.  4530. 43170.]
+Loss: 28.688909754719194
+
+Accumulated reward at episode 9476: [ 4530.  4560. 43110.]
+Loss: 4.320754157173909
+
+Accumulated reward at episode 9477: [ 4530.  4530. 43230.]
+Loss: 4.736685277314972
+
+Accumulated reward at episode 9478: [ 4530.  4530. 43230.]
+Loss: 3.3080969985039137
+
+Accumulated reward at episode 9479: [ 4530.  4530. 43170.]
+Loss: 0.5225059340812658
+
+Accumulated reward at episode 9480: [ 4530.  4530. 43260.]
+Loss: 5.317573105064698
+
+Accumulated reward at episode 9481: [ 4530.  4530. 43170.]
+Loss: 7.79089073289098
+
+Accumulated reward at episode 9482: [ 4530.  4560. 43170.]
+Loss: 22.786094965785438
+
+Accumulated reward at episode 9483: [ 4530.  4530. 43170.]
+Loss: 28.165262664565933
+
+Accumulated reward at episode 9484: [ 4530.  4530. 43230.]
+Loss: 2.6831740037303797
+
+Accumulated reward at episode 9485: [ 4530.  4530. 43170.]
+Loss: 3.0023725851529535
+
+Accumulated reward at episode 9486: [ 4530.  4530. 43230.]
+Loss: 2.3442389104090045
+
+Accumulated reward at episode 9487: [ 4530.  4530. 43260.]
+Loss: 1.9812261836170824
+
+Accumulated reward at episode 9488: [ 4530.  4560. 43110.]
+Loss: 5.528861209522171
+
+Accumulated reward at episode 9489: [ 4530.  4530. 43260.]
+Loss: 5.1473904739232665
+
+Accumulated reward at episode 9490: [ 4530.  4530. 43230.]
+Loss: 8.604070437457626
+
+Accumulated reward at episode 9491: [ 4530.  4530. 43260.]
+Loss: 20.96808872537826
+
+Accumulated reward at episode 9492: [ 4530.  4530. 43260.]
+Loss: 23.244830083321993
+
+Accumulated reward at episode 9493: [ 4530.  4530. 43230.]
+Loss: 8.52532817897328
+
+Accumulated reward at episode 9494: [ 4530.  4530. 43170.]
+Loss: 2.379453443089055
+
+Accumulated reward at episode 9495: [ 4530.  4560. 43110.]
+Loss: 6.088094884387831
+
+Accumulated reward at episode 9496: [ 4530.  4530. 43230.]
+Loss: 5.102225957708328
+
+Accumulated reward at episode 9497: [ 4530.  4530. 43260.]
+Loss: 8.002360203025072
+
+Accumulated reward at episode 9498: [ 4530.  4560. 43110.]
+Loss: 16.186229480529885
+
+Accumulated reward at episode 9499: [ 4530.  4530. 43200.]
+Loss: 26.637175834100333
+
+Accumulated reward at episode 9500: [ 4530.  4530. 43230.]
+Loss: 8.059577573225672
+
+Accumulated reward at episode 9501: [ 4530.  4530. 43260.]
+Loss: 6.32247739616351
+
+Accumulated reward at episode 9502: [ 4530.  4530. 43230.]
+Loss: 6.918061547276601
+
+Accumulated reward at episode 9503: [ 4530.  4560. 43110.]
+Loss: 3.8391893117628113
+
+Accumulated reward at episode 9504: [ 4530.  4530. 43260.]
+Loss: 9.684200611358616
+
+Accumulated reward at episode 9505: [ 4530.  4530. 43230.]
+Loss: 16.447673630172915
+
+Accumulated reward at episode 9506: [ 4530.  4560. 43110.]
+Loss: 24.36632411744279
+
+Accumulated reward at episode 9507: [ 4530.  4530. 43200.]
+Loss: 3.6144873724184285
+
+Accumulated reward at episode 9508: [ 4530.  4530. 43230.]
+Loss: 6.276691539281801
+
+Accumulated reward at episode 9509: [ 4530.  4530. 43230.]
+Loss: 3.8089779471496557
+
+Accumulated reward at episode 9510: [ 4530.  4530. 43230.]
+Loss: 10.091708633998415
+
+Accumulated reward at episode 9511: [ 4530.  4530. 43200.]
+Loss: 21.91233639757534
+
+Accumulated reward at episode 9512: [ 4530.  4560. 43140.]
+Loss: 27.279930399656504
+
+Accumulated reward at episode 9513: [ 4530.  4530. 43200.]
+Loss: 4.08697128120945
+
+Accumulated reward at episode 9514: [ 4530.  4530. 43230.]
+Loss: 3.073043556405741
+
+Accumulated reward at episode 9515: [ 4530.  4530. 43260.]
+Loss: 3.702859344686145
+
+Accumulated reward at episode 9516: [ 4530.  4530. 43290.]
+Loss: 3.749974969380318
+
+Accumulated reward at episode 9517: [ 4530.  4560. 43140.]
+Loss: 4.3507694936009536
+
+Accumulated reward at episode 9518: [ 4530.  4530. 43230.]
+Loss: 6.041890738836182
+
+Accumulated reward at episode 9519: [ 4530.  4560. 43170.]
+Loss: 7.303089287872582
+
+Accumulated reward at episode 9520: [ 4530.  4530. 43260.]
+Loss: 15.225910974123249
+
+Accumulated reward at episode 9521: [ 4530.  4530. 43200.]
+Loss: 17.266583406082336
+
+Accumulated reward at episode 9522: [ 4530.  4530. 43260.]
+Loss: 11.370100301912501
+
+Accumulated reward at episode 9523: [ 4530.  4560. 43140.]
+Loss: 4.084212519653439
+
+Accumulated reward at episode 9524: [ 4530.  4530. 43290.]
+Loss: 1.9168342164243977
+
+Accumulated reward at episode 9525: [ 4530.  4560. 43110.]
+Loss: 2.9802164593213174
+
+Accumulated reward at episode 9526: [ 4530.  4530. 43200.]
+Loss: 3.0714322155411855
+
+Accumulated reward at episode 9527: [ 4530.  4560. 43110.]
+Loss: 7.306139709158003
+
+Accumulated reward at episode 9528: [ 4530.  4530. 43290.]
+Loss: 4.902076555691396
+
+Accumulated reward at episode 9529: [ 4530.  4530. 43290.]
+Loss: 19.24671659412586
+
+Accumulated reward at episode 9530: [ 4530.  4530. 43170.]
+Loss: 26.14501830406561
+
+Accumulated reward at episode 9531: [ 4530.  4530. 43200.]
+Loss: 2.3970012975713875
+
+Accumulated reward at episode 9532: [ 4530.  4530. 43260.]
+Loss: 2.5245763769132763
+
+Accumulated reward at episode 9533: [ 4530.  4560. 43110.]
+Loss: 4.284558754060688
+
+Accumulated reward at episode 9534: [ 4530.  4530. 43290.]
+Loss: 9.339228871140758
+
+Accumulated reward at episode 9535: [ 4530.  4530. 43260.]
+Loss: 21.058595077575816
+
+Accumulated reward at episode 9536: [ 4530.  4530. 43260.]
+Loss: 15.478795080712574
+
+Accumulated reward at episode 9537: [ 4530.  4530. 43260.]
+Loss: 13.854198361109642
+
+Accumulated reward at episode 9538: [ 4530.  4530. 43200.]
+Loss: 3.5461799312857476
+
+Accumulated reward at episode 9539: [ 4530.  4530. 43200.]
+Loss: 3.9955608700419516
+
+Accumulated reward at episode 9540: [ 4530.  4530. 43200.]
+Loss: 1.9934024630724902
+
+Accumulated reward at episode 9541: [ 4530.  4530. 43200.]
+Loss: 3.5047275043278963
+
+Accumulated reward at episode 9542: [ 4530.  4530. 43230.]
+Loss: 9.861208790201227
+
+Accumulated reward at episode 9543: [ 4530.  4560. 43140.]
+Loss: 18.52051872979352
+
+Accumulated reward at episode 9544: [ 4530.  4530. 43260.]
+Loss: 26.003112427093573
+
+Accumulated reward at episode 9545: [ 4530.  4530. 43260.]
+Loss: 5.079120534320601
+
+Accumulated reward at episode 9546: [ 4530.  4530. 43170.]
+Loss: 3.603382469333953
+
+Accumulated reward at episode 9547: [ 4530.  4530. 43200.]
+Loss: 2.993837686591659
+
+Accumulated reward at episode 9548: [ 4530.  4530. 43230.]
+Loss: 0.28769797446587736
+
+Accumulated reward at episode 9549: [ 4530.  4560. 43140.]
+Loss: 3.786938491740825
+
+Accumulated reward at episode 9550: [ 4530.  4530. 43200.]
+Loss: 6.168301547608878
+
+Accumulated reward at episode 9551: [ 4530.  4530. 43200.]
+Loss: 3.8878909516917113
+
+Accumulated reward at episode 9552: [ 4530.  4560. 43110.]
+Loss: 11.22715458348138
+
+Accumulated reward at episode 9553: [ 4530.  4560. 43140.]
+Loss: 19.388110135408528
+
+Accumulated reward at episode 9554: [ 4530.  4530. 43260.]
+Loss: 25.68753711788076
+
+Accumulated reward at episode 9555: [ 4530.  4530. 43290.]
+Loss: 0.9747119051670434
+
+Accumulated reward at episode 9556: [ 4530.  4560. 43110.]
+Loss: 3.955838265754598
+
+Accumulated reward at episode 9557: [ 4530.  4530. 43290.]
+Loss: 1.9330632783865112
+
+Accumulated reward at episode 9558: [ 4530.  4530. 43200.]
+Loss: 4.414955490204757
+
+Accumulated reward at episode 9559: [ 4530.  4560. 43140.]
+Loss: 8.616932287064122
+
+Accumulated reward at episode 9560: [ 4530.  4530. 43200.]
+Loss: 23.39921396202117
+
+Accumulated reward at episode 9561: [ 4530.  4530. 43200.]
+Loss: 26.391487371764367
+
+Accumulated reward at episode 9562: [ 4530.  4560. 43110.]
+Loss: 2.8250401873770468
+
+Accumulated reward at episode 9563: [ 4530.  4560. 43140.]
+Loss: 5.600917198699252
+
+Accumulated reward at episode 9564: [ 4530.  4530. 43230.]
+Loss: 2.7104485042229727
+
+Accumulated reward at episode 9565: [ 4530.  4530. 43200.]
+Loss: 1.358384872355416
+
+Accumulated reward at episode 9566: [ 4530.  4530. 43290.]
+Loss: 0.381137916258218
+
+Accumulated reward at episode 9567: [ 4530.  4530. 43170.]
+Loss: 0.8832650718049374
+
+Accumulated reward at episode 9568: [ 4530.  4530. 43260.]
+Loss: 0.9138144032831472
+
+Accumulated reward at episode 9569: [ 4530.  4530. 43290.]
+Loss: 3.647108415961768
+
+Accumulated reward at episode 9570: [ 4530.  4560. 43140.]
+Loss: 5.292162466342843
+
+Accumulated reward at episode 9571: [ 4530.  4560. 43170.]
+Loss: 8.553485206333278
+
+Accumulated reward at episode 9572: [ 4530.  4530. 43260.]
+Loss: 18.74492462548042
+
+Accumulated reward at episode 9573: [ 4530.  4560. 43170.]
+Loss: 27.610920771958508
+
+Accumulated reward at episode 9574: [ 4530.  4530. 43200.]
+Loss: 3.8590309684673776
+
+Accumulated reward at episode 9575: [ 4530.  4530. 43200.]
+Loss: 2.360415566312099
+
+Accumulated reward at episode 9576: [ 4530.  4530. 43230.]
+Loss: 3.6836789307533753
+
+Accumulated reward at episode 9577: [ 4530.  4530. 43230.]
+Loss: 4.511595824864269
+
+Accumulated reward at episode 9578: [ 4530.  4530. 43200.]
+Loss: 6.212256086717826
+
+Accumulated reward at episode 9579: [ 4530.  4530. 43260.]
+Loss: 7.546759368995926
+
+Accumulated reward at episode 9580: [ 4530.  4530. 43230.]
+Loss: 22.376654916840398
+
+Accumulated reward at episode 9581: [ 4530.  4530. 43230.]
+Loss: 25.850334768200995
+
+Accumulated reward at episode 9582: [ 4530.  4530. 43170.]
+Loss: 3.35081762988669
+
+Accumulated reward at episode 9583: [ 4530.  4530. 43230.]
+Loss: 3.4535971869238726
+
+Accumulated reward at episode 9584: [ 4530.  4560. 43110.]
+Loss: 3.9712136458978136
+
+Accumulated reward at episode 9585: [ 4530.  4560. 43140.]
+Loss: 6.3667938996498155
+
+Accumulated reward at episode 9586: [ 4530.  4560. 43140.]
+Loss: 7.655511458158964
+
+Accumulated reward at episode 9587: [ 4530.  4530. 43200.]
+Loss: 9.117944328194174
+
+Accumulated reward at episode 9588: [ 4530.  4530. 43230.]
+Loss: 20.584223962104527
+
+Accumulated reward at episode 9589: [ 4530.  4560. 43140.]
+Loss: 27.648613817970833
+
+Accumulated reward at episode 9590: [ 4530.  4530. 43260.]
+Loss: 5.454124837297983
+
+Accumulated reward at episode 9591: [ 4530.  4530. 43290.]
+Loss: 6.321011869475188
+
+Accumulated reward at episode 9592: [ 4530.  4530. 43290.]
+Loss: 1.4518985946964662
+
+Accumulated reward at episode 9593: [ 4530.  4560. 43170.]
+Loss: 1.414551563902916
+
+Accumulated reward at episode 9594: [ 4530.  4530. 43230.]
+Loss: 5.300352381171083
+
+Accumulated reward at episode 9595: [ 4530.  4530. 43200.]
+Loss: 4.11871213681976
+
+Accumulated reward at episode 9596: [ 4530.  4530. 43230.]
+Loss: 7.875747337099732
+
+Accumulated reward at episode 9597: [ 4530.  4530. 43200.]
+Loss: 22.3396850867412
+
+Accumulated reward at episode 9598: [ 4530.  4530. 43260.]
+Loss: 26.468641410554618
+
+Accumulated reward at episode 9599: [ 4530.  4530. 43230.]
+Loss: 3.15030307880575
+
+Accumulated reward at episode 9600: [ 4530.  4530. 43230.]
+Loss: 3.261811685810795
+
+Accumulated reward at episode 9601: [ 4530.  4530. 43230.]
+Loss: 1.6737701658603703
+
+Accumulated reward at episode 9602: [ 4530.  4530. 43260.]
+Loss: 6.1714158321818795
+
+Accumulated reward at episode 9603: [ 4530.  4530. 43200.]
+Loss: 10.700493657061772
+
+Accumulated reward at episode 9604: [ 4530.  4530. 43230.]
+Loss: 23.511034122810628
+
+Accumulated reward at episode 9605: [ 4530.  4530. 43200.]
+Loss: 28.067994061008697
+
+Accumulated reward at episode 9606: [ 4530.  4560. 43140.]
+Loss: 3.8082224167342247
+
+Accumulated reward at episode 9607: [ 4530.  4530. 43230.]
+Loss: 3.62045341198849
+
+Accumulated reward at episode 9608: [ 4530.  4560. 43140.]
+Loss: 3.990169940434045
+
+Accumulated reward at episode 9609: [ 4530.  4530. 43200.]
+Loss: 4.148120351366519
+
+Accumulated reward at episode 9610: [ 4530.  4560. 43170.]
+Loss: 4.12606184402005
+
+Accumulated reward at episode 9611: [ 4530.  4530. 43230.]
+Loss: 10.59378476455083
+
+Accumulated reward at episode 9612: [ 4530.  4530. 43200.]
+Loss: 22.269943411347658
+
+Accumulated reward at episode 9613: [ 4530.  4530. 43200.]
+Loss: 28.233686701462506
+
+Accumulated reward at episode 9614: [ 4530.  4530. 43230.]
+Loss: 4.399158730054966
+
+Accumulated reward at episode 9615: [ 4530.  4530. 43170.]
+Loss: 4.366203894608734
+
+Accumulated reward at episode 9616: [ 4530.  4530. 43290.]
+Loss: 3.008948150881608
+
+Accumulated reward at episode 9617: [ 4530.  4530. 43200.]
+Loss: 4.727236619196926
+
+Accumulated reward at episode 9618: [ 4530.  4560. 43110.]
+Loss: 2.37691842677362
+
+Accumulated reward at episode 9619: [ 4530.  4530. 43200.]
+Loss: 3.1990516246593
+
+Accumulated reward at episode 9620: [ 4530.  4530. 43170.]
+Loss: 0.4604693263170725
+
+Accumulated reward at episode 9621: [ 4530.  4530. 43200.]
+Loss: 0.14687029705825905
+
+Accumulated reward at episode 9622: [ 4530.  4530. 43170.]
+Loss: 3.9039086016544156
+
+Accumulated reward at episode 9623: [ 4530.  4560. 43140.]
+Loss: 3.9753573670025553
+
+Accumulated reward at episode 9624: [ 4530.  4530. 43230.]
+Loss: 6.321659714792796
+
+Accumulated reward at episode 9625: [ 4530.  4530. 43230.]
+Loss: 15.575918396000006
+
+Accumulated reward at episode 9626: [ 4530.  4530. 43260.]
+Loss: 20.89807996661131
+
+Accumulated reward at episode 9627: [ 4530.  4560. 43170.]
+Loss: 16.382092666356886
+
+Accumulated reward at episode 9628: [ 4530.  4530. 43200.]
+Loss: 3.854467875567537
+
+Accumulated reward at episode 9629: [ 4530.  4530. 43200.]
+Loss: 2.1847651809719175
+
+Accumulated reward at episode 9630: [ 4530.  4530. 43230.]
+Loss: 0.44547296866047104
+
+Accumulated reward at episode 9631: [ 4530.  4530. 43290.]
+Loss: 7.117316902678105
+
+Accumulated reward at episode 9632: [ 4530.  4560. 43110.]
+Loss: 3.249064728042819
+
+Accumulated reward at episode 9633: [ 4530.  4530. 43230.]
+Loss: 3.2684334104480217
+
+Accumulated reward at episode 9634: [ 4530.  4530. 43230.]
+Loss: 4.306102407006305
+
+Accumulated reward at episode 9635: [ 4530.  4530. 43230.]
+Loss: 3.3111387893318174
+
+Accumulated reward at episode 9636: [ 4530.  4530. 43230.]
+Loss: 5.254391713296598
+
+Accumulated reward at episode 9637: [ 4530.  4530. 43200.]
+Loss: 9.59754111938314
+
+Accumulated reward at episode 9638: [ 4530.  4530. 43230.]
+Loss: 18.85877893458674
+
+Accumulated reward at episode 9639: [ 4530.  4530. 43290.]
+Loss: 24.57973035555085
+
+Accumulated reward at episode 9640: [ 4530.  4530. 43230.]
+Loss: 5.13992925121081
+
+Accumulated reward at episode 9641: [ 4530.  4530. 43260.]
+Loss: 1.9377910248801626
+
+Accumulated reward at episode 9642: [ 4530.  4530. 43200.]
+Loss: 3.7327758078499773
+
+Accumulated reward at episode 9643: [ 4530.  4530. 43230.]
+Loss: 2.9375247491891847
+
+Accumulated reward at episode 9644: [ 4530.  4530. 43230.]
+Loss: 4.653348067434751
+
+Accumulated reward at episode 9645: [ 4530.  4530. 43290.]
+Loss: 0.662011908360817
+
+Accumulated reward at episode 9646: [ 4530.  4530. 43170.]
+Loss: 5.773001885916439
+
+Accumulated reward at episode 9647: [ 4530.  4530. 43230.]
+Loss: 4.8403005428963315
+
+Accumulated reward at episode 9648: [ 4530.  4530. 43290.]
+Loss: 5.6786760134684195
+
+Accumulated reward at episode 9649: [ 4530.  4530. 43230.]
+Loss: 17.111854267127164
+
+Accumulated reward at episode 9650: [ 4530.  4530. 43230.]
+Loss: 27.553565256261415
+
+Accumulated reward at episode 9651: [ 4530.  4560. 43110.]
+Loss: 5.077117925931833
+
+Accumulated reward at episode 9652: [ 4530.  4530. 43260.]
+Loss: 2.621020725973563
+
+Accumulated reward at episode 9653: [ 4530.  4530. 43290.]
+Loss: 0.3386269809383143
+
+Accumulated reward at episode 9654: [ 4530.  4530. 43200.]
+Loss: 3.146402023051532
+
+Accumulated reward at episode 9655: [ 4530.  4530. 43230.]
+Loss: 3.501883081674082
+
+Accumulated reward at episode 9656: [ 4530.  4530. 43200.]
+Loss: 10.91087690136146
+
+Accumulated reward at episode 9657: [ 4530.  4560. 43140.]
+Loss: 21.954415974889613
+
+Accumulated reward at episode 9658: [ 4530.  4560. 43140.]
+Loss: 27.11864172956799
+
+Accumulated reward at episode 9659: [ 4530.  4530. 43260.]
+Loss: 3.7824665223183205
+
+Accumulated reward at episode 9660: [ 4530.  4530. 43170.]
+Loss: 1.874494643185658
+
+Accumulated reward at episode 9661: [ 4530.  4530. 43290.]
+Loss: 2.771953324756673
+
+Accumulated reward at episode 9662: [ 4530.  4530. 43260.]
+Loss: 5.763753140258904
+
+Accumulated reward at episode 9663: [ 4530.  4560. 43140.]
+Loss: 3.6401630469172237
+
+Accumulated reward at episode 9664: [ 4530.  4530. 43200.]
+Loss: 8.028761159714815
+
+Accumulated reward at episode 9665: [ 4530.  4560. 43170.]
+Loss: 8.698006810913181
+
+Accumulated reward at episode 9666: [ 4530.  4530. 43230.]
+Loss: 17.94853739022558
+
+Accumulated reward at episode 9667: [ 4530.  4560. 43140.]
+Loss: 24.405344674285587
+
+Accumulated reward at episode 9668: [ 4530.  4530. 43200.]
+Loss: 3.5113787106094976
+
+Accumulated reward at episode 9669: [ 4530.  4530. 43260.]
+Loss: 6.154674722242606
+
+Accumulated reward at episode 9670: [ 4530.  4560. 43140.]
+Loss: 3.1365824580212
+
+Accumulated reward at episode 9671: [ 4530.  4530. 43200.]
+Loss: 2.990924753459495
+
+Accumulated reward at episode 9672: [ 4530.  4530. 43200.]
+Loss: 7.52452513836323
+
+Accumulated reward at episode 9673: [ 4530.  4530. 43170.]
+Loss: 12.301374430462902
+
+Accumulated reward at episode 9674: [ 4530.  4530. 43230.]
+Loss: 18.20770629121599
+
+Accumulated reward at episode 9675: [ 4530.  4530. 43200.]
+Loss: 11.984810460860308
+
+Accumulated reward at episode 9676: [ 4530.  4530. 43230.]
+Loss: 4.123367809037596
+
+Accumulated reward at episode 9677: [ 4530.  4530. 43260.]
+Loss: 3.830782945464505
+
+Accumulated reward at episode 9678: [ 4530.  4530. 43290.]
+Loss: 1.0719972600390504
+
+Accumulated reward at episode 9679: [ 4530.  4530. 43230.]
+Loss: 0.5310370857949527
+
+Accumulated reward at episode 9680: [ 4530.  4530. 43260.]
+Loss: 2.3307971829462972
+
+Accumulated reward at episode 9681: [ 4530.  4530. 43290.]
+Loss: 3.376210948641319
+
+Accumulated reward at episode 9682: [ 4530.  4530. 43170.]
+Loss: 6.118795235748969
+
+Accumulated reward at episode 9683: [ 4530.  4560. 43110.]
+Loss: 8.587912290179627
+
+Accumulated reward at episode 9684: [ 4530.  4560. 43140.]
+Loss: 19.719852000290647
+
+Accumulated reward at episode 9685: [ 4530.  4530. 43260.]
+Loss: 13.488728053976184
+
+Accumulated reward at episode 9686: [ 4530.  4530. 43170.]
+Loss: 6.183764936687465
+
+Accumulated reward at episode 9687: [ 4530.  4530. 43230.]
+Loss: 6.025077917178944
+
+Accumulated reward at episode 9688: [ 4530.  4560. 43140.]
+Loss: 3.9847371105215
+
+Accumulated reward at episode 9689: [ 4530.  4530. 43200.]
+Loss: 6.065910606557669
+
+Accumulated reward at episode 9690: [ 4530.  4530. 43230.]
+Loss: 6.023290943397103
+
+Accumulated reward at episode 9691: [ 4530.  4530. 43230.]
+Loss: 8.531011032082032
+
+Accumulated reward at episode 9692: [ 4530.  4530. 43260.]
+Loss: 17.5052758894097
+
+Accumulated reward at episode 9693: [ 4530.  4530. 43230.]
+Loss: 26.40300380605096
+
+Accumulated reward at episode 9694: [ 4530.  4560. 43110.]
+Loss: 2.242076162167208
+
+Accumulated reward at episode 9695: [ 4530.  4530. 43200.]
+Loss: 1.8575074644313314
+
+Accumulated reward at episode 9696: [ 4530.  4530. 43200.]
+Loss: 2.26010035538661
+
+Accumulated reward at episode 9697: [ 4530.  4530. 43290.]
+Loss: 3.1371470508244403
+
+Accumulated reward at episode 9698: [ 4530.  4530. 43260.]
+Loss: 10.549188165621622
+
+Accumulated reward at episode 9699: [ 4530.  4530. 43230.]
+Loss: 21.06383320943216
+
+Accumulated reward at episode 9700: [ 4530.  4530. 43230.]
+Loss: 27.498781500855735
+
+Accumulated reward at episode 9701: [ 4530.  4530. 43170.]
+Loss: 4.702021124359542
+
+Accumulated reward at episode 9702: [ 4530.  4530. 43260.]
+Loss: 2.101017046785362
+
+Accumulated reward at episode 9703: [ 4530.  4530. 43260.]
+Loss: 3.333072344143721
+
+Accumulated reward at episode 9704: [ 4530.  4530. 43260.]
+Loss: 6.806420689300813
+
+Accumulated reward at episode 9705: [ 4530.  4530. 43200.]
+Loss: 4.537145889072456
+
+Accumulated reward at episode 9706: [ 4530.  4530. 43170.]
+Loss: 11.117202019017446
+
+Accumulated reward at episode 9707: [ 4530.  4560. 43110.]
+Loss: 22.7179979060304
+
+Accumulated reward at episode 9708: [ 4530.  4560. 43110.]
+Loss: 26.01623144125679
+
+Accumulated reward at episode 9709: [ 4530.  4530. 43200.]
+Loss: 3.9813037848017845
+
+Accumulated reward at episode 9710: [ 4530.  4530. 43200.]
+Loss: 1.8632774161643235
+
+Accumulated reward at episode 9711: [ 4530.  4530. 43200.]
+Loss: 3.2754563513523256
+
+Accumulated reward at episode 9712: [ 4530.  4530. 43290.]
+Loss: 9.37066621467343
+
+Accumulated reward at episode 9713: [ 4530.  4530. 43290.]
+Loss: 3.691001575552814
+
+Accumulated reward at episode 9714: [ 4530.  4530. 43260.]
+Loss: 19.833618226461063
+
+Accumulated reward at episode 9715: [ 4530.  4560. 43110.]
+Loss: 25.20410178540866
+
+Accumulated reward at episode 9716: [ 4530.  4530. 43290.]
+Loss: 3.350784962470401
+
+Accumulated reward at episode 9717: [ 4530.  4530. 43290.]
+Loss: 1.4053212961456845
+
+Accumulated reward at episode 9718: [ 4530.  4530. 43200.]
+Loss: 3.8085005141861017
+
+Accumulated reward at episode 9719: [ 4530.  4530. 43230.]
+Loss: 5.763242988113314
+
+Accumulated reward at episode 9720: [ 4530.  4530. 43170.]
+Loss: 4.493000312807555
+
+Accumulated reward at episode 9721: [ 4530.  4530. 43200.]
+Loss: 9.450107998813737
+
+Accumulated reward at episode 9722: [ 4530.  4530. 43200.]
+Loss: 21.820954612488023
+
+Accumulated reward at episode 9723: [ 4530.  4560. 43140.]
+Loss: 25.219624144618212
+
+Accumulated reward at episode 9724: [ 4530.  4560. 43110.]
+Loss: 4.030610953137737
+
+Accumulated reward at episode 9725: [ 4530.  4530. 43230.]
+Loss: 5.448015762914139
+
+Accumulated reward at episode 9726: [ 4530.  4530. 43260.]
+Loss: 3.477421525779844
+
+Accumulated reward at episode 9727: [ 4530.  4530. 43230.]
+Loss: 1.4974098967758387
+
+Accumulated reward at episode 9728: [ 4530.  4530. 43260.]
+Loss: 0.38887505453885557
+
+Accumulated reward at episode 9729: [ 4530.  4530. 43230.]
+Loss: 0.2969048611296933
+
+Accumulated reward at episode 9730: [ 4530.  4530. 43230.]
+Loss: 3.9090432487491844
+
+Accumulated reward at episode 9731: [ 4530.  4530. 43260.]
+Loss: 4.811293067705453
+
+Accumulated reward at episode 9732: [ 4530.  4530. 43230.]
+Loss: 11.177785408064612
+
+Accumulated reward at episode 9733: [ 4530.  4530. 43260.]
+Loss: 21.189642064026447
+
+Accumulated reward at episode 9734: [ 4530.  4530. 43260.]
+Loss: 29.072404379683363
+
+Accumulated reward at episode 9735: [ 4530.  4530. 43260.]
+Loss: 3.814772676645169
+
+Accumulated reward at episode 9736: [ 4530.  4530. 43170.]
+Loss: 6.772299677484342
+
+Accumulated reward at episode 9737: [ 4530.  4530. 43200.]
+Loss: 5.655300322140645
+
+Accumulated reward at episode 9738: [ 4530.  4530. 43230.]
+Loss: 6.0048532921793365
+
+Accumulated reward at episode 9739: [ 4530.  4530. 43260.]
+Loss: 8.001203843949387
+
+Accumulated reward at episode 9740: [ 4530.  4560. 43140.]
+Loss: 19.470789492354367
+
+Accumulated reward at episode 9741: [ 4530.  4560. 43110.]
+Loss: 18.5342373882266
+
+Accumulated reward at episode 9742: [ 4530.  4530. 43170.]
+Loss: 4.530155413251815
+
+Accumulated reward at episode 9743: [ 4530.  4530. 43170.]
+Loss: 6.521002957727449
+
+Accumulated reward at episode 9744: [ 4530.  4560. 43140.]
+Loss: 7.344652029138241
+
+Accumulated reward at episode 9745: [ 4530.  4530. 43230.]
+Loss: 12.533612454753175
+
+Accumulated reward at episode 9746: [ 4530.  4560. 43140.]
+Loss: 18.29492474119355
+
+Accumulated reward at episode 9747: [ 4530.  4530. 43200.]
+Loss: 18.688958004388514
+
+Accumulated reward at episode 9748: [ 4530.  4530. 43200.]
+Loss: 2.630110211617586
+
+Accumulated reward at episode 9749: [ 4530.  4560. 43170.]
+Loss: 1.149316557704964
+
+Accumulated reward at episode 9750: [ 4530.  4530. 43230.]
+Loss: 5.901890822940922
+
+Accumulated reward at episode 9751: [ 4530.  4560. 43110.]
+Loss: 8.322259734639225
+
+Accumulated reward at episode 9752: [ 4530.  4560. 43110.]
+Loss: 17.803900364891327
+
+Accumulated reward at episode 9753: [ 4530.  4530. 43290.]
+Loss: 26.563764905946122
+
+Accumulated reward at episode 9754: [ 4530.  4530. 43200.]
+Loss: 2.8237872777568342
+
+Accumulated reward at episode 9755: [ 4530.  4530. 43230.]
+Loss: 2.5243197210361963
+
+Accumulated reward at episode 9756: [ 4530.  4530. 43230.]
+Loss: 1.2077035164411616
+
+Accumulated reward at episode 9757: [ 4530.  4560. 43140.]
+Loss: 1.1222678689649108
+
+Accumulated reward at episode 9758: [ 4530.  4530. 43290.]
+Loss: 5.436209197399602
+
+Accumulated reward at episode 9759: [ 4530.  4530. 43230.]
+Loss: 3.0899225093826352
+
+Accumulated reward at episode 9760: [ 4530.  4530. 43200.]
+Loss: 0.5179782437514271
+
+Accumulated reward at episode 9761: [ 4530.  4530. 43230.]
+Loss: 0.3505512048832934
+
+Accumulated reward at episode 9762: [ 4530.  4530. 43260.]
+Loss: 3.6613136004133553
+
+Accumulated reward at episode 9763: [ 4530.  4530. 43200.]
+Loss: 3.1123082742045027
+
+Accumulated reward at episode 9764: [ 4530.  4530. 43290.]
+Loss: 2.694773034832833
+
+Accumulated reward at episode 9765: [ 4530.  4530. 43290.]
+Loss: 5.504665097008787
+
+Accumulated reward at episode 9766: [ 4530.  4530. 43230.]
+Loss: 21.055682893792984
+
+Accumulated reward at episode 9767: [ 4530.  4530. 43200.]
+Loss: 28.45834354091853
+
+Accumulated reward at episode 9768: [ 4530.  4530. 43260.]
+Loss: 3.5122693803389873
+
+Accumulated reward at episode 9769: [ 4530.  4530. 43260.]
+Loss: 5.508915801764443
+
+Accumulated reward at episode 9770: [ 4530.  4530. 43290.]
+Loss: 6.047231149299746
+
+Accumulated reward at episode 9771: [ 4530.  4530. 43290.]
+Loss: 0.5725795972128018
+
+Accumulated reward at episode 9772: [ 4530.  4530. 43260.]
+Loss: 1.4941937017591331
+
+Accumulated reward at episode 9773: [ 4530.  4530. 43290.]
+Loss: 1.0941254277762333
+
+Accumulated reward at episode 9774: [ 4530.  4530. 43170.]
+Loss: 1.2716865036769007
+
+Accumulated reward at episode 9775: [ 4530.  4530. 43260.]
+Loss: 5.769777244026914
+
+Accumulated reward at episode 9776: [ 4530.  4530. 43230.]
+Loss: 1.0913423461245457
+
+Accumulated reward at episode 9777: [ 4530.  4530. 43200.]
+Loss: 4.526018165121279
+
+Accumulated reward at episode 9778: [ 4530.  4530. 43260.]
+Loss: 4.288214461689407
+
+Accumulated reward at episode 9779: [ 4530.  4530. 43230.]
+Loss: 10.125696665721415
+
+Accumulated reward at episode 9780: [ 4530.  4530. 43260.]
+Loss: 14.430898463666319
+
+Accumulated reward at episode 9781: [ 4530.  4530. 43200.]
+Loss: 29.68048303509223
+
+Accumulated reward at episode 9782: [ 4530.  4530. 43170.]
+Loss: 8.42514789803444
+
+Accumulated reward at episode 9783: [ 4530.  4530. 43200.]
+Loss: 7.384022052641527
+
+Accumulated reward at episode 9784: [ 4530.  4530. 43200.]
+Loss: 4.759469402181304
+
+Accumulated reward at episode 9785: [ 4530.  4560. 43140.]
+Loss: 8.896570668588897
+
+Accumulated reward at episode 9786: [ 4530.  4530. 43200.]
+Loss: 18.132871368619135
+
+Accumulated reward at episode 9787: [ 4530.  4530. 43290.]
+Loss: 28.19694662759688
+
+Accumulated reward at episode 9788: [ 4530.  4560. 43140.]
+Loss: 4.8920200537020495
+
+Accumulated reward at episode 9789: [ 4530.  4530. 43170.]
+Loss: 3.048850477394882
+
+Accumulated reward at episode 9790: [ 4530.  4560. 43110.]
+Loss: 3.103147669811895
+
+Accumulated reward at episode 9791: [ 4530.  4530. 43200.]
+Loss: 3.7053178784914467
+
+Accumulated reward at episode 9792: [ 4530.  4530. 43290.]
+Loss: 3.3800681914256177
+
+Accumulated reward at episode 9793: [ 4530.  4530. 43200.]
+Loss: 5.795843690351423
+
+Accumulated reward at episode 9794: [ 4530.  4530. 43200.]
+Loss: 8.998821830783175
+
+Accumulated reward at episode 9795: [ 4530.  4530. 43170.]
+Loss: 20.90654272245059
+
+Accumulated reward at episode 9796: [ 4530.  4560. 43140.]
+Loss: 23.05282856439009
+
+Accumulated reward at episode 9797: [ 4530.  4530. 43260.]
+Loss: 1.5065888864940098
+
+Accumulated reward at episode 9798: [ 4530.  4530. 43260.]
+Loss: 3.466793164957415
+
+Accumulated reward at episode 9799: [ 4530.  4530. 43290.]
+Loss: 1.8804720029818167
+
+Accumulated reward at episode 9800: [ 4530.  4530. 43230.]
+Loss: 0.6181496171033394
+
+Accumulated reward at episode 9801: [ 4530.  4530. 43200.]
+Loss: 3.5937058996952693
+
+Accumulated reward at episode 9802: [ 4530.  4560. 43110.]
+Loss: 4.803240770880513
+
+Accumulated reward at episode 9803: [ 4530.  4530. 43230.]
+Loss: 6.136979354508624
+
+Accumulated reward at episode 9804: [ 4530.  4560. 43140.]
+Loss: 7.853015730857254
+
+Accumulated reward at episode 9805: [ 4530.  4530. 43230.]
+Loss: 19.14128656026528
+
+Accumulated reward at episode 9806: [ 4530.  4530. 43260.]
+Loss: 16.41753415132424
+
+Accumulated reward at episode 9807: [ 4530.  4530. 43200.]
+Loss: 14.843192308955217
+
+Accumulated reward at episode 9808: [ 4530.  4530. 43260.]
+Loss: 3.275655511758182
+
+Accumulated reward at episode 9809: [ 4530.  4560. 43110.]
+Loss: 3.0864354303576724
+
+Accumulated reward at episode 9810: [ 4530.  4530. 43290.]
+Loss: 1.6814000732188181
+
+Accumulated reward at episode 9811: [ 4530.  4560. 43140.]
+Loss: 1.218681396940323
+
+Accumulated reward at episode 9812: [ 4530.  4530. 43170.]
+Loss: 6.7266280105737
+
+Accumulated reward at episode 9813: [ 4530.  4560. 43110.]
+Loss: 6.6426189161861755
+
+Accumulated reward at episode 9814: [ 4530.  4530. 43290.]
+Loss: 7.0897903538766105
+
+Accumulated reward at episode 9815: [ 4530.  4530. 43290.]
+Loss: 19.57132502798278
+
+Accumulated reward at episode 9816: [ 4530.  4530. 43170.]
+Loss: 25.541286458453126
+
+Accumulated reward at episode 9817: [ 4530.  4530. 43260.]
+Loss: 2.53241775279575
+
+Accumulated reward at episode 9818: [ 4530.  4530. 43230.]
+Loss: 1.4390748712597468
+
+Accumulated reward at episode 9819: [ 4530.  4530. 43230.]
+Loss: 6.500449779486788
+
+Accumulated reward at episode 9820: [ 4530.  4530. 43200.]
+Loss: 7.202149802538481
+
+Accumulated reward at episode 9821: [ 4530.  4530. 43230.]
+Loss: 4.185007972352224
+
+Accumulated reward at episode 9822: [ 4530.  4530. 43290.]
+Loss: 4.120155714009045
+
+Accumulated reward at episode 9823: [ 4530.  4530. 43230.]
+Loss: 8.533536957849506
+
+Accumulated reward at episode 9824: [ 4530.  4560. 43110.]
+Loss: 18.524570150883893
+
+Accumulated reward at episode 9825: [ 4530.  4530. 43260.]
+Loss: 15.488659850866336
+
+Accumulated reward at episode 9826: [ 4530.  4530. 43230.]
+Loss: 3.1151961447513843
+
+Accumulated reward at episode 9827: [ 4530.  4530. 43200.]
+Loss: 2.4206979893028184
+
+Accumulated reward at episode 9828: [ 4530.  4560. 43110.]
+Loss: 3.8078421229626396
+
+Accumulated reward at episode 9829: [ 4530.  4530. 43230.]
+Loss: 3.5452945928485287
+
+Accumulated reward at episode 9830: [ 4530.  4530. 43230.]
+Loss: 4.071353839574774
+
+Accumulated reward at episode 9831: [ 4530.  4530. 43260.]
+Loss: 3.1813856398485765
+
+Accumulated reward at episode 9832: [ 4530.  4530. 43260.]
+Loss: 8.031082459086091
+
+Accumulated reward at episode 9833: [ 4530.  4530. 43260.]
+Loss: 16.531757372669023
+
+Accumulated reward at episode 9834: [ 4530.  4530. 43200.]
+Loss: 26.852405898715507
+
+Accumulated reward at episode 9835: [ 4530.  4530. 43200.]
+Loss: 8.105705523087336
+
+Accumulated reward at episode 9836: [ 4530.  4530. 43260.]
+Loss: 6.572500714397181
+
+Accumulated reward at episode 9837: [ 4530.  4560. 43140.]
+Loss: 1.1909723634312825
+
+Accumulated reward at episode 9838: [ 4530.  4530. 43200.]
+Loss: 6.272660799201873
+
+Accumulated reward at episode 9839: [ 4530.  4530. 43290.]
+Loss: 6.2279297074183475
+
+Accumulated reward at episode 9840: [ 4530.  4530. 43170.]
+Loss: 10.665557197444937
+
+Accumulated reward at episode 9841: [ 4530.  4560. 43140.]
+Loss: 16.936952847032746
+
+Accumulated reward at episode 9842: [ 4530.  4530. 43260.]
+Loss: 7.136010740734725
+
+Accumulated reward at episode 9843: [ 4530.  4530. 43290.]
+Loss: 2.2051827759339737
+
+Accumulated reward at episode 9844: [ 4530.  4560. 43140.]
+Loss: 3.9463509119293483
+
+Accumulated reward at episode 9845: [ 4530.  4560. 43140.]
+Loss: 6.43328772334797
+
+Accumulated reward at episode 9846: [ 4530.  4530. 43290.]
+Loss: 4.872423222391039
+
+Accumulated reward at episode 9847: [ 4530.  4530. 43200.]
+Loss: 6.762979422247586
+
+Accumulated reward at episode 9848: [ 4530.  4530. 43230.]
+Loss: 20.33839750748341
+
+Accumulated reward at episode 9849: [ 4530.  4530. 43230.]
+Loss: 27.400995279661835
+
+Accumulated reward at episode 9850: [ 4530.  4530. 43260.]
+Loss: 4.191946285130522
+
+Accumulated reward at episode 9851: [ 4530.  4530. 43230.]
+Loss: 3.1492476350396004
+
+Accumulated reward at episode 9852: [ 4530.  4530. 43200.]
+Loss: 3.8009122968061133
+
+Accumulated reward at episode 9853: [ 4530.  4530. 43170.]
+Loss: 7.618956278305422
+
+Accumulated reward at episode 9854: [ 4530.  4530. 43290.]
+Loss: 9.000272687072302
+
+Accumulated reward at episode 9855: [ 4530.  4530. 43260.]
+Loss: 17.94451064316306
+
+Accumulated reward at episode 9856: [ 4530.  4530. 43200.]
+Loss: 27.17849505085902
+
+Accumulated reward at episode 9857: [ 4530.  4560. 43140.]
+Loss: 2.6076411865530336
+
+Accumulated reward at episode 9858: [ 4530.  4530. 43170.]
+Loss: 3.1405770096298053
+
+Accumulated reward at episode 9859: [ 4530.  4530. 43230.]
+Loss: 4.965889548837381
+
+Accumulated reward at episode 9860: [ 4530.  4530. 43170.]
+Loss: 3.355980837870431
+
+Accumulated reward at episode 9861: [ 4530.  4530. 43170.]
+Loss: 1.3884172130978616
+
+Accumulated reward at episode 9862: [ 4530.  4530. 43200.]
+Loss: 5.776996185598799
+
+Accumulated reward at episode 9863: [ 4530.  4560. 43140.]
+Loss: 2.8848013083800774
+
+Accumulated reward at episode 9864: [ 4530.  4530. 43230.]
+Loss: 8.296729327013301
+
+Accumulated reward at episode 9865: [ 4530.  4530. 43200.]
+Loss: 17.54685023067635
+
+Accumulated reward at episode 9866: [ 4530.  4530. 43290.]
+Loss: 19.12121612500871
+
+Accumulated reward at episode 9867: [ 4530.  4530. 43200.]
+Loss: 18.182758677162866
+
+Accumulated reward at episode 9868: [ 4530.  4530. 43200.]
+Loss: 5.0427973844641345
+
+Accumulated reward at episode 9869: [ 4530.  4530. 43230.]
+Loss: 3.2007133901759834
+
+Accumulated reward at episode 9870: [ 4530.  4530. 43200.]
+Loss: 1.576422778289426
+
+Accumulated reward at episode 9871: [ 4530.  4560. 43110.]
+Loss: 1.4175422026938769
+
+Accumulated reward at episode 9872: [ 4530.  4530. 43200.]
+Loss: 2.5361603574539333
+
+Accumulated reward at episode 9873: [ 4530.  4530. 43230.]
+Loss: 4.786937477650437
+
+Accumulated reward at episode 9874: [ 4530.  4560. 43140.]
+Loss: 3.8691235907787496
+
+Accumulated reward at episode 9875: [ 4530.  4530. 43230.]
+Loss: 10.023583700757266
+
+Accumulated reward at episode 9876: [ 4530.  4530. 43170.]
+Loss: 22.561068397023057
+
+Accumulated reward at episode 9877: [ 4530.  4560. 43140.]
+Loss: 27.870153424088468
+
+Accumulated reward at episode 9878: [ 4530.  4530. 43230.]
+Loss: 3.8259960006922396
+
+Accumulated reward at episode 9879: [ 4530.  4530. 43260.]
+Loss: 2.2770319644834824
+
+Accumulated reward at episode 9880: [ 4530.  4560. 43140.]
+Loss: 2.385493770579342
+
+Accumulated reward at episode 9881: [ 4530.  4530. 43230.]
+Loss: 1.5130995542237924
+
+Accumulated reward at episode 9882: [ 4530.  4530. 43230.]
+Loss: 3.8228539433947955
+
+Accumulated reward at episode 9883: [ 4530.  4530. 43230.]
+Loss: 4.484370459943742
+
+Accumulated reward at episode 9884: [ 4530.  4560. 43140.]
+Loss: 9.840937553579632
+
+Accumulated reward at episode 9885: [ 4530.  4530. 43230.]
+Loss: 20.910795895513406
+
+Accumulated reward at episode 9886: [ 4530.  4560. 43140.]
+Loss: 25.98076938901507
+
+Accumulated reward at episode 9887: [ 4530.  4530. 43170.]
+Loss: 4.020456936804064
+
+Accumulated reward at episode 9888: [ 4530.  4530. 43170.]
+Loss: 2.4811755928430235
+
+Accumulated reward at episode 9889: [ 4530.  4530. 43200.]
+Loss: 3.650455595350481
+
+Accumulated reward at episode 9890: [ 4530.  4530. 43290.]
+Loss: 5.207499967608804
+
+Accumulated reward at episode 9891: [ 4530.  4560. 43110.]
+Loss: 7.462532448315484
+
+Accumulated reward at episode 9892: [ 4530.  4530. 43290.]
+Loss: 5.952372771160762
+
+Accumulated reward at episode 9893: [ 4530.  4530. 43200.]
+Loss: 18.64483804490759
+
+Accumulated reward at episode 9894: [ 4530.  4530. 43170.]
+Loss: 28.037914901953812
+
+Accumulated reward at episode 9895: [ 4530.  4560. 43170.]
+Loss: 1.588381260500234
+
+Accumulated reward at episode 9896: [ 4530.  4560. 43110.]
+Loss: 2.058035536320831
+
+Accumulated reward at episode 9897: [ 4530.  4560. 43140.]
+Loss: 4.509334559234702
+
+Accumulated reward at episode 9898: [ 4530.  4530. 43230.]
+Loss: 5.424936849479717
+
+Accumulated reward at episode 9899: [ 4530.  4530. 43200.]
+Loss: 0.2664868763971338
+
+Accumulated reward at episode 9900: [ 4530.  4530. 43260.]
+Loss: 0.46214607595299495
+
+Accumulated reward at episode 9901: [ 4530.  4530. 43200.]
+Loss: 0.7058964544872107
+
+Accumulated reward at episode 9902: [ 4530.  4560. 43140.]
+Loss: 6.56805587512014
+
+Accumulated reward at episode 9903: [ 4530.  4560. 43140.]
+Loss: 7.067578301399169
+
+Accumulated reward at episode 9904: [ 4530.  4530. 43200.]
+Loss: 16.784499080470063
+
+Accumulated reward at episode 9905: [ 4530.  4530. 43230.]
+Loss: 25.85363927573101
+
+Accumulated reward at episode 9906: [ 4530.  4530. 43200.]
+Loss: 4.614898245405093
+
+Accumulated reward at episode 9907: [ 4530.  4560. 43170.]
+Loss: 2.1858003153700456
+
+Accumulated reward at episode 9908: [ 4530.  4530. 43290.]
+Loss: 4.789260345342415
+
+Accumulated reward at episode 9909: [ 4530.  4560. 43140.]
+Loss: 2.056789077322548
+
+Accumulated reward at episode 9910: [ 4530.  4530. 43200.]
+Loss: 8.349313543347694
+
+Accumulated reward at episode 9911: [ 4530.  4530. 43290.]
+Loss: 15.733075958210478
+
+Accumulated reward at episode 9912: [ 4530.  4530. 43290.]
+Loss: 26.975483187861638
+
+Accumulated reward at episode 9913: [ 4530.  4530. 43200.]
+Loss: 2.0893274757662725
+
+Accumulated reward at episode 9914: [ 4530.  4530. 43260.]
+Loss: 2.4525141705641165
+
+Accumulated reward at episode 9915: [ 4530.  4530. 43290.]
+Loss: 1.753912631603816
+
+Accumulated reward at episode 9916: [ 4530.  4560. 43110.]
+Loss: 2.936679328520344
+
+Accumulated reward at episode 9917: [ 4530.  4560. 43140.]
+Loss: 4.747573198542468
+
+Accumulated reward at episode 9918: [ 4530.  4560. 43140.]
+Loss: 8.81663488023542
+
+Accumulated reward at episode 9919: [ 4530.  4530. 43200.]
+Loss: 21.225206869035944
+
+Accumulated reward at episode 9920: [ 4530.  4530. 43230.]
+Loss: 25.37609686560237
+
+Accumulated reward at episode 9921: [ 4530.  4560. 43170.]
+Loss: 8.482903520322454
+
+Accumulated reward at episode 9922: [ 4530.  4530. 43290.]
+Loss: 4.979913746460656
+
+Accumulated reward at episode 9923: [ 4530.  4560. 43140.]
+Loss: 2.2451412374724695
+
+Accumulated reward at episode 9924: [ 4530.  4530. 43260.]
+Loss: 1.3619181943346281
+
+Accumulated reward at episode 9925: [ 4530.  4530. 43230.]
+Loss: 0.9681373248368658
+
+Accumulated reward at episode 9926: [ 4530.  4530. 43290.]
+Loss: 0.8208263442957505
+
+Accumulated reward at episode 9927: [ 4530.  4530. 43200.]
+Loss: 0.8242092672365969
+
+Accumulated reward at episode 9928: [ 4530.  4530. 43200.]
+Loss: 3.6723167202545066
+
+Accumulated reward at episode 9929: [ 4530.  4530. 43200.]
+Loss: 4.68745916900978
+
+Accumulated reward at episode 9930: [ 4530.  4560. 43140.]
+Loss: 4.918563628309552
+
+Accumulated reward at episode 9931: [ 4530.  4530. 43230.]
+Loss: 5.46408554714322
+
+Accumulated reward at episode 9932: [ 4530.  4560. 43140.]
+Loss: 15.864128751355441
+
+Accumulated reward at episode 9933: [ 4530.  4530. 43200.]
+Loss: 22.868279135340696
+
+Accumulated reward at episode 9934: [ 4530.  4560. 43140.]
+Loss: 6.6309241341536795
+
+Accumulated reward at episode 9935: [ 4530.  4530. 43230.]
+Loss: 2.124662963684463
+
+Accumulated reward at episode 9936: [ 4530.  4560. 43110.]
+Loss: 1.103117317080709
+
+Accumulated reward at episode 9937: [ 4530.  4560. 43140.]
+Loss: 6.363382029388192
+
+Accumulated reward at episode 9938: [ 4530.  4530. 43290.]
+Loss: 3.306341421047533
+
+Accumulated reward at episode 9939: [ 4530.  4530. 43290.]
+Loss: 3.4125239091524238
+
+Accumulated reward at episode 9940: [ 4530.  4530. 43200.]
+Loss: 9.287078470450684
+
+Accumulated reward at episode 9941: [ 4530.  4530. 43200.]
+Loss: 20.89433448534865
+
+Accumulated reward at episode 9942: [ 4530.  4560. 43170.]
+Loss: 27.60917013721939
+
+Accumulated reward at episode 9943: [ 4530.  4530. 43290.]
+Loss: 5.531177387197658
+
+Accumulated reward at episode 9944: [ 4530.  4530. 43170.]
+Loss: 4.363221160067409
+
+Accumulated reward at episode 9945: [ 4530.  4560. 43140.]
+Loss: 3.303725396220183
+
+Accumulated reward at episode 9946: [ 4530.  4530. 43230.]
+Loss: 1.2795746873199498
+
+Accumulated reward at episode 9947: [ 4530.  4560. 43110.]
+Loss: 1.222045593394474
+
+Accumulated reward at episode 9948: [ 4530.  4560. 43140.]
+Loss: 5.071422052742797
+
+Accumulated reward at episode 9949: [ 4530.  4530. 43230.]
+Loss: 5.357230263142678
+
+Accumulated reward at episode 9950: [ 4530.  4530. 43230.]
+Loss: 4.285837827329224
+
+Accumulated reward at episode 9951: [ 4530.  4530. 43200.]
+Loss: 8.872356011900482
+
+Accumulated reward at episode 9952: [ 4530.  4530. 43200.]
+Loss: 18.985342705817086
+
+Accumulated reward at episode 9953: [ 4530.  4560. 43110.]
+Loss: 26.739586826706574
+
+Accumulated reward at episode 9954: [ 4530.  4530. 43230.]
+Loss: 2.684199333354668
+
+Accumulated reward at episode 9955: [ 4530.  4530. 43230.]
+Loss: 3.2897047398487116
+
+Accumulated reward at episode 9956: [ 4530.  4530. 43230.]
+Loss: 4.016561775002027
+
+Accumulated reward at episode 9957: [ 4530.  4530. 43230.]
+Loss: 2.7596200137218356
+
+Accumulated reward at episode 9958: [ 4530.  4530. 43230.]
+Loss: 4.518245981574571
+
+Accumulated reward at episode 9959: [ 4530.  4530. 43230.]
+Loss: 7.646317739695451
+
+Accumulated reward at episode 9960: [ 4530.  4530. 43200.]
+Loss: 23.62209759581087
+
+Accumulated reward at episode 9961: [ 4530.  4530. 43200.]
+Loss: 28.691544962180316
+
+Accumulated reward at episode 9962: [ 4530.  4530. 43230.]
+Loss: 4.281099852719678
+
+Accumulated reward at episode 9963: [ 4530.  4530. 43260.]
+Loss: 2.006124130209276
+
+Accumulated reward at episode 9964: [ 4530.  4530. 43290.]
+Loss: 0.31016960257517323
+
+Accumulated reward at episode 9965: [ 4530.  4530. 43260.]
+Loss: 3.230263963280602
+
+Accumulated reward at episode 9966: [ 4530.  4530. 43200.]
+Loss: 3.3283641233712653
+
+Accumulated reward at episode 9967: [ 4530.  4530. 43170.]
+Loss: 7.392573527382205
+
+Accumulated reward at episode 9968: [ 4530.  4530. 43170.]
+Loss: 4.068282758664912
+
+Accumulated reward at episode 9969: [ 4530.  4530. 43200.]
+Loss: 10.115393262023428
+
+Accumulated reward at episode 9970: [ 4530.  4530. 43290.]
+Loss: 19.189680969275493
+
+Accumulated reward at episode 9971: [ 4530.  4530. 43230.]
+Loss: 26.386403123199315
+
+Accumulated reward at episode 9972: [ 4530.  4530. 43260.]
+Loss: 2.1690438201221234
+
+Accumulated reward at episode 9973: [ 4530.  4530. 43200.]
+Loss: 3.405512139014769
+
+Accumulated reward at episode 9974: [ 4530.  4530. 43230.]
+Loss: 3.957875623979084
+
+Accumulated reward at episode 9975: [ 4530.  4530. 43290.]
+Loss: 2.6450587220998467
+
+Accumulated reward at episode 9976: [ 4530.  4530. 43170.]
+Loss: 5.181567424027142
+
+Accumulated reward at episode 9977: [ 4530.  4530. 43230.]
+Loss: 3.3593047765601094
+
+Accumulated reward at episode 9978: [ 4530.  4560. 43110.]
+Loss: 9.716435389429856
+
+Accumulated reward at episode 9979: [ 4530.  4560. 43140.]
+Loss: 15.769853290680022
+
+Accumulated reward at episode 9980: [ 4530.  4560. 43140.]
+Loss: 20.653744872399326
+
+Accumulated reward at episode 9981: [ 4530.  4530. 43260.]
+Loss: 7.2226657376837435
+
+Accumulated reward at episode 9982: [ 4530.  4530. 43290.]
+Loss: 1.9562544819356429
+
+Accumulated reward at episode 9983: [ 4530.  4560. 43140.]
+Loss: 4.113408064052974
+
+Accumulated reward at episode 9984: [ 4530.  4530. 43170.]
+Loss: 6.737408074312762
+
+Accumulated reward at episode 9985: [ 4530.  4530. 43260.]
+Loss: 5.270881547222122
+
+Accumulated reward at episode 9986: [ 4530.  4530. 43200.]
+Loss: 9.640603511966187
+
+Accumulated reward at episode 9987: [ 4530.  4530. 43260.]
+Loss: 22.64790884843056
+
+Accumulated reward at episode 9988: [ 4530.  4530. 43290.]
+Loss: 27.86854352183503
+
+Accumulated reward at episode 9989: [ 4530.  4530. 43200.]
+Loss: 2.939660648912775
+
+Accumulated reward at episode 9990: [ 4530.  4530. 43200.]
+Loss: 2.1917253719697936
+
+Accumulated reward at episode 9991: [ 4530.  4530. 43290.]
+Loss: 0.7129410844500412
+
+Accumulated reward at episode 9992: [ 4530.  4530. 43230.]
+Loss: 7.952426108747541
+
+Accumulated reward at episode 9993: [ 4530.  4530. 43200.]
+Loss: 5.665871698132113
+
+Accumulated reward at episode 9994: [ 4530.  4560. 43140.]
+Loss: 9.395077412035873
+
+Accumulated reward at episode 9995: [ 4530.  4530. 43200.]
+Loss: 21.243826281431524
+
+Accumulated reward at episode 9996: [ 4530.  4530. 43200.]
+Loss: 27.573272030301105
+
+Accumulated reward at episode 9997: [ 4530.  4530. 43230.]
+Loss: 3.2648612980240146
+
+Accumulated reward at episode 9998: [ 4530.  4560. 43140.]
+Loss: 4.084561214952964
+
+Accumulated reward at episode 9999: [ 4530.  4530. 43260.]
+Loss: 5.16199981843292
+
+Accumulated reward at episode 10000: [ 4530.  4530. 43260.]
+Loss: 4.433534770097303
+
+FINISH TRAINING NSW Q LEARNING
