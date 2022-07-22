@@ -78,7 +78,7 @@ if __name__ == '__main__':
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
     prs.add_argument("-f", dest="fuel", type=int, default=10000, required=False, help="Timesteps each episode\n")
-    prs.add_argument("-ep", dest="episodes", type=int, default=5000, required=False, help="Episodes.\n")
+    prs.add_argument("-ep", dest="episodes", type=int, default=10000, required=False, help="Episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-aN", dest="alpha_N", type=bool, default=False, required=False, help="Whether use 1/N for alpha\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
@@ -87,35 +87,22 @@ if __name__ == '__main__':
     prs.add_argument("-i", dest="init_val", type=int, default=30, required=False, help="Initial values\n")
     prs.add_argument("-d", dest="dim_factor", type=float, default=0.9, required=False, help="Diminish factor for epsilon\n")
     prs.add_argument("-t", dest="tolerance", type=float, default=1e-5, required=False, help="Loss threshold for Q-values between each episode\n")
-    prs.add_argument("-s", dest="seed", type=int, default=1122, required=False, help="See for randomization of reset() function\n")
+    prs.add_argument("-gs", dest="size", type=int, default=5, required=False, help="Grid size of the world\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
     args = prs.parse_args()
     
-    # size = 5
-    # loc_coords = [[0,0], [3,2]]
-    # dest_coords = [[0,4], [3,3]]
-    
-    # size = 6
-    # loc_coords = [[0,0], [0,5], [3,2], [5,4]]
-    # dest_coords = [[0,4], [5,0], [3,3], [2,0]]
-    
-    # size = 8
-    # loc_coords = [[0,0], [0,5], [3,2], [5,4], [3,7], [5,6]]
-    # dest_coords = [[0,4], [5,0], [3,3], [2,0], [7,0], [6,6]]
-    
-    size = 8
-    loc_coords = [[0,0], [0,5], [3,2], [3,7]]
-    dest_coords = [[0,4], [5,0], [3,3], [7,0]]
+    size = args.size
+    loc_coords = [[0,0], [0,5], [3,2]]
+    dest_coords = [[0,4], [5,0], [3,3]]
     fuel = args.fuel
+    
     fair_env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, 
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
-    fair_env.seed(args.seed)
+    fair_env.seed(1122)
     
     run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 
                        gamma=args.gamma, nsw_lambda=args.nsw_lambda, init_val=args.init_val, alpha_N = args.alpha_N,
                        dim_factor=args.dim_factor, tolerance=args.tolerance, file_name=args.file_name)
-    # nsw_Q_table = np.load('Taxi_MDP_Trained_Q-table/NSW_size5_locs2_without_reward_10.npy')
-    # evaluate_NSW_Q_learning(nsw_Q_table, vec_dim=2, taxi_loc=[2,1], pass_dest=None, runs=1)
     
     
     

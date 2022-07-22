@@ -113,17 +113,17 @@ if __name__ == '__main__':
     # loc_coords = [[0,0], [3,2]]
     # dest_coords = [[0,4], [3,3]]
     size = 8
-    loc_coords = [[0,0], [0,5], [3,2], [5,4], [3,7], [5,6]]
-    dest_coords = [[0,4], [5,0], [3,3], [2,0], [7,0], [6,6]]
+    loc_coords = [[0,0], [0,5], [3,2], [3,7]]
+    dest_coords = [[0,4], [5,0], [3,3], [7,0]]
     fuel = 10000
     
     env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 8)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
-    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size8_locs6_2.npy')
+    q_table = np.load('Experiments/taxi_q_tables/NSW_Cont_Penalty_V2_size8_locs5_aN_2.npy')
     eval_nsw(q_table, taxi_loc=[5,5], pass_dest=None, nsw_lambda=1e-4,
-               gamma=0.9, episodes=1, render=False,  check_dest=True)
+               gamma=0.95, episodes=1, render=False,  check_dest=True)
     
-    check_all_locs(q_table, eval_steps=10000, gamma=0.9, nsw_lambda=1e-4, nsw=True)
+    check_all_locs(q_table, eval_steps=10000, gamma=0.95, nsw_lambda=1e-4, nsw=True)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
     #eval_ql(q_table, taxi_loc=[2,2], pass_dest=None, episodes=1)

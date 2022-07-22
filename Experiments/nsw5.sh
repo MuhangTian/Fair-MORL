@@ -9,4 +9,4 @@
 #SBATCH --time=4-00:00:00               # Time limit hrs:min:sec
 #SBATCH --output=%J.out
 #SBATCH --error=%J.err
-python3 nsw_ql_taxi_pen_v2_2.py -n 1
+python3 nsw_ql_taxi_pen_v2.py -n 1 -gs 10
