@@ -56,9 +56,16 @@ from Fair_Taxi_MDP import Fair_Taxi_MDP
 # print(len(set(arr)))
 
 '''Test taxi environment with penalty'''
-size = 12
-loc_coords = [[0,0], [0,5], [3,2]]
-dest_coords = [[0,4], [5,0], [3,3]]
+size = 10
+loc_coords = [[0,0], [0,5], [3,2], [9,0], [4,7]]
+dest_coords = [[0,4], [5,0], [3,3], [0,9], [8,9]]
+
+loc_coords = [[0,0], [0,5], [3,2], [9,0], [8,9], [5,5], [7,4]]
+dest_coords = [[0,4], [5,0], [3,3], [0,9], [4,7], [5,9], [8,4]]
+
+
+loc_coords = [[0,0], [0,5], [3,2], [9,0], [8,9], [5,5], [7,4], [1,7], [6,2]]
+dest_coords = [[0,4], [5,0], [3,3], [0,9], [4,7], [5,9], [8,4], [6,8], [8,6]]
 fuel = 100
 
 # size = 5
