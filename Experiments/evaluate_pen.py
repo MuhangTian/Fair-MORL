@@ -31,7 +31,7 @@ def eval_nsw(Q_table, taxi_loc=None, pass_dest=None, trajectories=20,
                 state = env.reset([i,j])
                 if render == True: env.render()
                 
-                while not done:
+                while not done:                  
                     action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
                     next, reward, done = env.step(action)
                     # reward = np.sum(reward) # for scalar reward with NSW Q-table
@@ -111,16 +111,16 @@ def check_all_locs(q_table, eval_steps, gamma, nsw, nsw_lambda=1e-4):
 
 if __name__ == '__main__':
     size = 10
-    loc_coords = [[0,0], [0,5], [3,2], [9,0], [8,9], [5,5], [7,4]]
-    dest_coords = [[0,4], [5,0], [3,3], [0,9], [4,7], [5,9], [8,4]]
+    loc_coords = [[0,0], [0,5], [3,2], [9,0]]
+    dest_coords = [[0,4], [5,0], [3,3], [0,9]]
     fuel = 10000
     
     env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 8)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
-    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs7_4.npy')
-    eval_nsw(q_table, taxi_loc=[7,6], pass_dest=None, nsw_lambda=1e-4,
-               gamma=0.95, trajectories=1, render=False,  check_dest=True)
+    q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs4_1.npy')
+    eval_nsw(q_table, taxi_loc=[3,2], pass_dest=None, nsw_lambda=1e-4,
+               gamma=0.95, trajectories=50, render=True,  check_dest=False)
     
     check_all_locs(q_table, eval_steps=2000, gamma=0.95, nsw_lambda=1e-4, nsw=True)
     #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')

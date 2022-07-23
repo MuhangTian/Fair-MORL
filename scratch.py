@@ -12,4 +12,4 @@ import numpy as np
 # for _ in range(10000):
 #     env.step(env.action_space.sample())
 #     env.render()
-print(np.random.random_integers(0, 5, size=2))
+print(np.ndim([0,1,2]))
