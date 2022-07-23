@@ -1,7 +1,7 @@
 #!/bin/sh
 #SBATCH --job-name=NSW9
 #SBATCH --nodes=1
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=end
 #SBATCH --mail-user=muhang.tian@duke.edu
 #SBATCH --ntasks=1                    
 #SBATCH --cpus-per-task=24            
