@@ -1,0 +1,6 @@
+usage: nsw_ql_taxi_pen_v2.py [-h] [-f FUEL] [-ep EPISODES] [-a ALPHA]
+                             [-aN ALPHA_N] [-e EPSILON] [-g GAMMA]
+                             [-nl NSW_LAMBDA] [-i INIT_VAL] [-d DIM_FACTOR]
+                             [-t TOLERANCE] [-gs SIZE] [-n FILE_NAME]
+                             [-locs LOC_COORDS] [-dests DEST_COORDS]
+nsw_ql_taxi_pen_v2.py: error: argument -locs: invalid loads value: '[[0,0],'

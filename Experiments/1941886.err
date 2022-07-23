@@ -1,0 +1,6 @@
+usage: nsw_ql_taxi_pen_v2.py [-h] [-f FUEL] [-ep EPISODES] [-a ALPHA]
+                             [-aN ALPHA_N] [-e EPSILON] [-g GAMMA]
+                             [-nl NSW_LAMBDA] [-i INIT_VAL] [-d DIM_FACTOR]
+                             [-t TOLERANCE] [-gs SIZE] [-n FILE_NAME]
+                             [-locs LOC_COORDS] [-dests DEST_COORDS]
+nsw_ql_taxi_pen_v2.py: error: unrecognized arguments: [0,5], [3,2], [9,0], [8,9], [5,5], [7,4], [1,7], [6,2]] [5,0], [3,3], [0,9], [4,7], [5,9], [8,4], [6,8], [8,6]]
