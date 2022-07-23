@@ -3,7 +3,7 @@ import numpy as np
 import argparse
 from Fair_Taxi_MDP_Penalty_V2 import Fair_Taxi_MDP_Penalty_V2
 
-def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, alpha_N, file_name):
+def run_NSW_Q_learning(trajectories, alpha, epsilon, gamma, nsw_lambda, init_val, dim_factor, tolerance, alpha_N, file_name):
     Q_table = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
     Num = np.full(fair_env.observation_space.n, epsilon, dtype=float)
     Q_table = Q_table + init_val
@@ -12,7 +12,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
         print('********** Using 1/N alpha ***********\n')
         a_Num = np.zeros([fair_env.observation_space.n, fair_env.action_space.n], dtype=float)
     
-    for i in range(1, episodes+1):
+    for i in range(1, trajectories+1):
         R_acc = np.zeros(len(fair_env.loc_coords))
         state = fair_env.reset()
         done = False
@@ -80,7 +80,7 @@ if __name__ == '__main__':
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
     prs.add_argument("-f", dest="fuel", type=int, default=50000000, required=False, help="Timesteps each episode\n")
-    prs.add_argument("-ep", dest="episodes", type=int, default=1, required=False, help="Episodes.\n")
+    prs.add_argument("-tj", dest="trajectories", type=int, default=1, required=False, help="Trajectories.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-aN", dest="alpha_N", type=bool, default=False, required=False, help="Whether use 1/N for alpha\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
@@ -104,7 +104,7 @@ if __name__ == '__main__':
                             output_path='Taxi_MDP/NSW_Q_learning/run_', fps=4)
     fair_env.seed(1122)
     
-    run_NSW_Q_learning(episodes=args.episodes, alpha=args.alpha, epsilon=args.epsilon, 
+    run_NSW_Q_learning(trajectories=args.trajectories, alpha=args.alpha, epsilon=args.epsilon, 
                        gamma=args.gamma, nsw_lambda=args.nsw_lambda, init_val=args.init_val, alpha_N=args.alpha_N,
                        dim_factor=args.dim_factor, tolerance=args.tolerance, file_name=args.file_name)
     
