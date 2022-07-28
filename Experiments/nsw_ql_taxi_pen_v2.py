@@ -98,7 +98,7 @@ if __name__ == '__main__':
     prs.add_argument("-t", dest="tolerance", type=float, default=1e-5, required=False, help="Loss threshold for Q-values between each episode\n")
     prs.add_argument("-gs", dest="size", type=int, default=10, required=False, help="Grid size of the world\n")
     prs.add_argument("-n", dest="file_name", type=str, default='', required=False, help="name of .npy\n")
-    prs.add_argument("-m", dest="mode", type=str, default='myopic', required=False, help="Action selection modes\n")
+    prs.add_argument("-mode", dest="mode", type=str, default='myopic', required=False, help="Action selection modes\n")
     prs.add_argument("-locs", dest="loc_coords", type=json.loads, default=[[0,0], [0,5], [3,2]], required=False, help="Location coordinates\n")
     prs.add_argument("-dests", dest="dest_coords", type=json.loads, default=[[0,4], [5,0], [3,3]], required=False, help="Destination coordinates\n")
     args = prs.parse_args()
