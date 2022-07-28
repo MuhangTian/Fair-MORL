@@ -179,7 +179,7 @@ class Fair_Taxi_MDP_Penalty(gym.Env):
                     self.pass_dest = self.dest_coords[self.pass_idx]
                 else:   # for single shared destination
                     self.pass_dest = self.dest_coords[0]
-                reward = np.full(len(self.loc_coords), -1e-2, dtype=float)
+                reward = np.full(len(self.loc_coords), -1, dtype=float)
             else:   # for invalid pick
                 reward = np.full(len(self.loc_coords), -10, dtype=float)
         elif action == 5:   # drop
@@ -199,7 +199,7 @@ class Fair_Taxi_MDP_Penalty(gym.Env):
             self.taxi_loc += self._action_to_direct[action]  # taxi move according to the map
             self.taxi_loc = np.where(self.taxi_loc < 0, 0, self.taxi_loc)
             self.taxi_loc = np.where(self.taxi_loc > self.size-1, self.size-1, self.taxi_loc)
-            reward = np.full(len(self.loc_coords), -1e-2, dtype=float)
+            reward = np.full(len(self.loc_coords), -1, dtype=float)
         
         self.timesteps += 1
         self.acc_reward += reward

@@ -12,4 +12,7 @@ import numpy as np
 # for _ in range(10000):
 #     env.step(env.action_space.sample())
 #     env.render()
-print(np.ndim([0,1,2]))
+c = 0
+for _ in range(10):
+    print(np.power(0.95, c))
+    c += 1
