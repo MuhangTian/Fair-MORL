@@ -129,18 +129,18 @@ def plot_nsw(data, labels, width, nsw_lambda=1e-4):
 
 if __name__ == '__main__':
     '''Plot Q value loss over time (learning)'''
-    data1 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs4_1_loss.npy')
-    # data2 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs3_1_loss.npy')
+    data1 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size6_locs3_2_loss.npy')
+    data2 = np.load('Experiments/taxi_q_tables/QL_Penalty_size6_locs3_loss.npy')
     # data3 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size12_locs3_1_loss.npy')
-    loss_data = [data1]
-    labels = ['8X8 Grid', '10X10 Grid', '12X12 Grid']
-    plot_loss(loss_data=loss_data, ID=1932259, colors=['b','r','g'], x_range=40000, 
-              linewidth=0.5, labels=labels, alpha=0.8, subplot=True)
+    loss_data = [data1, data2]
+    labels = ['Modified Q learning with NSW', 'Standatd Q learning']
+    plot_loss(loss_data=loss_data, ID=1932259, colors=['r','b','g'], x_range=600, 
+              linewidth=0.7, labels=labels, alpha=0.8, subplot=False)
     
-    '''Plot Total Reward over Time (learning'''
-    id = [1940069, 1940073,1940077]
-    plot_total(IDs=id, x_range=10000, linewidth=0.8, alpha=0.8,
-               colors=['r','b','g'], labels=['8X8 Grid','10X10 Grid','12X12 Grid'])
+    '''Plot Total Reward over Time (learning)'''
+    # id = [1940069, 1940073,1940077]
+    # plot_total(IDs=id, x_range=10000, linewidth=0.8, alpha=0.8,
+    #            colors=['r','b','g'], labels=['8X8 Grid','10X10 Grid','12X12 Grid'])
     
     '''Plot accumulated reward'''
     # data1 = np.load('Experiments/ql_Racc_6.npy')

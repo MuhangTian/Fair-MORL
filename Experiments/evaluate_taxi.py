@@ -21,7 +21,7 @@ def nsw(vec, nsw_lambda):
     vec = np.where(vec <= 0, nsw_lambda, vec)  # replace any negative values or zeroes with lambda
     return np.sum(np.log(vec))    # numpy uses natural log
 
-def eval_nsw(Q_table, name, taxi_loc=None, pass_dest=None, episodes=20, 
+def eval_nsw(Q, name, taxi_loc=None, pass_dest=None, episodes=20, mode='non-stationary',
              nsw_lambda=0.01, gamma=1, check_dest=False, render=True, update=False):
     Racc = []
     if check_dest == True:
@@ -32,12 +32,15 @@ def eval_nsw(Q_table, name, taxi_loc=None, pass_dest=None, episodes=20,
                 state = env.reset([i,j])
                 print('Initial State: {}'.format(env.decode(state)))
                 
-                while not done:                  
-                    action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+                while not done:   
+                    if mode == 'non-stationary':               
+                        action = argmax_nsw(R_acc, Q[state], nsw_lambda)
+                    elif mode == 'stationary':
+                        action = argmax_nsw(0, Q[state], nsw_lambda)
                     next, reward, done = env.step(action)
                     if update == True:
-                        max_action = argmax_nsw(0, gamma*Q_table[next], nsw_lambda)
-                        Q_table[state, action] = Q_table[state, action] + 0.1*(reward + gamma*Q_table[next, max_action] - Q_table[state, action])
+                        max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
+                        Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                     state = next
                     R_acc += reward
 
@@ -53,13 +56,15 @@ def eval_nsw(Q_table, name, taxi_loc=None, pass_dest=None, episodes=20,
             if render == True: env.render()
             
             while not done:
-                action = argmax_nsw(R_acc, gamma*Q_table[state], nsw_lambda)
+                if mode == 'non-stationary':               
+                    action = argmax_nsw(R_acc, Q[state], nsw_lambda)
+                elif mode == 'stationary':
+                    action = argmax_nsw(0, Q[state], nsw_lambda)
                 next, reward, done = env.step(action)
-                
                 if render == True: env.render()
                 if update == True:
-                    max_action = argmax_nsw(0, gamma*Q_table[next], nsw_lambda)
-                    Q_table[state, action] = Q_table[state, action] + 0.1*(reward + gamma*Q_table[next, max_action] - Q_table[state, action])
+                    max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
+                    Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                 state = next
                 R_acc += reward
             
@@ -69,7 +74,7 @@ def eval_nsw(Q_table, name, taxi_loc=None, pass_dest=None, episodes=20,
         np.save('Experiments/{}.npy'.format(name), Racc)
     return print("FINSIH EVALUATE NSW Q LEARNING\n")
 
-def eval_ql(Q_table, taxi_loc=None, pass_dest=None, episodes=20):
+def eval_ql(Q, taxi_loc=None, pass_dest=None, episodes=20, render=False):
     Racc = []
     for i in range(1, episodes+1):
         env._clean_metrics() # clean values before generating results for each run
@@ -77,10 +82,11 @@ def eval_ql(Q_table, taxi_loc=None, pass_dest=None, episodes=20):
         R_acc = np.zeros(len(env.loc_coords))
         pass_loc = None if pass_dest == None else 1
         state = env.reset(taxi_loc, pass_loc, pass_dest)
-        
+        if render==True: env.render()
         while not done:
-            action = np.argmax(Q_table[state])
+            action = np.argmax(Q[state])
             next, reward, done = env.step(action)
+            if render==True: env.render()
             state = next
             R_acc += reward
         
@@ -90,7 +96,7 @@ def eval_ql(Q_table, taxi_loc=None, pass_dest=None, episodes=20):
     np.save('Experiments/ql_Racc_6.npy', Racc)
     return print("FINISH EVALUATE Q LEARNING\n")
 
-def check_all_locs(q_table, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=False, thres=20):
+def check_all_locs(Q, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=False, thres=20):
     invalid, prev, valid = [], 0, []
     print('Check initial locations...\n')
     for i in range(env.size):
@@ -101,13 +107,13 @@ def check_all_locs(q_table, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=Fals
             prev = state
             for _ in range(eval_steps):
                 if nsw == False:
-                    action = np.argmax(gamma*q_table[state])
+                    action = np.argmax(Q[state])
                 else:
-                    action = argmax_nsw(R_acc, gamma*q_table[state], nsw_lambda)
+                    action = argmax_nsw(R_acc, Q[state], nsw_lambda)
                 next, reward, done = env.step(action)
                 if update == True:
-                    max_action = argmax_nsw(0, gamma*q_table[next], nsw_lambda)
-                    q_table[state, action] = q_table[state, action] + 0.1*(reward + gamma*q_table[next, max_action] - q_table[state, action])
+                    max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
+                    Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                 state = next
                 if state == prev: count += 1
                 else: count = 0
@@ -124,28 +130,18 @@ def check_all_locs(q_table, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=Fals
     else: return print('Result: These initial locations FAIL: {}'.format(invalid))
 
 if __name__ == '__main__':
-    size = 10
-    loc_coords = [[0,0],[0,5],[3,2],[9,0],[8,9],[6,7]]
-    dest_coords = [[0,4],[5,0],[3,3],[0,9],[4,7],[8,3]]
+    size = 6
+    loc_coords = [[0,0],[0,5],[3,2]]
+    dest_coords = [[0,4],[5,0],[3,3]]
     fuel = 10000
     
-    env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 15)
+    env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 8)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
-    # q_table = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs5_3.npy')
-    # q_table2 = np.copy(q_table)
-    # update = True
-    #check_all_locs(q_table, eval_steps=4000, gamma=0.9, nsw_lambda=1e-4, nsw=True, update=update, thres=50)
-    # eval_nsw(q_table2, taxi_loc=None, nsw_lambda=1e-4, gamma=0.85, update=update,
-    #          episodes=50, render=False,  check_dest=True, name='nsw_6')
-    #q_table = np.load('Experiments/taxi_q_tables/QL_size5_locs2.npy')
-    #eval_ql(q_table, taxi_loc=None, pass_dest=None, episodes=50)
-    
-    
-    q_table1 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs6_1.npy')
-    q_table2 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs6_2.npy')
-    q_table3 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size10_locs6_3.npy')
-    print('********** EVALUATE 1 ************\n')
-    eval_nsw(q_table1, taxi_loc=None, nsw_lambda=1e-4, gamma=0.95, update=True,
-             episodes=50, render=False,  check_dest=True, name='nsw_6')
+    Q = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size6_locs3_1.npy')
+    #check_all_locs(Q, eval_steps=4000, gamma=0.9, nsw_lambda=1e-4, nsw=True, update=update, thres=50)
+    eval_nsw(Q, taxi_loc=[0,0], nsw_lambda=1e-4, gamma=0.95, update=False, mode='stationary',
+             episodes=50, render=True,  check_dest=False, name='nsw_6')
+    #Q = np.load('Experiments/taxi_Qs/QL_size5_locs2.npy')
+    # eval_ql(Q, taxi_loc=[0,0], pass_dest=None, episodes=50, render=True)
     
