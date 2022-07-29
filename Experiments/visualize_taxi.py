@@ -133,7 +133,7 @@ if __name__ == '__main__':
     data2 = np.load('Experiments/taxi_q_tables/QL_Penalty_size6_locs3_loss.npy')
     # data3 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size12_locs3_1_loss.npy')
     loss_data = [data1, data2]
-    labels = ['Modified Q learning with NSW', 'Standatd Q learning']
+    labels = ['Modified Q learning with NSW', 'Standard Q learning']
     plot_loss(loss_data=loss_data, ID=1932259, colors=['r','b','g'], x_range=600, 
               linewidth=0.7, labels=labels, alpha=0.8, subplot=False)
     
