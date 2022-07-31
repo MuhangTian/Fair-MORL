@@ -22,7 +22,8 @@ def nsw(vec, nsw_lambda):
     return np.sum(np.log(vec))    # numpy uses natural log
 
 def eval_nsw(Q, name, taxi_loc=None, pass_dest=None, episodes=20, mode='non-stationary',
-             nsw_lambda=0.01, gamma=1, check_dest=False, render=True, update=False):
+             nsw_lambda=0.01, check_dest=False, render=True):
+    # TODO: Add discounting for R_acc
     Racc = []
     if check_dest == True:
         for i in range(env.size):
@@ -38,13 +39,11 @@ def eval_nsw(Q, name, taxi_loc=None, pass_dest=None, episodes=20, mode='non-stat
                     elif mode == 'stationary':
                         action = argmax_nsw(0, Q[state], nsw_lambda)
                     next, reward, done = env.step(action)
-                    if update == True:
-                        max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
-                        Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                     state = next
                     R_acc += reward
 
                 nsw_score = nsw(R_acc, nsw_lambda)
+                Racc.append(R_acc)
                 print('Accumulated Reward: {}\nNSW: {}\n'.format(R_acc, nsw_score))
     else:
         for i in range(1, episodes+1):
@@ -62,17 +61,15 @@ def eval_nsw(Q, name, taxi_loc=None, pass_dest=None, episodes=20, mode='non-stat
                     action = argmax_nsw(0, Q[state], nsw_lambda)
                 next, reward, done = env.step(action)
                 if render == True: env.render()
-                if update == True:
-                    max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
-                    Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                 state = next
                 R_acc += reward
             
-            print('Accumulated Reward, trajectory {}: {}\n'.format(i, R_acc))
+            print('Accumulated Reward, episode {}: {}\n'.format(i, R_acc))
             Racc.append(R_acc)
         #env._output_csv()
         np.save('Experiments/{}.npy'.format(name), Racc)
-    return print("FINSIH EVALUATE NSW Q LEARNING\n")
+    
+    print("Average Accumulated Reward: {}\nFINSIH EVALUATE NSW Q LEARNING\n".format(np.mean(Racc, axis=0)))
 
 def eval_ql(Q, taxi_loc=None, pass_dest=None, episodes=20, render=False):
     Racc = []
@@ -96,7 +93,8 @@ def eval_ql(Q, taxi_loc=None, pass_dest=None, episodes=20, render=False):
     np.save('Experiments/ql_Racc_6.npy', Racc)
     return print("FINISH EVALUATE Q LEARNING\n")
 
-def check_all_locs(Q, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=False, thres=20):
+def check_all_locs(Q, eval_steps, nsw, nsw_lambda=1e-4, thres=20):
+    # TODO: Add discounting for R_acc
     invalid, prev, valid = [], 0, []
     print('Check initial locations...\n')
     for i in range(env.size):
@@ -111,9 +109,6 @@ def check_all_locs(Q, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=False, thr
                 else:
                     action = argmax_nsw(R_acc, Q[state], nsw_lambda)
                 next, reward, done = env.step(action)
-                if update == True:
-                    max_action = argmax_nsw(0, gamma*Q[next], nsw_lambda)
-                    Q[state, action] = Q[state, action] + 0.1*(reward + gamma*Q[next, max_action] - Q[state, action])
                 state = next
                 if state == prev: count += 1
                 else: count = 0
@@ -124,24 +119,23 @@ def check_all_locs(Q, eval_steps, gamma, nsw, nsw_lambda=1e-4, update=False, thr
                 if nsw == True: R_acc += reward
             if count < 5: valid.append([i,j]) # append valid initial states
             
-    if len(invalid) == 0: return print('Result: All initial locations WORK')
-    elif len(invalid) == size*size: return print('Result: All initial locations FAIL')
-    elif len(invalid) >= int(size*size/2): print('Result: These initial locations WORK: {}'.format(valid))
-    else: return print('Result: These initial locations FAIL: {}'.format(invalid))
+    if len(invalid) == 0: return print('Result: All initial locations WORK\n')
+    elif len(invalid) == size*size: return print('Result: All initial locations FAIL\n')
+    elif len(invalid) >= int(size*size/2): print('Result: These initial locations WORK: {}\n'.format(valid))
+    else: return print('Result: These initial locations FAIL: {}\n'.format(invalid))
 
 if __name__ == '__main__':
     size = 6
     loc_coords = [[0,0],[0,5],[3,2]]
     dest_coords = [[0,4],[5,0],[3,3]]
     fuel = 10000
-    
     env = Fair_Taxi_MDP_Penalty_V2(size, loc_coords, dest_coords, fuel, '', 8)
     env.seed(1122)  # make sure to use same seed as we used in learning
     
-    Q = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size6_locs3_1.npy')
-    #check_all_locs(Q, eval_steps=4000, gamma=0.9, nsw_lambda=1e-4, nsw=True, update=update, thres=50)
-    eval_nsw(Q, taxi_loc=[0,0], nsw_lambda=1e-4, gamma=0.95, update=False, mode='stationary',
-             episodes=50, render=True,  check_dest=False, name='nsw_6')
+    Q = np.load('Experiments/taxi_q_tables_V2/NSW_Penalty_V2_size6_locs3_1.npy')
+    check_all_locs(Q, eval_steps=4000, nsw_lambda=1e-4, nsw=True, thres=50)
+    eval_nsw(Q, taxi_loc=[5,0], nsw_lambda=1e-4, mode='non-stationary',
+             episodes=50, render=True,  check_dest=False, name='')
     #Q = np.load('Experiments/taxi_Qs/QL_size5_locs2.npy')
     # eval_ql(Q, taxi_loc=[0,0], pass_dest=None, episodes=50, render=True)
     
