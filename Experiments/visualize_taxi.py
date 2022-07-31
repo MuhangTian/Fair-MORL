@@ -16,7 +16,7 @@ def plot_loss(loss_data, ID, x_range=None, linewidth=0.3, alpha=0.9, colors=['r'
         plt.xlabel('Intervals (each interval is 10000 steps)')
         plt.ylabel('Loss')
         # plt.title('Q value loss over time for job {}'.format(ID))
-        plt.title('Q value loss over time for 4 pickup locations')
+        plt.title('Q value loss over time')
         plt.show()
     elif subplot == True:
         if x_range == None:
@@ -129,13 +129,11 @@ def plot_nsw(data, labels, width, nsw_lambda=1e-4):
 
 if __name__ == '__main__':
     '''Plot Q value loss over time (learning)'''
-    data1 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size6_locs3_2_loss.npy')
-    data2 = np.load('Experiments/taxi_q_tables/QL_Penalty_size6_locs3_loss.npy')
-    # data3 = np.load('Experiments/taxi_q_tables/NSW_Penalty_V2_size12_locs3_1_loss.npy')
-    loss_data = [data1, data2]
-    labels = ['Modified Q learning with NSW', 'Standard Q learning']
-    plot_loss(loss_data=loss_data, ID=1932259, colors=['r','b','g'], x_range=600, 
-              linewidth=0.7, labels=labels, alpha=0.8, subplot=False)
+    data1 = np.load('Experiments/taxi_q_tables_V2/NSW_Penalty_V2_size5_locs2_1_loss.npy')
+    loss_data = [data1]
+    #labels = ['Modified Q learning with NSW', 'Standard Q learning']
+    plot_loss(loss_data=loss_data, ID=1932259, colors=['r','b','g'], x_range=20000, 
+              linewidth=0.7, labels=None, alpha=0.8, subplot=False)
     
     '''Plot Total Reward over Time (learning)'''
     # id = [1940069, 1940073,1940077]
