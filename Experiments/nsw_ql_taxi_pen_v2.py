@@ -92,7 +92,7 @@ if __name__ == '__main__':
     prs = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter,
                                   description="""NSW Q-learning on Taxi""")
     prs.add_argument("-f", dest="fuel", type=int, default=10000, required=False, help="Timesteps each episode\n")
-    prs.add_argument("-tj", dest="episodes", type=int, default=20000, required=False, help="episodes.\n")
+    prs.add_argument("-tj", dest="episodes", type=int, default=10000, required=False, help="episodes.\n")
     prs.add_argument("-a", dest="alpha", type=float, default=0.1, required=False, help="Alpha learning rate.\n")
     prs.add_argument("-aN", dest="alpha_N", type=bool, default=False, required=False, help="Whether use 1/N for alpha\n")
     prs.add_argument("-e", dest="epsilon", type=float, default=0.1, required=False, help="Exploration rate.\n")
