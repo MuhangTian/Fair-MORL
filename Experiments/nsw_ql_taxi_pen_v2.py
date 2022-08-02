@@ -8,7 +8,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
     Q = np.zeros([fair_env.observation_space.n, fair_env.action_space.n, len(fair_env.loc_coords)], dtype=float)
     Num = np.full(fair_env.observation_space.n, epsilon, dtype=float)   # for epsilon
     Q = Q + init_val
-    loss_data = []
+    loss_data, nsw_data = [], []
     if alpha_N == True:
         print('********** Using 1/N alpha ***********\n')
         a_Num = np.zeros([fair_env.observation_space.n, fair_env.action_space.n], dtype=float)
@@ -28,7 +28,7 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
             if np.random.uniform(0,1) < epsilon:
                 action = fair_env.action_space.sample()
             else:
-                action = argmax_nsw(R_acc, Q[state], nsw_lambda)
+                action = argmax_nsw(R_acc, np.power(gamma,c)*Q[state], nsw_lambda)
                 
             if alpha_N == True: 
                 a_Num[state, action] += 1
@@ -44,12 +44,14 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
             
             Num[state] *= dim_factor  # epsilon diminish over time
             state = next
-            R_acc += np.power(gamma, c)*reward
+            R_acc += np.power(gamma,c)*reward
             c += 1
         
         loss = np.sum(np.abs(Q - old_table))
         loss_data.append(loss)
-        print('Accumulated reward: {}\nLoss: {}\nAverage Epsilon: {}\n'.format(R_acc, loss, np.mean(avg)))
+        nsw_score = nsw(R_acc, nsw_lambda)
+        nsw_data.append(nsw_score)
+        print('Accumulated reward: {}\nLoss: {}\nAverage Epsilon: {}\nNSW: {}\n'.format(R_acc,loss,np.mean(avg),nsw_score))
         if loss < tolerance:
             loss_count += 1
             if loss_count == 10: break  # need to be smaller for consecutive loops to satisfy early break
@@ -61,6 +63,8 @@ def run_NSW_Q_learning(episodes, alpha, epsilon, gamma, nsw_lambda, init_val, di
             arr=Q)
     np.save(file='taxi_q_tables_V2/NSW_Penalty_V2_size{}_locs{}_{}{}{}_loss'.format(fair_env.size,len(fair_env.loc_coords), str, aN, file_name),
             arr=loss_data)
+    np.save(file='taxi_q_tables_V2/NSW_Penalty_V2_size{}_locs{}_{}{}{}_nsw'.format(fair_env.size,len(fair_env.loc_coords), str, aN, file_name),
+            arr=nsw_data)
     print('FINISH TRAINING NSW Q LEARNING')
     return Q
 
